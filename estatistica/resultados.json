@@ -1,0 +1,579 @@
+{
+  "q01": {
+    "n_linhas": 5565,
+    "n_colunas": 16,
+    "ausentes": 0,
+    "descritivas": {
+      "pop": {
+        "media": 34046.244204851755,
+        "desvio": 201577.027796375,
+        "minimo": 805.0,
+        "mediana": 10871.0,
+        "maximo": 11172609.0,
+        "assimetria": 37.703349394573415
+      },
+      "espvida": {
+        "media": 73.08899550763702,
+        "desvio": 2.680714744119558,
+        "minimo": 65.3,
+        "mediana": 73.47,
+        "maximo": 78.64,
+        "assimetria": -0.4093152918867018
+      },
+      "e_anosestudo": {
+        "media": 9.463638814016171,
+        "desvio": 1.0982694555124464,
+        "minimo": 4.34,
+        "mediana": 9.47,
+        "maximo": 12.83,
+        "assimetria": -0.20869337898995385
+      },
+      "t_analf18m": {
+        "media": 17.404643306379153,
+        "desvio": 10.698952979748151,
+        "minimo": 0.97,
+        "mediana": 14.11,
+        "maximo": 47.64,
+        "assimetria": 0.5980505167366106
+      },
+      "rdpc": {
+        "media": 493.6056172506739,
+        "desvio": 243.26933326461474,
+        "minimo": 96.25,
+        "mediana": 467.65,
+        "maximo": 2043.74,
+        "assimetria": 0.9596452878908447
+      },
+      "gini": {
+        "media": 0.49438095238095237,
+        "desvio": 0.06607458312965038,
+        "minimo": 0.28,
+        "mediana": 0.49,
+        "maximo": 0.8,
+        "assimetria": 0.29134744738890844
+      },
+      "pmpob": {
+        "media": 23.20657322551662,
+        "desvio": 17.915650333671916,
+        "minimo": 0.0,
+        "mediana": 18.14,
+        "maximo": 78.59,
+        "assimetria": 0.5436329165275303
+      },
+      "t_agua": {
+        "media": 85.59802875112308,
+        "desvio": 14.721327450236558,
+        "minimo": 0.15,
+        "mediana": 90.28,
+        "maximo": 100.0,
+        "assimetria": -1.8916575030026577
+      },
+      "t_banagua": {
+        "media": 80.87165498652291,
+        "desvio": 21.712463661763557,
+        "minimo": 3.26,
+        "mediana": 91.25,
+        "maximo": 100.0,
+        "assimetria": -1.213272863334543
+      },
+      "t_lixo": {
+        "media": 94.04732434860736,
+        "desvio": 11.049524568101736,
+        "minimo": 0.0,
+        "mediana": 98.03,
+        "maximo": 100.0,
+        "assimetria": -3.965817155639359
+      },
+      "t_luz": {
+        "media": 97.18961365678348,
+        "desvio": 6.024377202752993,
+        "minimo": 27.41,
+        "mediana": 99.39,
+        "maximo": 100.0,
+        "assimetria": -4.216711947172502
+      },
+      "t_des": {
+        "media": 6.742481581311771,
+        "desvio": 3.825009818695011,
+        "minimo": 0.0,
+        "mediana": 6.26,
+        "maximo": 41.93,
+        "assimetria": 1.2394095080350431
+      },
+      "idhm": {
+        "media": 0.6591574123989219,
+        "desvio": 0.0719972817138271,
+        "minimo": 0.418,
+        "mediana": 0.665,
+        "maximo": 0.862,
+        "assimetria": -0.15560544230957568
+      }
+    }
+  },
+  "q02": {
+    "variavel": "t_analf18m",
+    "rotulo": "Taxa de analfabetismo, 18 anos ou mais (%)",
+    "media": 17.404643306379153,
+    "mediana": 14.11,
+    "desvio_pop": 10.697991664954014,
+    "assimetria": 0.5980505167366106,
+    "a_prob": 0.5,
+    "a_classificacao": "evento equiprovável (tão provável quanto não ocorrer)",
+    "b_z": -0.30796839346699156,
+    "b_prob": 0.6209468087060973,
+    "b_classificacao": "evento provável",
+    "obs_menor_media": 0.5876010781671159,
+    "obs_maior_mediana": 0.49973045822102424
+  },
+  "q03": {
+    "variavel": "e_anosestudo",
+    "rotulo": "Expectativa de anos de estudo (anos)",
+    "mu0": 9.463638814016171,
+    "sigma": 1.0981707745781968,
+    "assimetria": -0.20869337898995385,
+    "a": {
+      "n": 20,
+      "alfa": 0.06,
+      "lado": "esquerda",
+      "media_amostral": 9.289,
+      "erro_padrao": 0.2455584502860446,
+      "z": -0.7111904062464129,
+      "z_critico": -1.5547735945968535,
+      "p_valor": 0.23848312641189306,
+      "rejeita_h0": false,
+      "decisao": "Não se rejeita H0",
+      "conclusao": "ao nível de 6%, não há evidência suficiente de que a média do grupo amostrado seja menor do que a média de referência."
+    },
+    "b": {
+      "n": 25,
+      "alfa": 0.09,
+      "lado": "direita",
+      "media_amostral": 9.491200000000001,
+      "erro_padrao": 0.21963415491563937,
+      "z": 0.12548679413917094,
+      "z_critico": 1.3407550336902165,
+      "p_valor": 0.4500690895738777,
+      "rejeita_h0": false,
+      "decisao": "Não se rejeita H0",
+      "conclusao": "ao nível de 9%, não há evidência suficiente de que a média do grupo amostrado seja maior do que a média de referência."
+    },
+    "amostra_a_municipios": [
+      "ITAPAGÉ (Ceará)",
+      "PILAR DO SUL (São Paulo)",
+      "SANTA IZABEL DO OESTE (Paraná)",
+      "RIO DAS OSTRAS (Rio de Janeiro)",
+      "Paraisópolis (Minas Gerais)",
+      "PALMEIRAS DE GOIÁS (Goiás)",
+      "SIRIRI (Sergipe)",
+      "SÃO JOSÉ DA TAPERA (Alagoas)",
+      "ALAGOINHAS (Bahia)",
+      "ITAÚBA (Mato Grosso)",
+      "Uberaba (Minas Gerais)",
+      "LAGOA DO OURO (Pernambuco)",
+      "DIAMANTE (Paraíba)",
+      "Santo Antônio do Rio Abaixo (Minas Gerais)",
+      "MIMOSO DE GOIÁS (Goiás)",
+      "NATIVIDADE (Tocantins)",
+      "JAGUARUANA (Ceará)",
+      "DOVERLÂNDIA (Goiás)",
+      "MACIEIRA (Santa Catarina)",
+      "BENJAMIN CONSTANT (Amazonas)"
+    ],
+    "amostra_b_municipios": [
+      "SANTA ALBERTINA (São Paulo)",
+      "PIRAÍ (Rio de Janeiro)",
+      "PALMEIRÓPOLIS (Tocantins)",
+      "SANTALUZ (Bahia)",
+      "BARRA DO TURVO (São Paulo)",
+      "BORBA (Amazonas)",
+      "RIBEIRÃO (Pernambuco)",
+      "RURÓPOLIS (Pará)",
+      "RIACHO DE SANTANA (Bahia)",
+      "ROLÂNDIA (Paraná)",
+      "CAMPOS SALES (Ceará)",
+      "PRESIDENTE JUSCELINO (Rio Grande do Norte)",
+      "PAIAL (Santa Catarina)",
+      "VIDAL RAMOS (Santa Catarina)",
+      "Oliveira Fortes (Minas Gerais)",
+      "SÃO JOSÉ DA VITÓRIA (Bahia)",
+      "JANUÁRIO CICCO (Rio Grande do Norte)",
+      "SUD MENNUCCI (São Paulo)",
+      "UMIRIM (Ceará)",
+      "SÃO JOSÉ DO DIVINO (Piauí)",
+      "PIRATUBA (Santa Catarina)",
+      "PARNAÍBA (Piauí)",
+      "ITAIÓPOLIS (Santa Catarina)",
+      "SÃO MIGUEL DO GUAPORÉ (Rondônia)",
+      "São Geraldo (Minas Gerais)"
+    ]
+  },
+  "q04": {
+    "x": "t_analf18m",
+    "y": "pmpob",
+    "rotulo_x": "Taxa de analfabetismo, 18 anos ou mais (%)",
+    "rotulo_y": "Proporção de pobres (%)",
+    "covariancia": 166.42611395540132,
+    "pearson": 0.8682556460501317,
+    "pearson_p": 0.0,
+    "forca": "forte e positiva",
+    "b0": -2.0982927824643416,
+    "b1": 1.4539146572860937,
+    "r2": 0.7538678668979318,
+    "f": 17038.681177861843,
+    "f_p": 0.0,
+    "gl_modelo": 1,
+    "gl_residuo": 5563,
+    "erro_padrao_residuos": 8.889058534106667,
+    "x_min": 0.97,
+    "x_max": 47.64,
+    "prev_x": 20.0,
+    "prev_y": 26.98000036325753
+  },
+  "q05": {
+    "y": "pmpob",
+    "x": [
+      "t_analf18m",
+      "t_banagua",
+      "t_luz"
+    ],
+    "rotulos": {
+      "pmpob": "Proporção de pobres (%)",
+      "t_analf18m": "Taxa de analfabetismo, 18 anos ou mais (%)",
+      "t_banagua": "População com banheiro e água encanada (%)",
+      "t_luz": "População com energia elétrica (%)"
+    },
+    "matriz_cov": {
+      "pmpob": {
+        "pmpob": 320.97052687839874,
+        "t_analf18m": 166.42611395540132,
+        "t_banagua": -341.304406135767,
+        "t_luz": -56.713968056715544
+      },
+      "t_analf18m": {
+        "pmpob": 166.42611395540132,
+        "t_analf18m": 114.4675948628618,
+        "t_banagua": -173.8083862445816,
+        "t_luz": -22.88965149476839
+      },
+      "t_banagua": {
+        "pmpob": -341.304406135767,
+        "t_analf18m": -173.8083862445816,
+        "t_banagua": 471.43107826340315,
+        "t_luz": 76.14412438142003
+      },
+      "t_luz": {
+        "pmpob": -56.713968056715544,
+        "t_analf18m": -22.88965149476839,
+        "t_banagua": 76.14412438142003,
+        "t_luz": 36.29312068105
+      }
+    },
+    "matriz_corr": {
+      "pmpob": {
+        "pmpob": 1.0,
+        "t_analf18m": 0.8682556460501337,
+        "t_banagua": -0.8774052177518532,
+        "t_luz": -0.5254668225023429
+      },
+      "t_analf18m": {
+        "pmpob": 0.8682556460501337,
+        "t_analf18m": 1.0,
+        "t_banagua": -0.7482045481187123,
+        "t_luz": -0.3551286783763262
+      },
+      "t_banagua": {
+        "pmpob": -0.8774052177518532,
+        "t_analf18m": -0.7482045481187123,
+        "t_banagua": 1.0,
+        "t_luz": 0.5821235053416829
+      },
+      "t_luz": {
+        "pmpob": -0.5254668225023429,
+        "t_analf18m": -0.3551286783763262,
+        "t_banagua": 0.5821235053416829,
+        "t_luz": 1.0
+      }
+    },
+    "coeficientes": {
+      "const": 63.1865924887537,
+      "t_analf18m": 0.8308899434326131,
+      "t_banagua": -0.37796365862994247,
+      "t_luz": -0.2456519257467821
+    },
+    "p_valores": {
+      "const": 0.0,
+      "t_analf18m": 0.0,
+      "t_banagua": 0.0,
+      "t_luz": 3.1935478463995246e-44
+    },
+    "erros_padrao": {
+      "const": 1.528875785443503,
+      "t_analf18m": 0.012046044640203526,
+      "t_banagua": 0.006824318371567388,
+      "t_luz": 0.017456191246770753
+    },
+    "equacao": "pmpob = 63.1866 + 0.8309 * t_analf18m - 0.3780 * t_banagua - 0.2457 * t_luz",
+    "r2": 0.876137583922527,
+    "r2_ajustado": 0.8760707637016617,
+    "f": 13111.863034507925,
+    "f_p": 0.0,
+    "gl_modelo": 3,
+    "gl_residuo": 5561,
+    "erro_padrao_residuos": 6.306951107335083,
+    "prev_entrada": {
+      "t_analf18m": 20.0,
+      "t_banagua": 70.0,
+      "t_luz": 95.0
+    },
+    "prev_y": 30.010002307365696
+  },
+  "q06": {
+    "limiar_idhm": 0.6,
+    "x": [
+      "t_analf18m",
+      "t_banagua",
+      "t_luz"
+    ],
+    "n_classe1": 1399,
+    "n_classe0": 4166,
+    "n_treino": 3895,
+    "n_teste": 1670,
+    "coeficientes": {
+      "const": 8.957309940715497,
+      "t_analf18m": 0.23719677787340687,
+      "t_banagua": -0.04968455813245571,
+      "t_luz": -0.1243180837836339
+    },
+    "p_valores": {
+      "const": 1.6198375323572134e-12,
+      "t_analf18m": 8.225275845004252e-98,
+      "t_banagua": 4.1974065713949324e-29,
+      "t_luz": 4.2135530255401246e-17
+    },
+    "odds_ratio": {
+      "t_analf18m": 1.2676905466833481,
+      "t_banagua": 0.9515295294171808,
+      "t_luz": 0.8830988967648298
+    },
+    "equacao": "logit(p) = ln(p / (1 - p)) = 8.9573 + 0.2372 * t_analf18m - 0.0497 * t_banagua - 0.1243 * t_luz",
+    "vn": 1165,
+    "fp": 85,
+    "fn": 72,
+    "vp": 348,
+    "acuracia": 0.9059880239520958,
+    "acuracia_base": 0.7485029940119761,
+    "sensibilidade": 0.8285714285714286,
+    "especificidade": 0.932,
+    "precisao": 0.8036951501154734,
+    "class_entrada": {
+      "t_analf18m": 25.0,
+      "t_banagua": 60.0,
+      "t_luz": 90.0
+    },
+    "class_logit": 0.717528359076276,
+    "class_prob": 0.6720625128649691,
+    "class_classe": 1,
+    "class_texto": "PRIORITÁRIO (classe 1)"
+  },
+  "q07": {
+    "por_uf": [
+      {
+        "ufn": "Bahia",
+        "municipios": 417,
+        "prioritarios": 263,
+        "populacao_prioritarios": 4582779,
+        "percentual": 63.069544364508396
+      },
+      {
+        "ufn": "Piauí",
+        "municipios": 224,
+        "prioritarios": 182,
+        "populacao_prioritarios": 1415711,
+        "percentual": 81.25
+      },
+      {
+        "ufn": "Maranhão",
+        "municipios": 217,
+        "prioritarios": 158,
+        "populacao_prioritarios": 3129545,
+        "percentual": 72.8110599078341
+      },
+      {
+        "ufn": "Paraíba",
+        "municipios": 223,
+        "prioritarios": 152,
+        "populacao_prioritarios": 1435246,
+        "percentual": 68.16143497757848
+      },
+      {
+        "ufn": "Pernambuco",
+        "municipios": 185,
+        "prioritarios": 108,
+        "populacao_prioritarios": 2132013,
+        "percentual": 58.37837837837838
+      },
+      {
+        "ufn": "Pará",
+        "municipios": 143,
+        "prioritarios": 96,
+        "populacao_prioritarios": 2861945,
+        "percentual": 67.13286713286713
+      },
+      {
+        "ufn": "Alagoas",
+        "municipios": 102,
+        "prioritarios": 88,
+        "populacao_prioritarios": 1465714,
+        "percentual": 86.27450980392157
+      },
+      {
+        "ufn": "Minas Gerais",
+        "municipios": 853,
+        "prioritarios": 73,
+        "populacao_prioritarios": 615367,
+        "percentual": 8.558030480656507
+      },
+      {
+        "ufn": "Rio Grande do Norte",
+        "municipios": 167,
+        "prioritarios": 70,
+        "populacao_prioritarios": 561183,
+        "percentual": 41.91616766467066
+      },
+      {
+        "ufn": "Ceará",
+        "municipios": 184,
+        "prioritarios": 49,
+        "populacao_prioritarios": 972128,
+        "percentual": 26.630434782608695
+      },
+      {
+        "ufn": "Amazonas",
+        "municipios": 62,
+        "prioritarios": 47,
+        "populacao_prioritarios": 1055859,
+        "percentual": 75.80645161290323
+      },
+      {
+        "ufn": "Sergipe",
+        "municipios": 75,
+        "prioritarios": 43,
+        "populacao_prioritarios": 626859,
+        "percentual": 57.333333333333336
+      },
+      {
+        "ufn": "Tocantins",
+        "municipios": 139,
+        "prioritarios": 25,
+        "populacao_prioritarios": 126190,
+        "percentual": 17.985611510791365
+      },
+      {
+        "ufn": "Acre",
+        "municipios": 22,
+        "prioritarios": 13,
+        "populacao_prioritarios": 178601,
+        "percentual": 59.09090909090909
+      },
+      {
+        "ufn": "Rondônia",
+        "municipios": 52,
+        "prioritarios": 9,
+        "populacao_prioritarios": 127702,
+        "percentual": 17.307692307692307
+      },
+      {
+        "ufn": "Roraima",
+        "municipios": 15,
+        "prioritarios": 5,
+        "populacao_prioritarios": 51462,
+        "percentual": 33.333333333333336
+      },
+      {
+        "ufn": "Mato Grosso do Sul",
+        "municipios": 78,
+        "prioritarios": 4,
+        "populacao_prioritarios": 43756,
+        "percentual": 5.128205128205129
+      },
+      {
+        "ufn": "Paraná",
+        "municipios": 399,
+        "prioritarios": 4,
+        "populacao_prioritarios": 36702,
+        "percentual": 1.0025062656641603
+      },
+      {
+        "ufn": "Amapá",
+        "municipios": 16,
+        "prioritarios": 3,
+        "populacao_prioritarios": 33671,
+        "percentual": 18.75
+      },
+      {
+        "ufn": "Goiás",
+        "municipios": 246,
+        "prioritarios": 3,
+        "populacao_prioritarios": 30926,
+        "percentual": 1.2195121951219512
+      },
+      {
+        "ufn": "Mato Grosso",
+        "municipios": 141,
+        "prioritarios": 3,
+        "populacao_prioritarios": 20965,
+        "percentual": 2.127659574468085
+      },
+      {
+        "ufn": "Rio Grande do Sul",
+        "municipios": 496,
+        "prioritarios": 1,
+        "populacao_prioritarios": 14285,
+        "percentual": 0.20161290322580644
+      },
+      {
+        "ufn": "Distrito Federal",
+        "municipios": 1,
+        "prioritarios": 0,
+        "populacao_prioritarios": 0,
+        "percentual": 0.0
+      },
+      {
+        "ufn": "Espírito Santo",
+        "municipios": 78,
+        "prioritarios": 0,
+        "populacao_prioritarios": 0,
+        "percentual": 0.0
+      },
+      {
+        "ufn": "Rio de Janeiro",
+        "municipios": 92,
+        "prioritarios": 0,
+        "populacao_prioritarios": 0,
+        "percentual": 0.0
+      },
+      {
+        "ufn": "Santa Catarina",
+        "municipios": 293,
+        "prioritarios": 0,
+        "populacao_prioritarios": 0,
+        "percentual": 0.0
+      },
+      {
+        "ufn": "São Paulo",
+        "municipios": 645,
+        "prioritarios": 0,
+        "populacao_prioritarios": 0,
+        "percentual": 0.0
+      }
+    ],
+    "pop_total": 189467349,
+    "pop_prioritarios": 21518609,
+    "media_analf_prioritarios": 30.960371694067188,
+    "media_analf_demais": 12.852443590974556,
+    "media_pobres_prioritarios": 46.6161686919228,
+    "media_pobres_demais": 15.345309649543927,
+    "media_luz_prioritarios": 92.61012151536814,
+    "media_luz_demais": 98.72746999519923
+  }
+}

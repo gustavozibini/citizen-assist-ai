@@ -1,0 +1,26 @@
+GLOBAL SOLUTION 2026.2 - CITIZENTECH
+Disciplina: Computer Organization and Architecture
+Professor: Prof. Dr. Marcus Grilo
+
+PROJETO: Sentinela de Alagamento
+Estacao de baixo custo que mede o nivel da agua em corrego, galeria ou boca
+de lobo e avisa a comunidade antes do alagamento.
+Raspberry Pi Pico + MicroPython, simulado no Wokwi.
+
+INTEGRANTE (trabalho individual)
+Nome completo: Gustavo Zibini Belizario
+RM: 561376
+Curso: Ciencia da Computacao - 1o ano
+
+LINKS
+1) Projeto no Wokwi (circuito + codigo MicroPython):
+   [COLAR AQUI O LINK DO WOKWI]
+
+2) Video demonstrativo no YouTube:
+   [COLAR AQUI O LINK DO YOUTUBE]
+
+ANTES DE ENVIAR
+[ ] O link do Wokwi abre em uma janela anonima do navegador
+[ ] A simulacao inicia e responde ao controle de distancia do sensor
+[ ] O link do YouTube abre em uma janela anonima (video "Nao listado")
+[ ] Os dois campos acima estao preenchidos

@@ -1,0 +1,464 @@
+======================================================================
+TESTES DO SISTEMA - Citizen Assist AI (DSA)
+Aluno: Gustavo Zibini Belizario - RM 561376
+======================================================================
+
+----------------------------------------------------------------------
+1. OPERAÇÕES SOBRE LISTA VAZIA
+----------------------------------------------------------------------
+[T01] Percorrer (listar) uma lista vazia
+  Entrada  : lista recém-criada; percorrer()
+  Esperado : 0 nó(s) visitado(s) | ids: (nenhum) | tamanho: 0 | fim: (nenhum)
+  Observado: 0 nó(s) visitado(s) | ids: (nenhum) | tamanho: 0 | fim: (nenhum)
+  Situação : OK
+
+[T02] Consultar por id em lista vazia
+  Entrada  : buscar_por_id(10)
+  Esperado : não encontrado
+  Observado: não encontrado
+  Situação : OK
+
+[T03] Excluir em lista vazia
+  Entrada  : remover(10)
+  Esperado : não encontrado | ids: (nenhum) | tamanho: 0 | fim: (nenhum)
+  Observado: não encontrado | ids: (nenhum) | tamanho: 0 | fim: (nenhum)
+  Situação : OK
+
+[T04] Atualizar em lista vazia
+  Entrada  : atualizar(10, ...)
+  Esperado : False
+  Observado: False
+  Situação : OK
+
+[T05] Pesquisar em lista vazia
+  Entrada  : pesquisar(titulo, 'rg')
+  Esperado : 0 resultado(s)
+  Observado: 0 resultado(s)
+  Situação : OK
+
+[T06] Ordenar lista vazia (não pode dar erro)
+  Entrada  : ordenar(titulo)
+  Esperado : ids: (nenhum) | tamanho: 0 | fim: (nenhum)
+  Observado: ids: (nenhum) | tamanho: 0 | fim: (nenhum)
+  Situação : OK
+
+----------------------------------------------------------------------
+2. CADASTRO (INSERÇÃO) E VALIDAÇÃO
+----------------------------------------------------------------------
+[T07] Inserir o primeiro registro em lista vazia
+  Entrada  : inserir(id 30)
+  Esperado : True | ids: 30 | tamanho: 1 | fim: 30
+  Observado: True | ids: 30 | tamanho: 1 | fim: 30
+  Situação : OK
+
+[T08] Inserir mais três registros (cada um entra no fim)
+  Entrada  : inserir(id 10), inserir(id 20), inserir(id 40)
+  Esperado : ids: 30 10 20 40 | tamanho: 4 | fim: 40
+  Observado: ids: 30 10 20 40 | tamanho: 4 | fim: 40
+  Situação : OK
+
+[T09] Recusar identificador duplicado sem alterar a lista
+  Entrada  : inserir(id 20) com o id 20 já cadastrado
+  Esperado : False | ids: 30 10 20 40 | tamanho: 4 | fim: 40
+  Observado: False | ids: 30 10 20 40 | tamanho: 4 | fim: 40
+  Situação : OK
+
+[T10] Identificador com texto no lugar de número
+  Entrada  : validar_identificador('abc')
+  Esperado : o identificador deve ser um número inteiro (exemplo: 101).
+  Observado: o identificador deve ser um número inteiro (exemplo: 101).
+  Situação : OK
+
+[T11] Identificador com número não inteiro
+  Entrada  : validar_identificador('3.5')
+  Esperado : o identificador deve ser um número inteiro (exemplo: 101).
+  Observado: o identificador deve ser um número inteiro (exemplo: 101).
+  Situação : OK
+
+[T12] Identificador vazio
+  Entrada  : validar_identificador('')
+  Esperado : o identificador é obrigatório.
+  Observado: o identificador é obrigatório.
+  Situação : OK
+
+[T13] Identificador negativo
+  Entrada  : validar_identificador('-5')
+  Esperado : o identificador deve estar entre 1 e 999999.
+  Observado: o identificador deve estar entre 1 e 999999.
+  Situação : OK
+
+[T14] Identificador zero
+  Entrada  : validar_identificador('0')
+  Esperado : o identificador deve estar entre 1 e 999999.
+  Observado: o identificador deve estar entre 1 e 999999.
+  Situação : OK
+
+[T15] Identificador válido
+  Entrada  : validar_identificador('25')
+  Esperado : válido
+  Observado: válido
+  Situação : OK
+
+[T16] Campo obrigatório vazio (só espaços)
+  Entrada  : validar_texto('Título', '   ', 80)
+  Esperado : o campo 'Título' é obrigatório e não pode ficar vazio.
+  Observado: o campo 'Título' é obrigatório e não pode ficar vazio.
+  Situação : OK
+
+[T17] Campo de texto acima do limite
+  Entrada  : validar_texto('Título', 81 letras 'a', 80)
+  Esperado : o campo 'Título' aceita no máximo 80 caracteres (foram digitados 81).
+  Observado: o campo 'Título' aceita no máximo 80 caracteres (foram digitados 81).
+  Situação : OK
+
+[T18] Campo de texto válido
+  Entrada  : validar_texto('Título', 'Renovação da CNH', 80)
+  Esperado : válido
+  Observado: válido
+  Situação : OK
+
+[T19] Carregar os registros de exemplo (múltiplos registros)
+  Entrada  : carregar_exemplos(lista vazia)
+  Esperado : 15 inseridos | ids: 104 302 102 401 203 106 601 101 501 105 301 402 103 502 602 | tamanho: 15 | fim: 602
+  Observado: 15 inseridos | ids: 104 302 102 401 203 106 601 101 501 105 301 402 103 502 602 | tamanho: 15 | fim: 602
+  Situação : OK
+
+[T20] Carregar os exemplos de novo: todos os ids já existem
+  Entrada  : carregar_exemplos(lista já carregada)
+  Esperado : 0 inseridos | tamanho: 15
+  Observado: 0 inseridos | tamanho: 15
+  Situação : OK
+
+[T21] Registros de exemplo respeitam as validações
+  Entrada  : validar os 6 campos dos 15 exemplos
+  Esperado : 0 problema(s)
+  Observado: 0 problema(s)
+  Situação : OK
+
+----------------------------------------------------------------------
+3. CONSULTA POR IDENTIFICADOR (BUSCA LINEAR)
+----------------------------------------------------------------------
+[T22] Consultar o registro do primeiro nó
+  Entrada  : buscar_por_id(104)
+  Esperado : encontrado: [104] Segunda via da Carteira de Identidade (RG)
+  Observado: encontrado: [104] Segunda via da Carteira de Identidade (RG)
+  Situação : OK
+
+[T23] Consultar um registro do meio da lista
+  Entrada  : buscar_por_id(101)
+  Esperado : encontrado: [101] Carteira de Trabalho digital
+  Observado: encontrado: [101] Carteira de Trabalho digital
+  Situação : OK
+
+[T24] Consultar o registro do último nó
+  Entrada  : buscar_por_id(602)
+  Esperado : encontrado: [602] Economia de energia em casa
+  Observado: encontrado: [602] Economia de energia em casa
+  Situação : OK
+
+[T25] Consultar identificador que não existe
+  Entrada  : buscar_por_id(999)
+  Esperado : não encontrado
+  Observado: não encontrado
+  Situação : OK
+
+----------------------------------------------------------------------
+4. ATUALIZAÇÃO
+----------------------------------------------------------------------
+[T26] Atualizar um registro existente
+  Entrada  : atualizar(10, 'Título novo', 'Categoria nova', ...)
+  Esperado : True | Título novo | Categoria nova | Descrição nova | Público novo | Canal novo
+  Observado: True | Título novo | Categoria nova | Descrição nova | Público novo | Canal novo
+  Situação : OK
+
+[T27] Atualização não muda a posição nem os outros registros
+  Entrada  : lista após atualizar(10, ...)
+  Esperado : ids: 30 10 20 | tamanho: 3 | fim: 20 | Serviço de teste / Título novo / Serviço de teste
+  Observado: ids: 30 10 20 | tamanho: 3 | fim: 20 | Serviço de teste / Título novo / Serviço de teste
+  Situação : OK
+
+[T28] Atualizar identificador que não existe
+  Entrada  : atualizar(99, ...)
+  Esperado : False | ids: 30 10 20 | tamanho: 3 | fim: 20
+  Observado: False | ids: 30 10 20 | tamanho: 3 | fim: 20
+  Situação : OK
+
+----------------------------------------------------------------------
+5. EXCLUSÃO (INÍCIO, MEIO E FIM)
+----------------------------------------------------------------------
+[T29] Excluir o primeiro nó (o início passa a ser o 2º)
+  Entrada  : lista 30 10 20 40 50; remover(30)
+  Esperado : encontrado: [30] Serviço de teste | ids: 10 20 40 50 | tamanho: 4 | fim: 50
+  Observado: encontrado: [30] Serviço de teste | ids: 10 20 40 50 | tamanho: 4 | fim: 50
+  Situação : OK
+
+[T30] Excluir um nó do meio (o anterior é religado ao seguinte)
+  Entrada  : lista 10 20 40 50; remover(20)
+  Esperado : encontrado: [20] Serviço de teste | ids: 10 40 50 | tamanho: 3 | fim: 50
+  Observado: encontrado: [20] Serviço de teste | ids: 10 40 50 | tamanho: 3 | fim: 50
+  Situação : OK
+
+[T31] Excluir o último nó (o fim passa a ser o anterior)
+  Entrada  : lista 10 40 50; remover(50)
+  Esperado : encontrado: [50] Serviço de teste | ids: 10 40 | tamanho: 2 | fim: 40
+  Observado: encontrado: [50] Serviço de teste | ids: 10 40 | tamanho: 2 | fim: 40
+  Situação : OK
+
+[T32] Excluir identificador que não existe
+  Entrada  : lista 10 40; remover(77)
+  Esperado : não encontrado | ids: 10 40 | tamanho: 2 | fim: 40
+  Observado: não encontrado | ids: 10 40 | tamanho: 2 | fim: 40
+  Situação : OK
+
+[T33] Inserir depois de excluir o último (o novo fim funciona)
+  Entrada  : lista 10 40; inserir(id 60)
+  Esperado : ids: 10 40 60 | tamanho: 3 | fim: 60
+  Observado: ids: 10 40 60 | tamanho: 3 | fim: 60
+  Situação : OK
+
+[T34] Excluir todos os registros: a lista volta a ficar vazia
+  Entrada  : remover(10), remover(40), remover(60)
+  Esperado : vazia: True | ids: (nenhum) | tamanho: 0 | fim: (nenhum)
+  Observado: vazia: True | ids: (nenhum) | tamanho: 0 | fim: (nenhum)
+  Situação : OK
+
+[T35] Inserir de novo depois de esvaziar a lista
+  Entrada  : inserir(id 5)
+  Esperado : ids: 5 | tamanho: 1 | fim: 5
+  Observado: ids: 5 | tamanho: 1 | fim: 5
+  Situação : OK
+
+----------------------------------------------------------------------
+6. PESQUISA POR TÍTULO E POR CATEGORIA
+----------------------------------------------------------------------
+[T36] Pesquisar no título, sem acento e em minúsculas
+  Entrada  : pesquisar(titulo, 'certidoes')
+  Esperado : ids: 105 | tamanho: 1 | fim: 105
+  Observado: ids: 105 | tamanho: 1 | fim: 105
+  Situação : OK
+
+[T37] Pesquisar no título, em maiúsculas, com mais de um resultado
+  Entrada  : pesquisar(titulo, 'CARTEIRA')
+  Esperado : ids: 104 101 | tamanho: 2 | fim: 101
+  Observado: ids: 104 101 | tamanho: 2 | fim: 101
+  Situação : OK
+
+[T38] Pesquisar na categoria ignorando o acento
+  Entrada  : pesquisar(categoria, 'saude')
+  Esperado : ids: 401 402 | tamanho: 2 | fim: 402
+  Observado: ids: 401 402 | tamanho: 2 | fim: 402
+  Situação : OK
+
+[T39] Pesquisar na categoria por parte da palavra
+  Entrada  : pesquisar(categoria, 'DOCUM')
+  Esperado : ids: 104 102 106 101 105 103 | tamanho: 6 | fim: 103
+  Observado: ids: 104 102 106 101 105 103 | tamanho: 6 | fim: 103
+  Situação : OK
+
+[T40] Pesquisar um trecho que não existe
+  Entrada  : pesquisar(titulo, 'xyz')
+  Esperado : ids: (nenhum) | tamanho: 0 | fim: (nenhum)
+  Observado: ids: (nenhum) | tamanho: 0 | fim: (nenhum)
+  Situação : OK
+
+[T41] Pesquisar com trecho vazio não devolve a lista inteira
+  Entrada  : pesquisar(titulo, '   ')
+  Esperado : ids: (nenhum) | tamanho: 0 | fim: (nenhum)
+  Observado: ids: (nenhum) | tamanho: 0 | fim: (nenhum)
+  Situação : OK
+
+[T42] A pesquisa não altera a lista original
+  Entrada  : lista original depois das pesquisas acima
+  Esperado : ids: 104 302 102 401 203 106 601 101 501 105 301 402 103 502 602 | tamanho: 15 | fim: 602
+  Observado: ids: 104 302 102 401 203 106 601 101 501 105 301 402 103 502 602 | tamanho: 15 | fim: 602
+  Situação : OK
+
+----------------------------------------------------------------------
+7. ORDENAÇÃO (MERGE SORT NA LISTA ENCADEADA)
+----------------------------------------------------------------------
+[T43] Ordenar os 15 exemplos por identificador
+  Entrada  : ordenar(identificador)
+  Esperado : ids: 101 102 103 104 105 106 203 301 302 401 402 501 502 601 602 | tamanho: 15 | fim: 602
+  Observado: ids: 101 102 103 104 105 106 203 301 302 401 402 501 502 601 602 | tamanho: 15 | fim: 602
+  Situação : OK
+
+[T44] Ordenar os 15 exemplos por título (ordem alfabética)
+  Entrada  : ordenar(titulo)
+  Esperado : ids: 402 203 101 105 602 301 102 302 502 501 103 104 601 106 401 | tamanho: 15 | fim: 401
+  Observado: ids: 402 203 101 105 602 301 102 302 502 501 103 104 601 106 401 | tamanho: 15 | fim: 401
+  Situação : OK
+
+[T45] Ordenar por título ignorando acentos e maiúsculas
+  Entrada  : títulos: Zeladoria, água e esgoto, Biblioteca, Ônibus, energia
+  Esperado : água e esgoto / Biblioteca / energia / Ônibus / Zeladoria
+  Observado: água e esgoto / Biblioteca / energia / Ônibus / Zeladoria
+  Situação : OK
+
+[T46] Ordenar lista com um único registro
+  Entrada  : lista 7; ordenar(identificador)
+  Esperado : ids: 7 | tamanho: 1 | fim: 7
+  Observado: ids: 7 | tamanho: 1 | fim: 7
+  Situação : OK
+
+[T47] Ordenar lista com dois registros
+  Entrada  : lista 9 4; ordenar(identificador)
+  Esperado : ids: 4 9 | tamanho: 2 | fim: 9
+  Observado: ids: 4 9 | tamanho: 2 | fim: 9
+  Situação : OK
+
+[T48] Ordenar lista que já está em ordem
+  Entrada  : lista 1 2 3 4 5; ordenar(identificador)
+  Esperado : ids: 1 2 3 4 5 | tamanho: 5 | fim: 5
+  Observado: ids: 1 2 3 4 5 | tamanho: 5 | fim: 5
+  Situação : OK
+
+[T49] Ordenar lista em ordem invertida
+  Entrada  : lista 5 4 3 2 1; ordenar(identificador)
+  Esperado : ids: 1 2 3 4 5 | tamanho: 5 | fim: 5
+  Observado: ids: 1 2 3 4 5 | tamanho: 5 | fim: 5
+  Situação : OK
+
+[T50] Inserir e excluir depois de ordenar (início e fim corretos)
+  Entrada  : lista ordenada 1 2 3 4 5; inserir(id 6); remover(1)
+  Esperado : encontrado: [1] Serviço de teste | ids: 2 3 4 5 6 | tamanho: 5 | fim: 6
+  Observado: encontrado: [1] Serviço de teste | ids: 2 3 4 5 6 | tamanho: 5 | fim: 6
+  Situação : OK
+
+[T51] Ordenar 200 registros embaralhados
+  Entrada  : 200 ids gerados por (i * 37) % 211 + 1; ordenar(identificador)
+  Esperado : antes ordenada: não | depois ordenada: sim | tamanho: 200 | primeiro: 1 | fim: 211
+  Observado: antes ordenada: não | depois ordenada: sim | tamanho: 200 | primeiro: 1 | fim: 211
+  Situação : OK
+
+----------------------------------------------------------------------
+8. MENU INTERATIVO E ENTRADAS INVÁLIDAS (menu executado de verdade)
+----------------------------------------------------------------------
+[T52] Opção de menu inexistente
+  Entrada  : teclado: 99, 0
+  Esperado : Opção inválida: digite um número de 0 a 8.
+  Observado: Opção inválida: digite um número de 0 a 8.
+  Situação : OK
+
+[T53] Texto no lugar do número da opção
+  Entrada  : teclado: abc, 0
+  Esperado : Opção inválida: digite um número de 0 a 8.
+  Observado: Opção inválida: digite um número de 0 a 8.
+  Situação : OK
+
+[T54] Opção em branco (só Enter)
+  Entrada  : teclado: (Enter), 0
+  Esperado : Opção inválida: digite um número de 0 a 8.
+  Observado: Opção inválida: digite um número de 0 a 8.
+  Situação : OK
+
+[T55] Listar com a lista vazia
+  Entrada  : teclado: 2, 0
+  Esperado : Lista vazia: nenhum serviço cadastrado.
+  Observado: Lista vazia: nenhum serviço cadastrado.
+  Situação : OK
+
+[T56] Excluir com a lista vazia
+  Entrada  : teclado: 5, 0
+  Esperado : Lista vazia: nenhum serviço cadastrado.
+  Observado: Lista vazia: nenhum serviço cadastrado.
+  Situação : OK
+
+[T57] Consulta com texto no lugar do identificador
+  Entrada  : teclado: 8, 3, abc, 0
+  Esperado : Entrada inválida: o identificador deve ser um número inteiro (exemplo: 101).
+  Observado: Entrada inválida: o identificador deve ser um número inteiro (exemplo: 101).
+  Situação : OK
+
+[T58] Consulta de identificador que não existe
+  Entrada  : teclado: 8, 3, 999, 0
+  Esperado : Registro não encontrado: não existe serviço com o id 999.
+  Observado: Registro não encontrado: não existe serviço com o id 999.
+  Situação : OK
+
+[T59] Cadastro com identificador duplicado
+  Entrada  : teclado: 8, 1, 104, 0
+  Esperado : Identificador duplicado: já existe um serviço com o id 104.
+  Observado: Identificador duplicado: já existe um serviço com o id 104.
+  Situação : OK
+
+[T60] Cadastro com título vazio: o menu avisa e pergunta de novo
+  Entrada  : teclado: 1, 700, (Enter), Horta comunitária, ...
+  Esperado : Entrada inválida: o campo 'Título' é obrigatório e não pode ficar vazio.
+  Observado: Entrada inválida: o campo 'Título' é obrigatório e não pode ficar vazio.
+  Situação : OK
+
+[T61] Mesmo cadastro, depois de corrigir o título: registro gravado
+  Entrada  : continuação: ..., Praça central; depois 3, 700, 0
+  Esperado : Serviço 700 cadastrado com sucesso. | [700] Horta comunitária
+  Observado: Serviço 700 cadastrado com sucesso. | [700] Horta comunitária
+  Situação : OK
+
+[T62] Atualizar pelo menu só o canal (Enter mantém os outros campos)
+  Entrada  : teclado: 8, 4, 103, (Enter) x4, Balcão 7, 3, 103, 0
+  Esperado : Serviço 103 atualizado com sucesso. | Canal ou local: Balcão 7 | [103] Renovação da CNH
+  Observado: Serviço 103 atualizado com sucesso. | Canal ou local: Balcão 7 | [103] Renovação da CNH
+  Situação : OK
+
+[T63] Exclusão com resposta inválida na confirmação e depois 's'
+  Entrada  : teclado: 8, 5, 104, talvez, s, 3, 104, 0
+  Esperado : Resposta inválida: digite s para sim ou n para não. | Serviço 104 excluído. Restam 14 serviço(s). | Registro não encontrado: não existe serviço com o id 104.
+  Observado: Resposta inválida: digite s para sim ou n para não. | Serviço 104 excluído. Restam 14 serviço(s). | Registro não encontrado: não existe serviço com o id 104.
+  Situação : OK
+
+[T64] Exclusão cancelada com 'n'
+  Entrada  : teclado: 8, 5, 104, n, 0
+  Esperado : Exclusão cancelada. Nada foi alterado.
+  Observado: Exclusão cancelada. Nada foi alterado.
+  Situação : OK
+
+[T65] Pesquisa pelo menu sem resultados
+  Entrada  : teclado: 8, 6, 1, zzz, 0
+  Esperado : Nenhum serviço encontrado com 'zzz' em título.
+  Observado: Nenhum serviço encontrado com 'zzz' em título.
+  Situação : OK
+
+[T66] Pesquisa pelo menu por categoria
+  Entrada  : teclado: 8, 6, 2, EDUCACAO, 0
+  Esperado : Total: 2 serviço(s). | [302] Matrícula na rede municipal de ensino | [301] Educação de Jovens e Adultos (EJA)
+  Observado: Total: 2 serviço(s). | [302] Matrícula na rede municipal de ensino | [301] Educação de Jovens e Adultos (EJA)
+  Situação : OK
+
+[T67] Critério de ordenação inexistente
+  Entrada  : teclado: 8, 7, 5, 0
+  Esperado : Opção inválida: digite 1 ou 2.
+  Observado: Opção inválida: digite 1 ou 2.
+  Situação : OK
+
+[T68] Ordenar pelo menu por identificador
+  Entrada  : teclado: 8, 7, 2, 0
+  Esperado : Lista ordenada por identificador: | [101] aparece antes de [602]: True
+  Observado: Lista ordenada por identificador: | [101] aparece antes de [602]: True
+  Situação : OK
+
+[T69] Carregar exemplos duas vezes: ids repetidos são ignorados
+  Entrada  : teclado: 8, 8, 0
+  Esperado : 15 não entraram porque o identificador já estava em uso.
+  Observado: 15 não entraram porque o identificador já estava em uso.
+  Situação : OK
+
+[T70] Sair pelo menu e aviso de protótipo educacional
+  Entrada  : teclado: 0
+  Esperado : AVISO: protótipo educacional com dados FICTÍCIOS. | Sistema encerrado. Até logo!
+  Observado: AVISO: protótipo educacional com dados FICTÍCIOS. | Sistema encerrado. Até logo!
+  Situação : OK
+
+[T71] Fim da entrada (EOF / Ctrl+D) no meio de um cadastro
+  Entrada  : teclado: 8, 1 e a entrada termina
+  Esperado : Entrada encerrada. Sistema encerrado. | erros técnicos: 0
+  Observado: Entrada encerrada. Sistema encerrado. | erros técnicos: 0
+  Situação : OK
+
+[T72] Ctrl+C durante a leitura da opção
+  Entrada  : teclado: Ctrl+C (KeyboardInterrupt simulado)
+  Esperado : Programa interrompido pelo usuário (Ctrl+C). Sistema encerrado. | erros técnicos: 0
+  Observado: Programa interrompido pelo usuário (Ctrl+C). Sistema encerrado. | erros técnicos: 0
+  Situação : OK
+
+======================================================================
+RESUMO: 72 cenários executados | 72 OK | 0 FALHOU
+======================================================================

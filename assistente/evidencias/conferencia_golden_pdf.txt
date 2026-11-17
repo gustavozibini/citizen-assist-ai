@@ -1,0 +1,31 @@
+Conferência do golden_dataset.csv contra o PDF do enunciado (GS_PAI1.pdf, texto extraído com pdftotext).
+Comando: python conferir_golden.py enunciado.txt  | Mensagem e resposta esperada comparadas palavra por palavra (espaços/quebras do PDF ignorados).
+
+# 1 mensagem=OK resposta=OK fichas=OK tipo=OK
+# 2 mensagem=OK resposta=OK fichas=OK tipo=OK
+# 3 mensagem=OK resposta=OK fichas=OK tipo=OK
+# 4 mensagem=OK resposta=OK fichas=OK tipo=OK
+# 5 mensagem=OK resposta=OK fichas=OK tipo=OK
+# 6 mensagem=OK resposta=OK fichas=OK tipo=OK
+# 7 mensagem=OK resposta=OK fichas=OK tipo=OK
+# 8 mensagem=OK resposta=OK fichas=OK tipo=OK
+# 9 mensagem=OK resposta=OK fichas=OK tipo=OK
+#10 mensagem=OK resposta=OK fichas=OK tipo=OK
+#11 mensagem=OK resposta=OK fichas=OK tipo=OK
+#12 mensagem=OK resposta=OK fichas=OK tipo=OK
+#13 mensagem=OK resposta=OK fichas=OK tipo=OK
+#14 mensagem=OK resposta=OK fichas=OK tipo=OK
+#15 mensagem=OK resposta=OK fichas=OK tipo=OK
+#16 mensagem=OK resposta=OK fichas=OK tipo=OK
+#17 mensagem=OK resposta=OK fichas=OK tipo=OK
+#18 mensagem=OK resposta=OK fichas=OK tipo=OK
+#19 mensagem=OK resposta=OK fichas=OK tipo=OK
+#20 mensagem=OK resposta=OK fichas=OK tipo=OK
+#21 mensagem=OK resposta=OK fichas=OK tipo=OK
+#22 mensagem=OK resposta=OK fichas=OK tipo=OK
+#23 mensagem=OK resposta=OK fichas=OK tipo=OK
+#24 mensagem=OK resposta=OK fichas=OK tipo=OK
+#25 mensagem=OK resposta=OK fichas=OK tipo=OK
+#26 mensagem=OK resposta=OK fichas=OK tipo=OK
+
+Total: 26 linhas, 0 com divergência.

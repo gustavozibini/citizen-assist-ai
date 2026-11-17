@@ -1,0 +1,38 @@
+Saída real de: python3 testes_energia.py -v
+Executado em: 17/11/2026 07:44 | Python 3.13.18
+Pasta: citizen-assist-ai/energia
+------------------------------------------------------------
+test_asbc_C2 (__main__.TestCalculosAMao.test_asbc_C2) ... ok
+test_caso_base_A (__main__.TestCalculosAMao.test_caso_base_A) ... ok
+test_energia_e_igual_potencia_vezes_tempo (__main__.TestCalculosAMao.test_energia_e_igual_potencia_vezes_tempo) ... ok
+test_formato_brasileiro (__main__.TestCalculosAMao.test_formato_brasileiro) ... ok
+test_fotovoltaica_D (__main__.TestCalculosAMao.test_fotovoltaica_D) ... ok
+test_habitos_B (__main__.TestCalculosAMao.test_habitos_B) ... ok
+test_mesma_necessidade_em_todas_as_alternativas (__main__.TestCalculosAMao.test_mesma_necessidade_em_todas_as_alternativas) ... ok
+test_payback_casos_especiais (__main__.TestCalculosAMao.test_payback_casos_especiais) ... ok
+test_solar_comercial_C1 (__main__.TestCalculosAMao.test_solar_comercial_C1) ... ok
+test_tarifa_social (__main__.TestCalculosAMao.test_tarifa_social) ... ok
+test_teto_do_coletor_limita_a_energia_solar (__main__.TestCalculosAMao.test_teto_do_coletor_limita_a_energia_solar) ... ok
+test_calculadora_caso_base_igual_a_tabela (__main__.TestCoerenciaAssistenteTabela.test_calculadora_caso_base_igual_a_tabela) ... ok
+test_numeros_do_readme_saem_do_codigo (__main__.TestCoerenciaAssistenteTabela.test_numeros_do_readme_saem_do_codigo) ... ok
+test_resposta_co2 (__main__.TestCoerenciaAssistenteTabela.test_resposta_co2) ... ok
+test_resposta_economizar (__main__.TestCoerenciaAssistenteTabela.test_resposta_economizar) ... ok
+test_resposta_fotovoltaica (__main__.TestCoerenciaAssistenteTabela.test_resposta_fotovoltaica) ... ok
+test_resposta_gasto (__main__.TestCoerenciaAssistenteTabela.test_resposta_gasto) ... ok
+test_resposta_solar (__main__.TestCoerenciaAssistenteTabela.test_resposta_solar) ... ok
+test_resposta_tarifa_social (__main__.TestCoerenciaAssistenteTabela.test_resposta_tarifa_social) ... ok
+test_tabela_esta_atualizada (__main__.TestCoerenciaAssistenteTabela.test_tabela_esta_atualizada) ... ok
+test_toda_resposta_tem_fonte_e_aviso (__main__.TestCoerenciaAssistenteTabela.test_toda_resposta_tem_fonte_e_aviso) ... ok
+test_calculadora_em_texto_com_numero_absurdo (__main__.TestEntradasInvalidas.test_calculadora_em_texto_com_numero_absurdo) ... ok
+test_dados_pessoais_nao_sao_aceitos_nem_repetidos (__main__.TestEntradasInvalidas.test_dados_pessoais_nao_sao_aceitos_nem_repetidos) ... ok
+test_menu_com_entradas_ruins_nao_quebra (__main__.TestEntradasInvalidas.test_menu_com_entradas_ruins_nao_quebra) ... ok
+test_menu_fim_de_entrada (__main__.TestEntradasInvalidas.test_menu_fim_de_entrada) ... ok
+test_numero_negativo_absurdo_ou_texto (__main__.TestEntradasInvalidas.test_numero_negativo_absurdo_ou_texto) ... ok
+test_texto_muito_longo (__main__.TestEntradasInvalidas.test_texto_muito_longo) ... ok
+test_texto_sem_sentido_e_fora_do_escopo (__main__.TestEntradasInvalidas.test_texto_sem_sentido_e_fora_do_escopo) ... ok
+test_vazio_e_none (__main__.TestEntradasInvalidas.test_vazio_e_none) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.004s
+
+OK

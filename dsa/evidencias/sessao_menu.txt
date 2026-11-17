@@ -1,0 +1,600 @@
+================================================================
+ AVISO: protótipo educacional com dados FICTÍCIOS.
+ Não é um canal oficial de atendimento e não coleta
+ dados pessoais. Os dados ficam só na memória e somem
+ ao sair. Dica: a opção 8 carrega registros de exemplo.
+================================================================
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 2
+--- Listar todos os serviços ---
+Lista vazia: nenhum serviço cadastrado.
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 3
+--- Consultar serviço pelo identificador ---
+Lista vazia: nenhum serviço cadastrado.
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 99
+Opção inválida: digite um número de 0 a 8.
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: abc
+Opção inválida: digite um número de 0 a 8.
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 8
+--- Carregar registros de exemplo ---
+15 registro(s) de exemplo carregado(s).
+A lista tem agora 15 serviço(s).
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 2
+--- Listar todos os serviços ---
+[104] Segunda via da Carteira de Identidade (RG)
+    Categoria     : Documentos
+    Descrição     : Segunda via custa R$ 38,00 e fica pronta em 10 dias úteis. Agendamento obrigatório pelo portal. Leve certidão e comprovante de residência.
+    Público-alvo  : Qualquer pessoa; menores de 12 anos acompanhados do responsável legal
+    Canal ou local: Posto de Identificação de Aurora
+[302] Matrícula na rede municipal de ensino
+    Categoria     : Educação
+    Descrição     : Orientação para matricular crianças e adolescentes nas escolas municipais. Matrícula gratuita, feita na escola mais próxima de casa.
+    Público-alvo  : Responsáveis por crianças e adolescentes em idade escolar
+    Canal ou local: Secretaria de Educação de Aurora ou escola municipal mais próxima
+[102] Inscrição no CPF
+    Categoria     : Documentos
+    Descrição     : Inscrição e correção de dados gratuitas pelo portal, com comprovante em até 2 dias úteis. O atendimento presencial tem taxa de R$ 7,00.
+    Público-alvo  : Quem precisa se inscrever no CPF ou corrigir dados
+    Canal ou local: Portal da Central do Cidadão ou balcão de atendimento
+[401] Vacinação de rotina
+    Categoria     : Saúde
+    Descrição     : Aplicação das vacinas do calendário básico para todas as idades. Gratuita e sem agendamento; leve a carteira de vacinação.
+    Público-alvo  : Crianças, adultos e idosos
+    Canal ou local: Unidade Básica de Saúde Central de Aurora
+[203] Cadastro em programas sociais
+    Categoria     : Assistência social
+    Descrição     : Orientação e inscrição de famílias de baixa renda nos programas sociais do município. Atendimento gratuito.
+    Público-alvo  : Famílias de baixa renda
+    Canal ou local: Centro de Assistência Social de Aurora
+[106] Título de eleitor
+    Categoria     : Documentos
+    Descrição     : Primeira via, segunda via e transferência gratuitas. O título digital sai em até 5 dias úteis. O cadastro fecha 150 dias antes de cada eleição.
+    Público-alvo  : Eleitores a partir de 16 anos
+    Canal ou local: Portal da Central do Cidadão ou Central Eleitoral de Aurora
+[601] Tarifa social de energia elétrica
+    Categoria     : Energia
+    Descrição     : Orientação sobre o desconto na conta de luz para famílias de baixa renda e sobre como pedir o benefício.
+    Público-alvo  : Famílias de baixa renda
+    Canal ou local: Centro de Assistência Social de Aurora ou portal da Central do Cidadão
+[101] Carteira de Trabalho digital
+    Categoria     : Documentos
+    Descrição     : Gratuita em qualquer canal. A versão digital fica disponível logo após o cadastro. Não precisa de agendamento.
+    Público-alvo  : Trabalhadores; menores de 18 anos acompanhados do responsável legal
+    Canal ou local: Portal ou aplicativo da Central do Cidadão
+[501] Ouvidoria comunitária
+    Categoria     : Atendimento comunitário
+    Descrição     : Canal para registrar sugestões, elogios e reclamações sobre os serviços públicos do bairro.
+    Público-alvo  : Moradores de Aurora
+    Canal ou local: Balcão da Central do Cidadão, de segunda a sexta, das 8h às 17h
+[105] Certidões de nascimento, casamento e óbito
+    Categoria     : Documentos
+    Descrição     : No balcão: R$ 55,00, pronta em 5 dias úteis. Pelo portal, em PDF: R$ 49,00, pronta em 3 dias úteis. Isenção no balcão para baixa renda.
+    Público-alvo  : A própria pessoa ou terceiro com procuração simples
+    Canal ou local: Cartório Central de Aurora ou portal da Central do Cidadão
+[301] Educação de Jovens e Adultos (EJA)
+    Categoria     : Educação
+    Descrição     : Turmas noturnas gratuitas para quem não concluiu o ensino fundamental ou médio na idade regular.
+    Público-alvo  : Jovens e adultos a partir de 15 anos
+    Canal ou local: Escolas municipais com turmas de EJA
+[402] Agendamento de consulta médica
+    Categoria     : Saúde
+    Descrição     : Marcação de consulta com clínico geral na unidade de saúde do bairro. Leve documento original com foto.
+    Público-alvo  : Moradores de Aurora
+    Canal ou local: Unidade Básica de Saúde do bairro
+[103] Renovação da CNH
+    Categoria     : Documentos
+    Descrição     : Taxa de R$ 180,00; exame médico pago à parte na clínica credenciada. A nova CNH fica pronta em 7 dias úteis após a aprovação no exame.
+    Público-alvo  : Motoristas com CNH vencida ou a até 30 dias do vencimento
+    Canal ou local: Agendamento obrigatório pelo portal da Central do Cidadão
+[502] Ônibus da Cidadania: atendimento itinerante
+    Categoria     : Atendimento comunitário
+    Descrição     : Unidade móvel que leva orientação sobre documentos e serviços aos bairros mais distantes. Consulte o calendário no portal.
+    Público-alvo  : Moradores de bairros distantes do centro
+    Canal ou local: Praças e escolas dos bairros, conforme calendário do portal
+[602] Economia de energia em casa
+    Categoria     : Energia
+    Descrição     : Orientações simples para reduzir o consumo: lâmpadas de LED, banho mais curto e aparelhos fora da tomada quando não estão em uso.
+    Público-alvo  : Todos os moradores
+    Canal ou local: Portal da Central do Cidadão e mutirões de bairro
+Total: 15 serviço(s).
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 1
+--- Cadastrar serviço ---
+Cadastre apenas informações do serviço. Não digite dados
+pessoais (nome, CPF, telefone ou endereço de pessoas).
+Identificador (número inteiro): abc
+Entrada inválida: o identificador deve ser um número inteiro (exemplo: 101).
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 1
+--- Cadastrar serviço ---
+Cadastre apenas informações do serviço. Não digite dados
+pessoais (nome, CPF, telefone ou endereço de pessoas).
+Identificador (número inteiro): 104
+Identificador duplicado: já existe um serviço com o id 104.
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 1
+--- Cadastrar serviço ---
+Cadastre apenas informações do serviço. Não digite dados
+pessoais (nome, CPF, telefone ou endereço de pessoas).
+Identificador (número inteiro): 700
+Título: 
+Entrada inválida: o campo 'Título' é obrigatório e não pode ficar vazio.
+Título: Horta comunitária do bairro
+Categoria: Atendimento comunitário
+Descrição: Canteiros coletivos mantidos por voluntários. Qualquer morador pode participar dos mutirões de plantio.
+Público-alvo: Moradores de Aurora
+Canal ou local de atendimento: Praça Central de Aurora
+Serviço 700 cadastrado com sucesso.
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 3
+--- Consultar serviço pelo identificador ---
+Identificador (número inteiro): 700
+[700] Horta comunitária do bairro
+    Categoria     : Atendimento comunitário
+    Descrição     : Canteiros coletivos mantidos por voluntários. Qualquer morador pode participar dos mutirões de plantio.
+    Público-alvo  : Moradores de Aurora
+    Canal ou local: Praça Central de Aurora
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 3
+--- Consultar serviço pelo identificador ---
+Identificador (número inteiro): 999
+Registro não encontrado: não existe serviço com o id 999.
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 3
+--- Consultar serviço pelo identificador ---
+Identificador (número inteiro): -5
+Entrada inválida: o identificador deve estar entre 1 e 999999.
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 4
+--- Atualizar serviço ---
+Identificador (número inteiro): 700
+Dados atuais:
+[700] Horta comunitária do bairro
+    Categoria     : Atendimento comunitário
+    Descrição     : Canteiros coletivos mantidos por voluntários. Qualquer morador pode participar dos mutirões de plantio.
+    Público-alvo  : Moradores de Aurora
+    Canal ou local: Praça Central de Aurora
+Digite os novos dados. O identificador não pode ser alterado.
+Título (Enter mantém o atual): Horta comunitária e compostagem
+Categoria (Enter mantém o atual): 
+Descrição (Enter mantém o atual): 
+Público-alvo (Enter mantém o atual): 
+Canal ou local de atendimento (Enter mantém o atual): Praça Central de Aurora, ao lado da biblioteca
+Serviço 700 atualizado com sucesso.
+[700] Horta comunitária e compostagem
+    Categoria     : Atendimento comunitário
+    Descrição     : Canteiros coletivos mantidos por voluntários. Qualquer morador pode participar dos mutirões de plantio.
+    Público-alvo  : Moradores de Aurora
+    Canal ou local: Praça Central de Aurora, ao lado da biblioteca
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 4
+--- Atualizar serviço ---
+Identificador (número inteiro): 999
+Registro não encontrado: não existe serviço com o id 999.
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 6
+--- Pesquisar por título ou categoria ---
+ 1 - Pesquisar no título
+ 2 - Pesquisar na categoria
+Onde pesquisar: 1
+Trecho procurado: carteira
+Serviços com 'carteira' em título:
+[104] Segunda via da Carteira de Identidade (RG)
+    Categoria     : Documentos
+    Descrição     : Segunda via custa R$ 38,00 e fica pronta em 10 dias úteis. Agendamento obrigatório pelo portal. Leve certidão e comprovante de residência.
+    Público-alvo  : Qualquer pessoa; menores de 12 anos acompanhados do responsável legal
+    Canal ou local: Posto de Identificação de Aurora
+[101] Carteira de Trabalho digital
+    Categoria     : Documentos
+    Descrição     : Gratuita em qualquer canal. A versão digital fica disponível logo após o cadastro. Não precisa de agendamento.
+    Público-alvo  : Trabalhadores; menores de 18 anos acompanhados do responsável legal
+    Canal ou local: Portal ou aplicativo da Central do Cidadão
+Total: 2 serviço(s).
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 6
+--- Pesquisar por título ou categoria ---
+ 1 - Pesquisar no título
+ 2 - Pesquisar na categoria
+Onde pesquisar: 2
+Trecho procurado: saude
+Serviços com 'saude' em categoria:
+[401] Vacinação de rotina
+    Categoria     : Saúde
+    Descrição     : Aplicação das vacinas do calendário básico para todas as idades. Gratuita e sem agendamento; leve a carteira de vacinação.
+    Público-alvo  : Crianças, adultos e idosos
+    Canal ou local: Unidade Básica de Saúde Central de Aurora
+[402] Agendamento de consulta médica
+    Categoria     : Saúde
+    Descrição     : Marcação de consulta com clínico geral na unidade de saúde do bairro. Leve documento original com foto.
+    Público-alvo  : Moradores de Aurora
+    Canal ou local: Unidade Básica de Saúde do bairro
+Total: 2 serviço(s).
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 6
+--- Pesquisar por título ou categoria ---
+ 1 - Pesquisar no título
+ 2 - Pesquisar na categoria
+Onde pesquisar: 1
+Trecho procurado: xyz
+Nenhum serviço encontrado com 'xyz' em título.
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 6
+--- Pesquisar por título ou categoria ---
+ 1 - Pesquisar no título
+ 2 - Pesquisar na categoria
+Onde pesquisar: 3
+Opção inválida: digite 1 ou 2.
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 5
+--- Excluir serviço ---
+Identificador (número inteiro): 104
+[104] Segunda via da Carteira de Identidade (RG)
+    Categoria     : Documentos
+    Descrição     : Segunda via custa R$ 38,00 e fica pronta em 10 dias úteis. Agendamento obrigatório pelo portal. Leve certidão e comprovante de residência.
+    Público-alvo  : Qualquer pessoa; menores de 12 anos acompanhados do responsável legal
+    Canal ou local: Posto de Identificação de Aurora
+Confirma a exclusão deste serviço? (s/n): talvez
+Resposta inválida: digite s para sim ou n para não.
+Confirma a exclusão deste serviço? (s/n): s
+Serviço 104 excluído. Restam 15 serviço(s).
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 5
+--- Excluir serviço ---
+Identificador (número inteiro): 105
+[105] Certidões de nascimento, casamento e óbito
+    Categoria     : Documentos
+    Descrição     : No balcão: R$ 55,00, pronta em 5 dias úteis. Pelo portal, em PDF: R$ 49,00, pronta em 3 dias úteis. Isenção no balcão para baixa renda.
+    Público-alvo  : A própria pessoa ou terceiro com procuração simples
+    Canal ou local: Cartório Central de Aurora ou portal da Central do Cidadão
+Confirma a exclusão deste serviço? (s/n): s
+Serviço 105 excluído. Restam 14 serviço(s).
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 5
+--- Excluir serviço ---
+Identificador (número inteiro): 700
+[700] Horta comunitária e compostagem
+    Categoria     : Atendimento comunitário
+    Descrição     : Canteiros coletivos mantidos por voluntários. Qualquer morador pode participar dos mutirões de plantio.
+    Público-alvo  : Moradores de Aurora
+    Canal ou local: Praça Central de Aurora, ao lado da biblioteca
+Confirma a exclusão deste serviço? (s/n): s
+Serviço 700 excluído. Restam 13 serviço(s).
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 5
+--- Excluir serviço ---
+Identificador (número inteiro): 602
+[602] Economia de energia em casa
+    Categoria     : Energia
+    Descrição     : Orientações simples para reduzir o consumo: lâmpadas de LED, banho mais curto e aparelhos fora da tomada quando não estão em uso.
+    Público-alvo  : Todos os moradores
+    Canal ou local: Portal da Central do Cidadão e mutirões de bairro
+Confirma a exclusão deste serviço? (s/n): n
+Exclusão cancelada. Nada foi alterado.
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 5
+--- Excluir serviço ---
+Identificador (número inteiro): 999
+Registro não encontrado: não existe serviço com o id 999.
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 7
+--- Ordenar serviços ---
+ 1 - Por título (ordem alfabética)
+ 2 - Por identificador (ordem crescente)
+Critério: 1
+Lista ordenada por título:
+[402] Agendamento de consulta médica
+    Categoria     : Saúde
+    Descrição     : Marcação de consulta com clínico geral na unidade de saúde do bairro. Leve documento original com foto.
+    Público-alvo  : Moradores de Aurora
+    Canal ou local: Unidade Básica de Saúde do bairro
+[203] Cadastro em programas sociais
+    Categoria     : Assistência social
+    Descrição     : Orientação e inscrição de famílias de baixa renda nos programas sociais do município. Atendimento gratuito.
+    Público-alvo  : Famílias de baixa renda
+    Canal ou local: Centro de Assistência Social de Aurora
+[101] Carteira de Trabalho digital
+    Categoria     : Documentos
+    Descrição     : Gratuita em qualquer canal. A versão digital fica disponível logo após o cadastro. Não precisa de agendamento.
+    Público-alvo  : Trabalhadores; menores de 18 anos acompanhados do responsável legal
+    Canal ou local: Portal ou aplicativo da Central do Cidadão
+[602] Economia de energia em casa
+    Categoria     : Energia
+    Descrição     : Orientações simples para reduzir o consumo: lâmpadas de LED, banho mais curto e aparelhos fora da tomada quando não estão em uso.
+    Público-alvo  : Todos os moradores
+    Canal ou local: Portal da Central do Cidadão e mutirões de bairro
+[301] Educação de Jovens e Adultos (EJA)
+    Categoria     : Educação
+    Descrição     : Turmas noturnas gratuitas para quem não concluiu o ensino fundamental ou médio na idade regular.
+    Público-alvo  : Jovens e adultos a partir de 15 anos
+    Canal ou local: Escolas municipais com turmas de EJA
+[102] Inscrição no CPF
+    Categoria     : Documentos
+    Descrição     : Inscrição e correção de dados gratuitas pelo portal, com comprovante em até 2 dias úteis. O atendimento presencial tem taxa de R$ 7,00.
+    Público-alvo  : Quem precisa se inscrever no CPF ou corrigir dados
+    Canal ou local: Portal da Central do Cidadão ou balcão de atendimento
+[302] Matrícula na rede municipal de ensino
+    Categoria     : Educação
+    Descrição     : Orientação para matricular crianças e adolescentes nas escolas municipais. Matrícula gratuita, feita na escola mais próxima de casa.
+    Público-alvo  : Responsáveis por crianças e adolescentes em idade escolar
+    Canal ou local: Secretaria de Educação de Aurora ou escola municipal mais próxima
+[502] Ônibus da Cidadania: atendimento itinerante
+    Categoria     : Atendimento comunitário
+    Descrição     : Unidade móvel que leva orientação sobre documentos e serviços aos bairros mais distantes. Consulte o calendário no portal.
+    Público-alvo  : Moradores de bairros distantes do centro
+    Canal ou local: Praças e escolas dos bairros, conforme calendário do portal
+[501] Ouvidoria comunitária
+    Categoria     : Atendimento comunitário
+    Descrição     : Canal para registrar sugestões, elogios e reclamações sobre os serviços públicos do bairro.
+    Público-alvo  : Moradores de Aurora
+    Canal ou local: Balcão da Central do Cidadão, de segunda a sexta, das 8h às 17h
+[103] Renovação da CNH
+    Categoria     : Documentos
+    Descrição     : Taxa de R$ 180,00; exame médico pago à parte na clínica credenciada. A nova CNH fica pronta em 7 dias úteis após a aprovação no exame.
+    Público-alvo  : Motoristas com CNH vencida ou a até 30 dias do vencimento
+    Canal ou local: Agendamento obrigatório pelo portal da Central do Cidadão
+[601] Tarifa social de energia elétrica
+    Categoria     : Energia
+    Descrição     : Orientação sobre o desconto na conta de luz para famílias de baixa renda e sobre como pedir o benefício.
+    Público-alvo  : Famílias de baixa renda
+    Canal ou local: Centro de Assistência Social de Aurora ou portal da Central do Cidadão
+[106] Título de eleitor
+    Categoria     : Documentos
+    Descrição     : Primeira via, segunda via e transferência gratuitas. O título digital sai em até 5 dias úteis. O cadastro fecha 150 dias antes de cada eleição.
+    Público-alvo  : Eleitores a partir de 16 anos
+    Canal ou local: Portal da Central do Cidadão ou Central Eleitoral de Aurora
+[401] Vacinação de rotina
+    Categoria     : Saúde
+    Descrição     : Aplicação das vacinas do calendário básico para todas as idades. Gratuita e sem agendamento; leve a carteira de vacinação.
+    Público-alvo  : Crianças, adultos e idosos
+    Canal ou local: Unidade Básica de Saúde Central de Aurora
+Total: 13 serviço(s).
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 7
+--- Ordenar serviços ---
+ 1 - Por título (ordem alfabética)
+ 2 - Por identificador (ordem crescente)
+Critério: 2
+Lista ordenada por identificador:
+[101] Carteira de Trabalho digital
+    Categoria     : Documentos
+    Descrição     : Gratuita em qualquer canal. A versão digital fica disponível logo após o cadastro. Não precisa de agendamento.
+    Público-alvo  : Trabalhadores; menores de 18 anos acompanhados do responsável legal
+    Canal ou local: Portal ou aplicativo da Central do Cidadão
+[102] Inscrição no CPF
+    Categoria     : Documentos
+    Descrição     : Inscrição e correção de dados gratuitas pelo portal, com comprovante em até 2 dias úteis. O atendimento presencial tem taxa de R$ 7,00.
+    Público-alvo  : Quem precisa se inscrever no CPF ou corrigir dados
+    Canal ou local: Portal da Central do Cidadão ou balcão de atendimento
+[103] Renovação da CNH
+    Categoria     : Documentos
+    Descrição     : Taxa de R$ 180,00; exame médico pago à parte na clínica credenciada. A nova CNH fica pronta em 7 dias úteis após a aprovação no exame.
+    Público-alvo  : Motoristas com CNH vencida ou a até 30 dias do vencimento
+    Canal ou local: Agendamento obrigatório pelo portal da Central do Cidadão
+[106] Título de eleitor
+    Categoria     : Documentos
+    Descrição     : Primeira via, segunda via e transferência gratuitas. O título digital sai em até 5 dias úteis. O cadastro fecha 150 dias antes de cada eleição.
+    Público-alvo  : Eleitores a partir de 16 anos
+    Canal ou local: Portal da Central do Cidadão ou Central Eleitoral de Aurora
+[203] Cadastro em programas sociais
+    Categoria     : Assistência social
+    Descrição     : Orientação e inscrição de famílias de baixa renda nos programas sociais do município. Atendimento gratuito.
+    Público-alvo  : Famílias de baixa renda
+    Canal ou local: Centro de Assistência Social de Aurora
+[301] Educação de Jovens e Adultos (EJA)
+    Categoria     : Educação
+    Descrição     : Turmas noturnas gratuitas para quem não concluiu o ensino fundamental ou médio na idade regular.
+    Público-alvo  : Jovens e adultos a partir de 15 anos
+    Canal ou local: Escolas municipais com turmas de EJA
+[302] Matrícula na rede municipal de ensino
+    Categoria     : Educação
+    Descrição     : Orientação para matricular crianças e adolescentes nas escolas municipais. Matrícula gratuita, feita na escola mais próxima de casa.
+    Público-alvo  : Responsáveis por crianças e adolescentes em idade escolar
+    Canal ou local: Secretaria de Educação de Aurora ou escola municipal mais próxima
+[401] Vacinação de rotina
+    Categoria     : Saúde
+    Descrição     : Aplicação das vacinas do calendário básico para todas as idades. Gratuita e sem agendamento; leve a carteira de vacinação.
+    Público-alvo  : Crianças, adultos e idosos
+    Canal ou local: Unidade Básica de Saúde Central de Aurora
+[402] Agendamento de consulta médica
+    Categoria     : Saúde
+    Descrição     : Marcação de consulta com clínico geral na unidade de saúde do bairro. Leve documento original com foto.
+    Público-alvo  : Moradores de Aurora
+    Canal ou local: Unidade Básica de Saúde do bairro
+[501] Ouvidoria comunitária
+    Categoria     : Atendimento comunitário
+    Descrição     : Canal para registrar sugestões, elogios e reclamações sobre os serviços públicos do bairro.
+    Público-alvo  : Moradores de Aurora
+    Canal ou local: Balcão da Central do Cidadão, de segunda a sexta, das 8h às 17h
+[502] Ônibus da Cidadania: atendimento itinerante
+    Categoria     : Atendimento comunitário
+    Descrição     : Unidade móvel que leva orientação sobre documentos e serviços aos bairros mais distantes. Consulte o calendário no portal.
+    Público-alvo  : Moradores de bairros distantes do centro
+    Canal ou local: Praças e escolas dos bairros, conforme calendário do portal
+[601] Tarifa social de energia elétrica
+    Categoria     : Energia
+    Descrição     : Orientação sobre o desconto na conta de luz para famílias de baixa renda e sobre como pedir o benefício.
+    Público-alvo  : Famílias de baixa renda
+    Canal ou local: Centro de Assistência Social de Aurora ou portal da Central do Cidadão
+[602] Economia de energia em casa
+    Categoria     : Energia
+    Descrição     : Orientações simples para reduzir o consumo: lâmpadas de LED, banho mais curto e aparelhos fora da tomada quando não estão em uso.
+    Público-alvo  : Todos os moradores
+    Canal ou local: Portal da Central do Cidadão e mutirões de bairro
+Total: 13 serviço(s).
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 7
+--- Ordenar serviços ---
+ 1 - Por título (ordem alfabética)
+ 2 - Por identificador (ordem crescente)
+Critério: 9
+Opção inválida: digite 1 ou 2.
+
+================================================================
+ MENU - Citizen Assist AI (serviços e orientações ao cidadão)
+  1 Cadastrar    2 Listar todos        3 Consultar por id
+  4 Atualizar    5 Excluir             6 Pesquisar (título/categoria)
+  7 Ordenar      8 Carregar exemplos   0 Sair
+================================================================
+Escolha uma opção: 0
+Sistema encerrado. Até logo!

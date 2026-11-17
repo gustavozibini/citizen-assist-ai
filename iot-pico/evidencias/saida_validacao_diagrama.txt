@@ -1,0 +1,115 @@
+VALIDACAO DO diagram.json - Sentinela de Alagamento
+
+[OK  ] diagram.json e um JSON valido
+[OK  ] cabecalho: "version": 1 e "editor": "wokwi"
+[OK  ] id unico: pico
+[OK  ] tipo documentado: wokwi-pi-pico (pico)
+[OK  ] atributo documentado: pico.env = 'micropython-20231227-v1.22.0'
+[OK  ] id unico: ultra1
+[OK  ] tipo documentado: wokwi-hc-sr04 (ultra1)
+[OK  ] atributo documentado: ultra1.distance = '180'
+[OK  ] id unico: lcd1
+[OK  ] tipo documentado: wokwi-lcd1602 (lcd1)
+[OK  ] atributo documentado: lcd1.pins = 'i2c'
+[OK  ] atributo documentado: lcd1.i2cAddress = '0x27'
+[OK  ] id unico: led_verde
+[OK  ] tipo documentado: wokwi-led (led_verde)
+[OK  ] atributo documentado: led_verde.color = 'green'
+[OK  ] atributo documentado: led_verde.label = 'NORMAL'
+[OK  ] id unico: led_amarelo
+[OK  ] tipo documentado: wokwi-led (led_amarelo)
+[OK  ] atributo documentado: led_amarelo.color = 'yellow'
+[OK  ] atributo documentado: led_amarelo.label = 'ATENCAO'
+[OK  ] id unico: led_vermelho
+[OK  ] tipo documentado: wokwi-led (led_vermelho)
+[OK  ] atributo documentado: led_vermelho.color = 'red'
+[OK  ] atributo documentado: led_vermelho.label = 'ALERTA'
+[OK  ] id unico: r_verde
+[OK  ] tipo documentado: wokwi-resistor (r_verde)
+[OK  ] atributo documentado: r_verde.value = '220'
+[OK  ] id unico: r_amarelo
+[OK  ] tipo documentado: wokwi-resistor (r_amarelo)
+[OK  ] atributo documentado: r_amarelo.value = '220'
+[OK  ] id unico: r_vermelho
+[OK  ] tipo documentado: wokwi-resistor (r_vermelho)
+[OK  ] atributo documentado: r_vermelho.value = '220'
+[OK  ] id unico: bz1
+[OK  ] tipo documentado: wokwi-buzzer (bz1)
+[OK  ] atributo documentado: bz1.volume = '0.1'
+[OK  ] id unico: btn1
+[OK  ] tipo documentado: wokwi-pushbutton (btn1)
+[OK  ] atributo documentado: btn1.color = 'blue'
+[OK  ] atributo documentado: btn1.label = 'SILENCIAR'
+[OK  ] atributo documentado: btn1.key = 's'
+[OK  ] placa Raspberry Pi Pico configurada para MicroPython (env=micropython-20231227-v1.22.0)
+[OK  ] LCD em modo I2C ("pins": "i2c")
+
+[OK  ] ligacao aponta para peca e pino existentes: ultra1:VCC
+[OK  ] ligacao aponta para peca e pino existentes: pico:VBUS
+[OK  ] ligacao aponta para peca e pino existentes: ultra1:GND
+[OK  ] ligacao aponta para peca e pino existentes: pico:GND.1
+[OK  ] ligacao aponta para peca e pino existentes: ultra1:TRIG
+[OK  ] ligacao aponta para peca e pino existentes: pico:GP3
+[OK  ] ligacao aponta para peca e pino existentes: ultra1:ECHO
+[OK  ] ligacao aponta para peca e pino existentes: pico:GP2
+[OK  ] ligacao aponta para peca e pino existentes: lcd1:VCC
+[OK  ] ligacao aponta para peca e pino existentes: pico:VBUS
+[OK  ] ligacao aponta para peca e pino existentes: lcd1:GND
+[OK  ] ligacao aponta para peca e pino existentes: pico:GND.8
+[OK  ] ligacao aponta para peca e pino existentes: lcd1:SDA
+[OK  ] ligacao aponta para peca e pino existentes: pico:GP0
+[OK  ] ligacao aponta para peca e pino existentes: lcd1:SCL
+[OK  ] ligacao aponta para peca e pino existentes: pico:GP1
+[OK  ] ligacao aponta para peca e pino existentes: pico:GP13
+[OK  ] ligacao aponta para peca e pino existentes: r_verde:2
+[OK  ] ligacao aponta para peca e pino existentes: r_verde:1
+[OK  ] ligacao aponta para peca e pino existentes: led_verde:A
+[OK  ] ligacao aponta para peca e pino existentes: led_verde:C
+[OK  ] ligacao aponta para peca e pino existentes: pico:GND.4
+[OK  ] ligacao aponta para peca e pino existentes: pico:GP14
+[OK  ] ligacao aponta para peca e pino existentes: r_amarelo:2
+[OK  ] ligacao aponta para peca e pino existentes: r_amarelo:1
+[OK  ] ligacao aponta para peca e pino existentes: led_amarelo:A
+[OK  ] ligacao aponta para peca e pino existentes: led_amarelo:C
+[OK  ] ligacao aponta para peca e pino existentes: pico:GND.4
+[OK  ] ligacao aponta para peca e pino existentes: pico:GP15
+[OK  ] ligacao aponta para peca e pino existentes: r_vermelho:2
+[OK  ] ligacao aponta para peca e pino existentes: r_vermelho:1
+[OK  ] ligacao aponta para peca e pino existentes: led_vermelho:A
+[OK  ] ligacao aponta para peca e pino existentes: led_vermelho:C
+[OK  ] ligacao aponta para peca e pino existentes: pico:GND.4
+[OK  ] ligacao aponta para peca e pino existentes: bz1:2
+[OK  ] ligacao aponta para peca e pino existentes: pico:GP16
+[OK  ] ligacao aponta para peca e pino existentes: bz1:1
+[OK  ] ligacao aponta para peca e pino existentes: pico:GND.5
+[OK  ] ligacao aponta para peca e pino existentes: btn1:1.l
+[OK  ] ligacao aponta para peca e pino existentes: pico:GP17
+[OK  ] ligacao aponta para peca e pino existentes: btn1:2.l
+[OK  ] ligacao aponta para peca e pino existentes: pico:GND.6
+
+Tabela de pinos: main.py x diagram.json
+[OK  ] PINO_LCD_SDA = 0 -> pico:GP0 ligado a lcd1:SDA
+[OK  ] PINO_LCD_SCL = 1 -> pico:GP1 ligado a lcd1:SCL
+[OK  ] PINO_ECHO = 2 -> pico:GP2 ligado a ultra1:ECHO
+[OK  ] PINO_TRIG = 3 -> pico:GP3 ligado a ultra1:TRIG
+[OK  ] PINO_BUZZER = 16 -> pico:GP16 ligado a bz1:2
+[OK  ] PINO_BOTAO = 17 -> pico:GP17 ligado a btn1:1.l
+[OK  ] PINO_LED_VERDE = 13 -> pico:GP13 -> resistor r_verde (220 ohms) -> anodo do led_verde -> catodo no GND
+[OK  ] PINO_LED_AMARELO = 14 -> pico:GP14 -> resistor r_amarelo (220 ohms) -> anodo do led_amarelo -> catodo no GND
+[OK  ] PINO_LED_VERMELHO = 15 -> pico:GP15 -> resistor r_vermelho (220 ohms) -> anodo do led_vermelho -> catodo no GND
+[OK  ] nenhum GPIO usado duas vezes no main.py
+[OK  ] os GPIOs ligados no diagrama sao exatamente os do main.py: GP0, GP1, GP13, GP14, GP15, GP16, GP17, GP2, GP3
+[OK  ] endereco I2C do LCD igual nos dois arquivos (0x27)
+
+Alimentacao e terra
+[OK  ] HC-SR04 VCC em VBUS (5 V)
+[OK  ] LCD VCC em VBUS (5 V)
+[OK  ] ultra1:GND ligado a um GND do Pico
+[OK  ] lcd1:GND ligado a um GND do Pico
+[OK  ] bz1:1 ligado a um GND do Pico
+[OK  ] btn1:2.l ligado a um GND do Pico
+[OK  ] nenhum terminal de componente sem ligacao 
+
+RESULTADO: 104 verificacoes, 104 OK, 0 com erro
+Observacao: esta validacao compara o arquivo com a documentacao do Wokwi.
+Ela nao executa o simulador.

@@ -1,0 +1,11 @@
+cenario;codigo;nome;consumo_kwh_mes;consumo_kwh_ano;custo_mes;custo_ano;investimento;economia_mes;economia_ano;payback_meses;payback_anos;co2_ano;co2_evitado_ano;custo_total_horizonte;economia_liquida_horizonte
+tarifa_convencional;A;Chuveiro elétrico sem cuidado (caso-base);110.0;1320.0;86.83;1041.98;0.0;0.0;0.0;0.0;0.0;50.82;0.0;10419.82;0.0
+tarifa_convencional;B;Hábitos: banho curto e posição verão;56.1;673.2;44.28;531.41;0.0;42.55;510.57;0.0;0.0;25.92;24.9;5314.11;5105.71
+tarifa_convencional;C1;Aquecedor solar comercial + chuveiro de apoio;33.0;396.0;26.05;312.59;3359.57;60.78;729.39;55.27;4.61;15.25;35.57;6485.51;3934.3
+tarifa_convencional;C2;Aquecedor solar de baixo custo (ASBC) + apoio;55.0;660.0;43.42;520.99;1500.0;43.42;520.99;34.55;2.88;25.41;25.41;6709.91;3709.91
+tarifa_convencional;D;Solar fotovoltaica (compensação de energia);0.0;0.0;0.0;0.0;6392.1;86.83;1041.98;73.61;6.13;0.0;50.82;6392.1;4027.72
+tarifa_social;A;Chuveiro elétrico sem cuidado (caso-base);110.0;1320.0;67.31;807.72;0.0;0.0;0.0;0.0;0.0;50.82;0.0;8077.21;0.0
+tarifa_social;B;Hábitos: banho curto e posição verão;56.1;673.2;34.33;411.94;0.0;32.98;395.78;0.0;0.0;25.92;24.9;4119.38;3957.83
+tarifa_social;C1;Aquecedor solar comercial + chuveiro de apoio;33.0;396.0;20.19;242.32;3359.57;47.12;565.4;71.3;5.94;15.25;35.57;5782.73;2294.48
+tarifa_social;C2;Aquecedor solar de baixo custo (ASBC) + apoio;55.0;660.0;33.66;403.86;1500.0;33.66;403.86;44.57;3.71;25.41;25.41;5538.61;2538.61
+tarifa_social;D;Solar fotovoltaica (compensação de energia);0.0;0.0;0.0;0.0;6392.1;67.31;807.72;94.96;7.91;0.0;50.82;6392.1;1685.11

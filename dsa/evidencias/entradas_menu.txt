@@ -1,0 +1,66 @@
+2
+3
+99
+abc
+8
+2
+1
+abc
+1
+104
+1
+700
+
+Horta comunitária do bairro
+Atendimento comunitário
+Canteiros coletivos mantidos por voluntários. Qualquer morador pode participar dos mutirões de plantio.
+Moradores de Aurora
+Praça Central de Aurora
+3
+700
+3
+999
+3
+-5
+4
+700
+Horta comunitária e compostagem
+
+
+
+Praça Central de Aurora, ao lado da biblioteca
+4
+999
+6
+1
+carteira
+6
+2
+saude
+6
+1
+xyz
+6
+3
+5
+104
+talvez
+s
+5
+105
+s
+5
+700
+s
+5
+602
+n
+5
+999
+7
+1
+7
+2
+7
+9
+0

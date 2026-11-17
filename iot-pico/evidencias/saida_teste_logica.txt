@@ -1,0 +1,533 @@
+TESTE DE LOGICA - Sentinela de Alagamento (main.py em CPython)
+Configuracao lida do main.py: sensor a 200 cm do fundo, canal de 150 cm,
+ATENCAO >= 50%, ALERTA >= 75%, histerese 5 pontos, media de 3 leituras,
+FALHA apos 3 leituras invalidas seguidas.
+
+======================================================================
+A) Conversao distancia -> nivel -> percentual
+======================================================================
+[OK  ] distancia 200 cm
+       entrada  : distancia=200 cm
+       esperado : nivel=0 cm, 0.0%
+       observado: nivel=0 cm, 0.0%
+[OK  ] distancia 180 cm
+       entrada  : distancia=180 cm
+       esperado : nivel=20 cm, 13.3%
+       observado: nivel=20 cm, 13.3%
+[OK  ] distancia 125 cm
+       entrada  : distancia=125 cm
+       esperado : nivel=75 cm, 50.0%
+       observado: nivel=75 cm, 50.0%
+[OK  ] distancia 110 cm
+       entrada  : distancia=110 cm
+       esperado : nivel=90 cm, 60.0%
+       observado: nivel=90 cm, 60.0%
+[OK  ] distancia 87.5 cm
+       entrada  : distancia=87.5 cm
+       esperado : nivel=112.5 cm, 75.0%
+       observado: nivel=112.5 cm, 75.0%
+[OK  ] distancia 60 cm
+       entrada  : distancia=60 cm
+       esperado : nivel=140 cm, 93.3%
+       observado: nivel=140 cm, 93.3%
+[OK  ] distancia 50 cm
+       entrada  : distancia=50 cm
+       esperado : nivel=150 cm, 100.0%
+       observado: nivel=150 cm, 100.0%
+[OK  ] distancia 10 cm
+       entrada  : distancia=10 cm
+       esperado : nivel=190 cm, 100.0%
+       observado: nivel=190 cm, 100.0%
+[OK  ] distancia 215 cm
+       entrada  : distancia=215 cm
+       esperado : nivel=0 cm, 0.0%
+       observado: nivel=0 cm, 0.0%
+
+======================================================================
+B) Leitura do sensor (pulso de eco -> cm) e validacao de faixa
+======================================================================
+[OK  ] pulso de 6728 us vira 116 cm
+       entrada  : eco=6728 us
+       esperado : 116.0
+       observado: 116.0
+[OK  ] sem eco (timeout) devolve None
+       entrada  : eco=timeout
+       esperado : None
+       observado: None
+[OK  ] leitura_valida(None)
+       entrada  : distancia=None
+       esperado : False
+       observado: False
+[OK  ] leitura_valida(1)
+       entrada  : distancia=1
+       esperado : False
+       observado: False
+[OK  ] leitura_valida(2)
+       entrada  : distancia=2
+       esperado : True
+       observado: True
+[OK  ] leitura_valida(200)
+       entrada  : distancia=200
+       esperado : True
+       observado: True
+[OK  ] leitura_valida(220)
+       entrada  : distancia=220
+       esperado : True
+       observado: True
+[OK  ] leitura_valida(221)
+       entrada  : distancia=221
+       esperado : False
+       observado: False
+[OK  ] leitura_valida(400)
+       entrada  : distancia=400
+       esperado : False
+       observado: False
+
+======================================================================
+C) Funcao definir_estado: limiares e histerese
+======================================================================
+[OK  ] estado atual NORMAL com 49.9%
+       entrada  : estado_atual=NORMAL, percentual=49.9
+       esperado : NORMAL
+       observado: NORMAL
+[OK  ] estado atual NORMAL com 50%
+       entrada  : estado_atual=NORMAL, percentual=50
+       esperado : ATENCAO
+       observado: ATENCAO
+[OK  ] estado atual ATENCAO com 47%
+       entrada  : estado_atual=ATENCAO, percentual=47
+       esperado : ATENCAO
+       observado: ATENCAO
+[OK  ] estado atual ATENCAO com 45%
+       entrada  : estado_atual=ATENCAO, percentual=45
+       esperado : ATENCAO
+       observado: ATENCAO
+[OK  ] estado atual ATENCAO com 44.9%
+       entrada  : estado_atual=ATENCAO, percentual=44.9
+       esperado : NORMAL
+       observado: NORMAL
+[OK  ] estado atual NORMAL com 47%
+       entrada  : estado_atual=NORMAL, percentual=47
+       esperado : NORMAL
+       observado: NORMAL
+[OK  ] estado atual ATENCAO com 74.9%
+       entrada  : estado_atual=ATENCAO, percentual=74.9
+       esperado : ATENCAO
+       observado: ATENCAO
+[OK  ] estado atual ATENCAO com 75%
+       entrada  : estado_atual=ATENCAO, percentual=75
+       esperado : ALERTA
+       observado: ALERTA
+[OK  ] estado atual ALERTA com 72%
+       entrada  : estado_atual=ALERTA, percentual=72
+       esperado : ALERTA
+       observado: ALERTA
+[OK  ] estado atual ALERTA com 70%
+       entrada  : estado_atual=ALERTA, percentual=70
+       esperado : ALERTA
+       observado: ALERTA
+[OK  ] estado atual ALERTA com 69.9%
+       entrada  : estado_atual=ALERTA, percentual=69.9
+       esperado : ATENCAO
+       observado: ATENCAO
+[OK  ] estado atual ALERTA com 47%
+       entrada  : estado_atual=ALERTA, percentual=47
+       esperado : ATENCAO
+       observado: ATENCAO
+[OK  ] estado atual ALERTA com 30%
+       entrada  : estado_atual=ALERTA, percentual=30
+       esperado : NORMAL
+       observado: NORMAL
+[OK  ] estado atual NORMAL com 90%
+       entrada  : estado_atual=NORMAL, percentual=90
+       esperado : ALERTA
+       observado: ALERTA
+
+======================================================================
+D) Ciclo completo: estados, LEDs (verde, amarelo, vermelho) e display
+======================================================================
+[0001] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0002] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0003] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0004] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0005] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[OK  ] agua baixa -> NORMAL, so LED verde
+       entrada  : distancia=180 cm por 5 leituras
+       esperado : ('NORMAL', (1, 0, 0))
+       observado: ('NORMAL', (1, 0, 0))
+[OK  ] display no estado NORMAL
+       entrada  : distancia=180 cm
+       esperado : ('Nivel: 20cm  13%', 'NORMAL          ')
+       observado: ('Nivel: 20cm  13%', 'NORMAL          ')
+[0006] dist=110.0cm nivel=43cm (29%) estado=ATENCAO (subida rapida) som=desligado
+[0007] dist=110.0cm nivel=67cm (44%) estado=ATENCAO (subida rapida) som=desligado
+[0008] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0009] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0010] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0011] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0012] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0013] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0014] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0015] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[OK  ] agua a 60% -> ATENCAO, so LED amarelo
+       entrada  : distancia=110 cm por 10 leituras
+       esperado : ('ATENCAO', (0, 1, 0))
+       observado: ('ATENCAO', (0, 1, 0))
+[OK  ] display no estado ATENCAO
+       entrada  : distancia=110 cm
+       esperado : ('Nivel: 90cm  60%', 'ATENCAO         ')
+       observado: ('Nivel: 90cm  60%', 'ATENCAO         ')
+[0016] dist=60.0cm nivel=107cm (71%) estado=ATENCAO som=desligado
+[0017] dist=60.0cm nivel=123cm (82%) estado=ALERTA som=ligado
+[0018] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0019] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0020] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[OK  ] agua a 93% -> ALERTA, so LED vermelho
+       entrada  : distancia=60 cm por 5 leituras
+       esperado : ('ALERTA', (0, 0, 1))
+       observado: ('ALERTA', (0, 0, 1))
+[OK  ] display no estado ALERTA
+       entrada  : distancia=60 cm
+       esperado : ('Nivel:140cm  93%', 'ALERTA! RISCO   ')
+       observado: ('Nivel:140cm  93%', 'ALERTA! RISCO   ')
+
+======================================================================
+E) Buzzer intermitente somente no ALERTA
+======================================================================
+[0021] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0022] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0023] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0024] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0025] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0026] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[OK  ] no ALERTA o buzzer alterna ligado/desligado a cada ciclo
+       entrada  : distancia=60 cm por 6 leituras
+       esperado : True
+       observado: True
+       sequencia do buzzer: [1, 0, 1, 0, 1, 0]
+[0027] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0028] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0029] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0030] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[OK  ] no NORMAL o buzzer nunca toca
+       entrada  : distancia=180 cm por 4 leituras
+       esperado : False
+       observado: False
+[0031] dist=110.0cm nivel=43cm (29%) estado=ATENCAO (subida rapida) som=desligado
+[0032] dist=110.0cm nivel=67cm (44%) estado=ATENCAO (subida rapida) som=desligado
+[0033] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0034] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0035] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0036] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0037] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0038] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[OK  ] na ATENCAO o buzzer nunca toca
+       entrada  : distancia=110 cm por 8 leituras
+       esperado : False
+       observado: False
+
+======================================================================
+F) Histerese no ciclo completo (o estado nao fica piscando no limiar)
+======================================================================
+[0039] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0040] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0041] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0042] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0043] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0044] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0045] dist=129.0cm nivel=84cm (56%) estado=ATENCAO som=desligado
+[0046] dist=129.0cm nivel=77cm (52%) estado=ATENCAO som=desligado
+[0047] dist=129.0cm nivel=71cm (47%) estado=ATENCAO som=desligado
+[0048] dist=129.0cm nivel=71cm (47%) estado=ATENCAO som=desligado
+[0049] dist=129.0cm nivel=71cm (47%) estado=ATENCAO som=desligado
+[0050] dist=129.0cm nivel=71cm (47%) estado=ATENCAO som=desligado
+[OK  ] desceu para 47% vindo da ATENCAO: continua ATENCAO
+       entrada  : distancia=129 cm (47,3%) depois de 60%
+       esperado : ATENCAO
+       observado: ATENCAO
+[0051] dist=135.0cm nivel=69cm (46%) estado=ATENCAO som=desligado
+[0052] dist=135.0cm nivel=67cm (45%) estado=NORMAL som=desligado
+[0053] dist=135.0cm nivel=65cm (43%) estado=NORMAL som=desligado
+[0054] dist=135.0cm nivel=65cm (43%) estado=NORMAL som=desligado
+[0055] dist=135.0cm nivel=65cm (43%) estado=NORMAL som=desligado
+[0056] dist=135.0cm nivel=65cm (43%) estado=NORMAL som=desligado
+[OK  ] desceu para 43%: volta ao NORMAL
+       entrada  : distancia=135 cm (43,3%)
+       esperado : NORMAL
+       observado: NORMAL
+[0057] dist=129.0cm nivel=67cm (45%) estado=NORMAL som=desligado
+[0058] dist=129.0cm nivel=69cm (46%) estado=NORMAL som=desligado
+[0059] dist=129.0cm nivel=71cm (47%) estado=NORMAL som=desligado
+[0060] dist=129.0cm nivel=71cm (47%) estado=NORMAL som=desligado
+[0061] dist=129.0cm nivel=71cm (47%) estado=NORMAL som=desligado
+[0062] dist=129.0cm nivel=71cm (47%) estado=NORMAL som=desligado
+[0063] dist=129.0cm nivel=71cm (47%) estado=NORMAL som=desligado
+[0064] dist=129.0cm nivel=71cm (47%) estado=NORMAL som=desligado
+[0065] dist=129.0cm nivel=71cm (47%) estado=NORMAL som=desligado
+[0066] dist=129.0cm nivel=71cm (47%) estado=NORMAL som=desligado
+[0067] dist=129.0cm nivel=71cm (47%) estado=NORMAL som=desligado
+[0068] dist=129.0cm nivel=71cm (47%) estado=NORMAL som=desligado
+[OK  ] subiu devagar para 47% vindo do NORMAL: continua NORMAL
+       entrada  : distancia=129 cm (47,3%) depois de 43%
+       esperado : NORMAL
+       observado: NORMAL
+[0069] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0070] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0071] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0072] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0073] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0074] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0075] dist=92.0cm nivel=129cm (86%) estado=ALERTA som=ligado
+[0076] dist=92.0cm nivel=119cm (79%) estado=ALERTA som=ligado
+[0077] dist=92.0cm nivel=108cm (72%) estado=ALERTA som=ligado
+[0078] dist=92.0cm nivel=108cm (72%) estado=ALERTA som=ligado
+[0079] dist=92.0cm nivel=108cm (72%) estado=ALERTA som=ligado
+[0080] dist=92.0cm nivel=108cm (72%) estado=ALERTA som=ligado
+[OK  ] desceu para 72% vindo do ALERTA: continua ALERTA
+       entrada  : distancia=92 cm (72%) depois de 93%
+       esperado : ALERTA
+       observado: ALERTA
+[0081] dist=98.0cm nivel=106cm (71%) estado=ALERTA som=ligado
+[0082] dist=98.0cm nivel=104cm (69%) estado=ATENCAO som=desligado
+[0083] dist=98.0cm nivel=102cm (68%) estado=ATENCAO som=desligado
+[0084] dist=98.0cm nivel=102cm (68%) estado=ATENCAO som=desligado
+[0085] dist=98.0cm nivel=102cm (68%) estado=ATENCAO som=desligado
+[0086] dist=98.0cm nivel=102cm (68%) estado=ATENCAO som=desligado
+[OK  ] desceu para 68%: cai para ATENCAO
+       entrada  : distancia=98 cm (68%)
+       esperado : ATENCAO
+       observado: ATENCAO
+[0087] dist=124.0cm nivel=76cm (51%) estado=ATENCAO som=desligado
+[0088] dist=127.0cm nivel=74cm (50%) estado=ATENCAO som=desligado
+[0089] dist=124.0cm nivel=75cm (50%) estado=ATENCAO som=desligado
+[0090] dist=127.0cm nivel=74cm (49%) estado=ATENCAO som=desligado
+[0091] dist=124.0cm nivel=75cm (50%) estado=ATENCAO som=desligado
+[0092] dist=127.0cm nivel=74cm (49%) estado=ATENCAO som=desligado
+[0093] dist=124.0cm nivel=75cm (50%) estado=ATENCAO som=desligado
+[0094] dist=127.0cm nivel=74cm (49%) estado=ATENCAO som=desligado
+[0095] dist=124.0cm nivel=75cm (50%) estado=ATENCAO som=desligado
+[0096] dist=127.0cm nivel=74cm (49%) estado=ATENCAO som=desligado
+[0097] dist=124.0cm nivel=75cm (50%) estado=ATENCAO som=desligado
+[0098] dist=127.0cm nivel=74cm (49%) estado=ATENCAO som=desligado
+[0099] dist=124.0cm nivel=75cm (50%) estado=ATENCAO som=desligado
+[0100] dist=127.0cm nivel=74cm (49%) estado=ATENCAO som=desligado
+[0101] dist=124.0cm nivel=75cm (50%) estado=ATENCAO som=desligado
+[0102] dist=127.0cm nivel=74cm (49%) estado=ATENCAO som=desligado
+[0103] dist=124.0cm nivel=75cm (50%) estado=ATENCAO som=desligado
+[0104] dist=127.0cm nivel=74cm (49%) estado=ATENCAO som=desligado
+[0105] dist=124.0cm nivel=75cm (50%) estado=ATENCAO som=desligado
+[0106] dist=127.0cm nivel=74cm (49%) estado=ATENCAO som=desligado
+[OK  ] leitura oscilando entre 48,7% e 50,7%: no maximo 1 troca de estado
+       entrada  : distancia alternando 124/127 cm por 20 leituras
+       esperado : True
+       observado: True
+       trocas de estado observadas: 0
+
+======================================================================
+G) Media movel filtra uma leitura isolada fora do padrao
+======================================================================
+[0107] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0108] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0109] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0110] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0111] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0112] dist=120.0cm nivel=40cm (27%) estado=ATENCAO (subida rapida) som=desligado
+[OK  ] um pico isolado nao muda o nivel para o valor bruto
+       entrada  : leituras 180,180,180 e depois uma de 120 cm
+       esperado : nivel medio=40 cm
+       observado: nivel medio=40 cm
+
+======================================================================
+H) Leitura invalida / falha no sensor
+======================================================================
+[0113] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0114] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0115] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0116] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0117] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0118] dist=110.0cm nivel=90cm (60%) estado=ATENCAO som=desligado
+[0119] leitura invalida (1/3) - mantendo estado ATENCAO
+[0120] leitura invalida (2/3) - mantendo estado ATENCAO
+[OK  ] 2 leituras sem eco: mantem o ultimo estado (ainda nao e falha)
+       entrada  : 2 leituras com timeout depois de ATENCAO
+       esperado : ATENCAO
+       observado: ATENCAO
+[0121] FALHA NO SENSOR - sem leitura valida
+[OK  ] 3a leitura sem eco: entra em FALHA
+       entrada  : 3 leituras com timeout seguidas
+       esperado : FALHA
+       observado: FALHA
+[OK  ] display mostra a falha
+       entrada  : estado FALHA
+       esperado : ('FALHA NO SENSOR ', 'Verificar equip.')
+       observado: ('FALHA NO SENSOR ', 'Verificar equip.')
+[0122] FALHA NO SENSOR - sem leitura valida
+[0123] FALHA NO SENSOR - sem leitura valida
+[0124] FALHA NO SENSOR - sem leitura valida
+[0125] FALHA NO SENSOR - sem leitura valida
+[OK  ] na FALHA: verde e vermelho apagados, amarelo piscando, sem som
+       entrada  : 4 leituras com timeout
+       esperado : True
+       observado: True
+       LEDs (verde, amarelo, vermelho) em cada ciclo: [(0, 0, 0), (0, 1, 0), (0, 0, 0), (0, 1, 0)]
+[0126] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0127] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0128] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0129] leitura invalida (1/3) - mantendo estado NORMAL
+[0130] leitura invalida (2/3) - mantendo estado NORMAL
+[0131] FALHA NO SENSOR - sem leitura valida
+[OK  ] distancia fora da faixa (400 cm) tambem vira FALHA
+       entrada  : distancia=400 cm por 3 leituras
+       esperado : FALHA
+       observado: FALHA
+[0132] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[OK  ] sensor voltou: sai da FALHA na primeira leitura valida
+       entrada  : distancia=180 cm depois da falha
+       esperado : ('NORMAL', (1, 0, 0))
+       observado: ('NORMAL', (1, 0, 0))
+[0133] leitura invalida (1/3) - mantendo estado NORMAL
+[0134] leitura invalida (2/3) - mantendo estado NORMAL
+[0135] FALHA NO SENSOR - sem leitura valida
+[0136] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[OK  ] sensor voltou com agua alta: vai direto para ALERTA
+       entrada  : distancia=60 cm depois da falha
+       esperado : ALERTA
+       observado: ALERTA
+
+======================================================================
+I) Botao de silenciar
+======================================================================
+[0137] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0138] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0139] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0140] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+>> Botao: buzzer silenciado (alerta visual continua)
+[OK  ] apertar no ALERTA silencia
+       entrada  : botao apertado durante ALERTA
+       esperado : True
+       observado: True
+[0141] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=silenciado
+[0142] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=silenciado
+[0143] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=silenciado
+[0144] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=silenciado
+[0145] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=silenciado
+[0146] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=silenciado
+[OK  ] silenciado: buzzer mudo, LED vermelho continua aceso
+       entrada  : distancia=60 cm por 6 leituras depois do botao
+       esperado : (False, 'ALERTA', (0, 0, 1))
+       observado: (False, 'ALERTA', (0, 0, 1))
+[OK  ] display avisa que esta sem som
+       entrada  : ALERTA silenciado
+       esperado : ALERTA (SEM SOM)
+       observado: ALERTA (SEM SOM)
+[0147] dist=180.0cm nivel=100cm (67%) estado=ATENCAO som=desligado
+[0148] dist=180.0cm nivel=60cm (40%) estado=NORMAL som=desligado
+[0149] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0150] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0151] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0152] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[OK  ] nivel baixou: silencio e cancelado
+       entrada  : distancia=180 cm por 6 leituras
+       esperado : ('NORMAL', False)
+       observado: ('NORMAL', False)
+[0153] dist=60.0cm nivel=60cm (40%) estado=ATENCAO (subida rapida) som=desligado
+[0154] dist=60.0cm nivel=100cm (67%) estado=ATENCAO som=desligado
+[0155] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0156] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0157] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0158] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[OK  ] nivel subiu de novo: o som volta
+       entrada  : distancia=60 cm de novo
+       esperado : True
+       observado: True
+[0159] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0160] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0161] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0162] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[OK  ] apertar fora do ALERTA nao faz nada
+       entrada  : botao apertado no NORMAL
+       esperado : False
+       observado: False
+[0163] dist=60.0cm nivel=60cm (40%) estado=ATENCAO (subida rapida) som=desligado
+[0164] dist=60.0cm nivel=100cm (67%) estado=ATENCAO som=desligado
+[0165] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0166] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0167] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[0168] dist=60.0cm nivel=140cm (93%) estado=ALERTA som=ligado
+[OK  ] alerta seguinte toca normalmente
+       entrada  : distancia=60 cm depois disso
+       esperado : True
+       observado: True
+
+======================================================================
+J) Subida rapida antecipa a ATENCAO
+======================================================================
+[0169] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0170] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0171] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0172] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0173] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0174] dist=140.0cm nivel=33cm (22%) estado=ATENCAO (subida rapida) som=desligado
+[OK  ] nivel ainda baixo, mas subindo rapido: ATENCAO antecipada
+       entrada  : distancia 180 -> 140 cm (media passa de 20 para 33 cm, 22%)
+       esperado : ('ATENCAO', True)
+       observado: ('ATENCAO', True)
+[OK  ] display indica a subida
+       entrada  : ATENCAO por subida rapida
+       esperado : ATENCAO: SUBINDO
+       observado: ATENCAO: SUBINDO
+[0175] dist=140.0cm nivel=47cm (31%) estado=ATENCAO (subida rapida) som=desligado
+[0176] dist=140.0cm nivel=60cm (40%) estado=ATENCAO (subida rapida) som=desligado
+[0177] dist=140.0cm nivel=60cm (40%) estado=ATENCAO (subida rapida) som=desligado
+[0178] dist=140.0cm nivel=60cm (40%) estado=ATENCAO (subida rapida) som=desligado
+[0179] dist=140.0cm nivel=60cm (40%) estado=ATENCAO (subida rapida) som=desligado
+[0180] dist=140.0cm nivel=60cm (40%) estado=ATENCAO (subida rapida) som=desligado
+[0181] dist=140.0cm nivel=60cm (40%) estado=ATENCAO (subida rapida) som=desligado
+[0182] dist=140.0cm nivel=60cm (40%) estado=NORMAL som=desligado
+[0183] dist=140.0cm nivel=60cm (40%) estado=NORMAL som=desligado
+[0184] dist=140.0cm nivel=60cm (40%) estado=NORMAL som=desligado
+[0185] dist=140.0cm nivel=60cm (40%) estado=NORMAL som=desligado
+[0186] dist=140.0cm nivel=60cm (40%) estado=NORMAL som=desligado
+[OK  ] nivel estabilizou abaixo de 45%: volta ao NORMAL
+       entrada  : distancia=140 cm por 12 leituras
+       esperado : ('NORMAL', False)
+       observado: ('NORMAL', False)
+[0187] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0188] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0189] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0190] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0191] dist=180.0cm nivel=20cm (13%) estado=NORMAL som=desligado
+[0192] dist=179.0cm nivel=20cm (14%) estado=NORMAL som=desligado
+[0193] dist=176.0cm nivel=22cm (14%) estado=NORMAL som=desligado
+[0194] dist=173.0cm nivel=24cm (16%) estado=NORMAL som=desligado
+[0195] dist=170.0cm nivel=27cm (18%) estado=NORMAL som=desligado
+[0196] dist=167.0cm nivel=30cm (20%) estado=NORMAL som=desligado
+[0197] dist=164.0cm nivel=33cm (22%) estado=NORMAL som=desligado
+[0198] dist=161.0cm nivel=36cm (24%) estado=NORMAL som=desligado
+[0199] dist=158.0cm nivel=39cm (26%) estado=NORMAL som=desligado
+[0200] dist=155.0cm nivel=42cm (28%) estado=NORMAL som=desligado
+[0201] dist=152.0cm nivel=45cm (30%) estado=NORMAL som=desligado
+[0202] dist=149.0cm nivel=48cm (32%) estado=NORMAL som=desligado
+[0203] dist=146.0cm nivel=51cm (34%) estado=NORMAL som=desligado
+[0204] dist=143.0cm nivel=54cm (36%) estado=NORMAL som=desligado
+[0205] dist=140.0cm nivel=57cm (38%) estado=NORMAL som=desligado
+[OK  ] subida lenta (3 cm por leitura) nao antecipa
+       entrada  : distancia de 179 ate 143 cm, 3 cm por leitura
+       esperado : True
+       observado: True
+
+======================================================================
+K) Pinos usados pelo programa (conferir com README e diagram.json)
+======================================================================
+[OK  ] nenhum pino repetido
+       entrada  : {'LCD SDA': 0, 'LCD SCL': 1, 'ECHO': 2, 'TRIG': 3, 'LED verde': 13, 'LED amarelo': 14, 'LED vermelho': 15, 'Buzzer': 16, 'Botao': 17}
+       esperado : 9
+       observado: 9
+[OK  ] I2C usa os pinos certos e o endereco 0x27
+       entrada  : objeto I2C criado pelo main.py
+       esperado : (0, 1, 39)
+       observado: (0, 1, 39)
+
+======================================================================
+RESULTADO: 68 verificacoes, 68 OK, 0 com erro
+======================================================================

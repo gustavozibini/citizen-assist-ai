@@ -1,0 +1,17 @@
+Execução do Citizen_Assist_AI.ipynb neste ambiente, em MODO OFFLINE (modelos falsos, SEM IA, SEM Groq).
+Data: 17/11/2026 07:56
+Comando: CITIZEN_OFFLINE=1 jupyter nbconvert --to notebook --execute Citizen_Assist_AI.ipynb (em cópia temporária da pasta)
+Objetivo: provar que todas as células rodam do início ao fim. NÃO são resultados de avaliação.
+
+Células: 55 (33 de código). Células executadas: 33. Erros: 0.
+Fichas embutidas conferidas por SHA-256: 8 de 8 OK.
+CPF (padrão 000.000.000-00) nas saídas do notebook: 0
+CPF nos arquivos gerados: 0
+Arquivos gerados (pasta resultados_offline/, marcados OFFLINE-SIMULADO): antes.csv, comparacao.png, conferencia_manual.csv, depois.csv, resumo_comparativo.csv, resumo_comparativo.md
+Injeção do enunciado detectada na seção 12: True
+Menu de texto (roteiro automático) exibiu as 7 categorias: True
+Testes com usuários: registro vazio reconhecido: True
+
+Observação: no modo offline o "agente" copia trechos das fichas e o "juiz" mede sobreposição
+de palavras. Os números de acerto dessa execução não têm valor de avaliação e não foram
+copiados para o relatório. Os resultados reais saem da execução no Colab com o Groq.

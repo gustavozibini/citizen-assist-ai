@@ -1,0 +1,245 @@
+Sessão real do menu: python3 assistente_energia.py
+Gravada em: 17/11/2026 07:44 | Python 3.13.18
+Como foi gravada: o programa rodou em um terminal virtual (biblioteca pexpect) e cada
+entrada foi digitada só depois de o prompt aparecer. O texto abaixo é a tela do terminal,
+sem edição. O CPF digitado é fictício (123.456.789-00) e serve só para testar o aviso de
+dados pessoais. Esta é uma sessão de teste do desenvolvedor, NÃO é um teste com usuário.
+Entradas usadas: 1|7|4|8|3|5500|2|7|-3|5|0|7|2|1|8|meu cpf é 123.456.789-00|8|qual a previsão do tempo?|8|vale a pena aquecedor solar?|5|99|0
+============================================================
+Atenção: são estimativas. Elas dependem das premissas do projeto (dados/premissas.csv). Não há garantia de economia. Este assistente é um protótipo educacional. Não é canal oficial da Enel, da ANEEL ou do governo.
+
+===== Citizen Assist AI - Energia: banho quente e conta de luz =====
+1 - Quanto gasta o chuveiro elétrico?
+2 - Como economizar sem gastar nada?
+3 - Vale a pena aquecedor solar de água?
+4 - E a energia solar fotovoltaica (placas de luz)?
+5 - O que é a Tarifa Social e quem tem direito?
+6 - Quanto CO2 dá para evitar?
+7 - Calculadora: o meu caso
+8 - Fazer uma pergunta com minhas palavras
+9 - Fontes e limitações
+0 - Sair
+Digite o número da opção: 1
+
+Um chuveiro elétrico de 5.500 W é um dos aparelhos que mais gastam.
+Exemplo: família de 4 pessoas, 1 banho por dia, 10 minutos cada.
+Consumo: 110,0 kWh por mês (1.320,0 kWh por ano).
+Custo: R$ 86,83 por mês (R$ 1.041,98 por ano), na tarifa da Enel SP de 0,78938 R$/kWh sem impostos.
+Conta: energia (kWh) = potência (kW) x horas de uso.
+Use a calculadora (opção 7) para ver o seu caso.
+Fonte: F1 (tarifa ANEEL/Enel SP), F4 (potência Lorenzetti) (lista em dados/FONTES.md).
+Atenção: são estimativas. Elas dependem das premissas do projeto (dados/premissas.csv). Não há garantia de economia. Este assistente é um protótipo educacional. Não é canal oficial da Enel, da ANEEL ou do governo.
+
+===== Citizen Assist AI - Energia: banho quente e conta de luz =====
+1 - Quanto gasta o chuveiro elétrico?
+2 - Como economizar sem gastar nada?
+3 - Vale a pena aquecedor solar de água?
+4 - E a energia solar fotovoltaica (placas de luz)?
+5 - O que é a Tarifa Social e quem tem direito?
+6 - Quanto CO2 dá para evitar?
+7 - Calculadora: o meu caso
+8 - Fazer uma pergunta com minhas palavras
+9 - Fontes e limitações
+0 - Sair
+Digite o número da opção: 7
+
+Calculadora do banho. Não precisa informar nome nem dados pessoais.
+Aperte Enter para usar o valor do exemplo.
+Quantas pessoas tomam banho na casa? [4] 4
+Quantos minutos dura cada banho, em média? [10] 8
+Como o chuveiro costuma ficar?
+1 - Posição inverno / mais quente
+2 - Posição verão / morno
+3 - Sei a potência em watts (está na embalagem ou na etiqueta)
+4 - Não sei
+Escolha [4]: 3
+Potência em W (ex.: 5500): 5500
+A família recebe a Tarifa Social? 1 - sim, 2 - não, 3 - não sei [3]: 2
+
+Seu caso: 4 pessoa(s), banho de 8 min, chuveiro de 5.500 W, tarifa residencial comum.
+Hoje o banho gasta cerca de 88,0 kWh por mês.
+Custo estimado: R$ 69,47 por mês (R$ 833,59 por ano).
+
+Comparação das alternativas:
+- Hábitos: banho curto e posição verão: economia de R$ 25,18/mês; investimento R$ 0,00; retorno: sem investimento; CO2 evitado 14,7 kg/ano.
+- Aquecedor solar comercial + chuveiro de apoio: economia de R$ 48,63/mês; investimento R$ 3.359,57; retorno: 69 meses (5,8 anos); CO2 evitado 28,5 kg/ano.
+- Aquecedor solar de baixo custo (ASBC) + apoio: economia de R$ 34,73/mês; investimento R$ 1.500,00; retorno: 43 meses (3,6 anos); CO2 evitado 20,3 kg/ano.
+- Solar fotovoltaica (compensação de energia): economia de R$ 69,47/mês; investimento R$ 5.113,68; retorno: 74 meses (6,1 anos); CO2 evitado 40,7 kg/ano.
+
+Recomendação:
+1. Comece pelos hábitos (B): não custa nada.
+2. Casa própria com sol no telhado e caixa d'água: avalie o aquecedor solar (C2 ou C1).
+3. Placa fotovoltaica (D) pede telhado próprio e mais dinheiro. O valor acima supõe comprar só a parte que o banho usa.
+   Na prática o menor sistema comum (2 kWp) custa cerca de R$ 12.000,00. Veja a opção 4 do menu.
+Fonte: F1 (tarifa), F4 e F5 (chuveiro), F6 a F12 (alternativas) (lista em dados/FONTES.md).
+Atenção: são estimativas. Elas dependem das premissas do projeto (dados/premissas.csv). Não há garantia de economia. Este assistente é um protótipo educacional. Não é canal oficial da Enel, da ANEEL ou do governo.
+
+===== Citizen Assist AI - Energia: banho quente e conta de luz =====
+1 - Quanto gasta o chuveiro elétrico?
+2 - Como economizar sem gastar nada?
+3 - Vale a pena aquecedor solar de água?
+4 - E a energia solar fotovoltaica (placas de luz)?
+5 - O que é a Tarifa Social e quem tem direito?
+6 - Quanto CO2 dá para evitar?
+7 - Calculadora: o meu caso
+8 - Fazer uma pergunta com minhas palavras
+9 - Fontes e limitações
+0 - Sair
+Digite o número da opção: 7
+
+Calculadora do banho. Não precisa informar nome nem dados pessoais.
+Aperte Enter para usar o valor do exemplo.
+Quantas pessoas tomam banho na casa? [4] -3
+Digite um número entre 1 e 15.
+Quantas pessoas tomam banho na casa? [4] 5
+Quantos minutos dura cada banho, em média? [10] 0
+Digite um número entre 1 e 60.
+Quantos minutos dura cada banho, em média? [10] 7
+Como o chuveiro costuma ficar?
+1 - Posição inverno / mais quente
+2 - Posição verão / morno
+3 - Sei a potência em watts (está na embalagem ou na etiqueta)
+4 - Não sei
+Escolha [4]: 2
+A família recebe a Tarifa Social? 1 - sim, 2 - não, 3 - não sei [3]: 1
+
+Seu caso: 5 pessoa(s), banho de 7 min, chuveiro de 3.850 W, Tarifa Social (só o que passa de 80 kWh).
+Hoje o banho gasta cerca de 67,4 kWh por mês.
+Custo estimado: R$ 41,23 por mês (R$ 494,73 por ano).
+
+Comparação das alternativas:
+- Hábitos: banho curto e posição verão: economia de R$ 5,89/mês; investimento R$ 0,00; retorno: sem investimento; CO2 evitado 4,4 kg/ano.
+- Aquecedor solar comercial + chuveiro de apoio: economia de R$ 28,86/mês; investimento R$ 3.359,57; retorno: 116 meses (9,7 anos); CO2 evitado 21,8 kg/ano.
+- Aquecedor solar de baixo custo (ASBC) + apoio: economia de R$ 20,61/mês; investimento R$ 1.500,00; retorno: 73 meses (6,1 anos); CO2 evitado 15,6 kg/ano.
+- Solar fotovoltaica (compensação de energia): economia de R$ 41,23/mês; investimento R$ 3.915,16; retorno: 95 meses (7,9 anos); CO2 evitado 31,1 kg/ano.
+
+Recomendação:
+1. Comece pelos hábitos (B): não custa nada.
+2. Casa própria com sol no telhado e caixa d'água: avalie o aquecedor solar (C2 ou C1).
+3. Placa fotovoltaica (D) pede telhado próprio e mais dinheiro. O valor acima supõe comprar só a parte que o banho usa.
+   Na prática o menor sistema comum (2 kWp) custa cerca de R$ 12.000,00. Veja a opção 4 do menu.
+Premissa: o resto da casa já usa 100 kWh por mês, então os 80 kWh gratuitos já foram usados.
+Fonte: F1 (tarifa), F4 e F5 (chuveiro), F6 a F12 (alternativas) (lista em dados/FONTES.md).
+Atenção: são estimativas. Elas dependem das premissas do projeto (dados/premissas.csv). Não há garantia de economia. Este assistente é um protótipo educacional. Não é canal oficial da Enel, da ANEEL ou do governo.
+
+===== Citizen Assist AI - Energia: banho quente e conta de luz =====
+1 - Quanto gasta o chuveiro elétrico?
+2 - Como economizar sem gastar nada?
+3 - Vale a pena aquecedor solar de água?
+4 - E a energia solar fotovoltaica (placas de luz)?
+5 - O que é a Tarifa Social e quem tem direito?
+6 - Quanto CO2 dá para evitar?
+7 - Calculadora: o meu caso
+8 - Fazer uma pergunta com minhas palavras
+9 - Fontes e limitações
+0 - Sair
+Digite o número da opção: 8
+Escreva sua pergunta: meu cpf é 123.456.789-00
+
+Por segurança, não digite CPF, telefone, e-mail, endereço ou número da conta de luz. Eu não preciso desses dados e não guardo nada.
+Faça a pergunta de novo sem eles.
+
+===== Citizen Assist AI - Energia: banho quente e conta de luz =====
+1 - Quanto gasta o chuveiro elétrico?
+2 - Como economizar sem gastar nada?
+3 - Vale a pena aquecedor solar de água?
+4 - E a energia solar fotovoltaica (placas de luz)?
+5 - O que é a Tarifa Social e quem tem direito?
+6 - Quanto CO2 dá para evitar?
+7 - Calculadora: o meu caso
+8 - Fazer uma pergunta com minhas palavras
+9 - Fontes e limitações
+0 - Sair
+Digite o número da opção: 8
+Escreva sua pergunta: qual a previsão do tempo?
+
+Desculpe, não entendi ou esse assunto está fora do que eu sei.
+Eu falo sobre: gasto do chuveiro, como economizar, aquecedor solar, energia fotovoltaica, Tarifa Social e CO2.
+Digite 'ajuda' para ver exemplos.
+
+===== Citizen Assist AI - Energia: banho quente e conta de luz =====
+1 - Quanto gasta o chuveiro elétrico?
+2 - Como economizar sem gastar nada?
+3 - Vale a pena aquecedor solar de água?
+4 - E a energia solar fotovoltaica (placas de luz)?
+5 - O que é a Tarifa Social e quem tem direito?
+6 - Quanto CO2 dá para evitar?
+7 - Calculadora: o meu caso
+8 - Fazer uma pergunta com minhas palavras
+9 - Fontes e limitações
+0 - Sair
+Digite o número da opção: 8
+Escreva sua pergunta: vale a pena aquecedor solar?
+
+O aquecedor solar esquenta a água com o sol. O chuveiro fica de apoio nos dias sem sol.
+Aquecedor comercial (placa de 2,0 m² e caixa de 200 L):
+- custa cerca de R$ 3.359,57 instalado;
+- economiza cerca de R$ 60,78 por mês;
+- se paga em 55 meses (4,6 anos).
+Aquecedor de baixo custo (ASBC, montado com tubos de plástico):
+- custa cerca de R$ 1.500,00 em material;
+- economiza cerca de R$ 43,42 por mês;
+- se paga em 35 meses (2,9 anos).
+Vale a pena se você mora em casa própria, com telhado ou laje com sol e caixa d'água.
+Em casa alugada, converse antes com o dono do imóvel.
+No inverno o sol rende menos: o comercial cobre no máximo 83% do banho nessa época.
+Se o sistema render só o mínimo da Lei Solar de SP, o retorno passa para 97 meses (8,1 anos).
+Fonte: F7 (preço SINAPI), F8 (Lei Solar SP), F9 (estudo de desempenho), F10 (ASBC), F6 (irradiação em SP) (lista em dados/FONTES.md).
+Atenção: são estimativas. Elas dependem das premissas do projeto (dados/premissas.csv). Não há garantia de economia. Este assistente é um protótipo educacional. Não é canal oficial da Enel, da ANEEL ou do governo.
+
+===== Citizen Assist AI - Energia: banho quente e conta de luz =====
+1 - Quanto gasta o chuveiro elétrico?
+2 - Como economizar sem gastar nada?
+3 - Vale a pena aquecedor solar de água?
+4 - E a energia solar fotovoltaica (placas de luz)?
+5 - O que é a Tarifa Social e quem tem direito?
+6 - Quanto CO2 dá para evitar?
+7 - Calculadora: o meu caso
+8 - Fazer uma pergunta com minhas palavras
+9 - Fontes e limitações
+0 - Sair
+Digite o número da opção: 5
+
+A Tarifa Social dá desconto na conta de luz para famílias de baixa renda.
+Regra atual: os primeiros 80 kWh do mês são gratuitos. O que passar disso é pago.
+Quem tem direito à gratuidade:
+- família no CadÚnico com renda de até meio salário mínimo por pessoa;
+- idoso (65+) ou pessoa com deficiência que recebe o BPC;
+- famílias indígenas e quilombolas no CadÚnico.
+Renda entre meio e 1 salário mínimo por pessoa, com consumo até 120 kWh: desconto social menor (cerca de 11,8%).
+O desconto é automático se o CadÚnico estiver atualizado.
+A conta de luz precisa estar no nome de alguém da família, no endereço do cadastro.
+Procure o CRAS da sua região para se cadastrar ou atualizar.
+Atenção: o banho de 4 pessoas gasta 110,0 kWh por mês, mais do que os 80 kWh gratuitos.
+Com a Tarifa Social, o banho ainda pode custar cerca de R$ 67,31 por mês (excedente a 0,61191 R$/kWh sem impostos).
+Por isso economizar no banho continua valendo a pena.
+Fonte: F1 (ANEEL, REH 3.596/2026), F2 (governo federal), F14 (Lei 15.235/2025) (lista em dados/FONTES.md).
+Atenção: são estimativas. Elas dependem das premissas do projeto (dados/premissas.csv). Não há garantia de economia. Este assistente é um protótipo educacional. Não é canal oficial da Enel, da ANEEL ou do governo.
+
+===== Citizen Assist AI - Energia: banho quente e conta de luz =====
+1 - Quanto gasta o chuveiro elétrico?
+2 - Como economizar sem gastar nada?
+3 - Vale a pena aquecedor solar de água?
+4 - E a energia solar fotovoltaica (placas de luz)?
+5 - O que é a Tarifa Social e quem tem direito?
+6 - Quanto CO2 dá para evitar?
+7 - Calculadora: o meu caso
+8 - Fazer uma pergunta com minhas palavras
+9 - Fontes e limitações
+0 - Sair
+Digite o número da opção: 99
+Opção inválida. Digite um número de 0 a 9.
+
+===== Citizen Assist AI - Energia: banho quente e conta de luz =====
+1 - Quanto gasta o chuveiro elétrico?
+2 - Como economizar sem gastar nada?
+3 - Vale a pena aquecedor solar de água?
+4 - E a energia solar fotovoltaica (placas de luz)?
+5 - O que é a Tarifa Social e quem tem direito?
+6 - Quanto CO2 dá para evitar?
+7 - Calculadora: o meu caso
+8 - Fazer uma pergunta com minhas palavras
+9 - Fontes e limitações
+0 - Sair
+Digite o número da opção: 0
+Até logo! Lembre: um banho mais curto já ajuda.

@@ -1,0 +1,14 @@
+GLOBAL SOLUTION 2026.2 - CITIZEN ASSIST AI
+Disciplina: Soluções em Energias Renováveis e Sustentáveis
+Curso: Ciência da Computação - Turma 1CC - FIAP
+
+Integrante:
+Nome completo: Gustavo Zibini Belizario
+RM: 561376
+
+Link do repositório no GitHub:
+[COLE AQUI O LINK DO REPOSITÓRIO]
+(Parte de Energia na pasta: energia/)
+
+Link do vídeo no YouTube (não listado):
+[COLE AQUI O LINK DO VÍDEO]
