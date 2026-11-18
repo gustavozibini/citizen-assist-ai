@@ -1,0 +1,20 @@
+============================================================
+CITIZEN ASSIST AI - Posso ser atendido no balcão agora?
+Protótipo educacional: não é canal oficial e não confirma atendimento, serviços ou direitos. Fonte: ficha FC-07, versão de 01/10/2026 (material didático).
+Não informe dados pessoais: basta responder sim ou não.
+============================================================
+Hoje é dia útil (segunda a sexta, sem feriado)? [1 = sim / 0 = não / s = sair]: Agora está entre 8h e 17h? [1 = sim / 0 = não / s = sair]: O serviço é RG ou CNH (exige agendamento)? [1 = sim / 0 = não / s = sair]: Você tem agendamento marcado? [1 = sim / 0 = não / s = sair]: 
+Entradas: A=0 B=1 C=1 D=1  ->  S=0
+Não pode ser atendido agora. Não há atendimento aos sábados, domingos e feriados. Volte em um dia útil.
+------------------------------------------------------------
+Hoje é dia útil (segunda a sexta, sem feriado)? [1 = sim / 0 = não / s = sair]: Agora está entre 8h e 17h? [1 = sim / 0 = não / s = sair]:   Entrada inválida ('2'). Digite apenas 1 ou 0.
+Agora está entre 8h e 17h? [1 = sim / 0 = não / s = sair]: O serviço é RG ou CNH (exige agendamento)? [1 = sim / 0 = não / s = sair]: Você tem agendamento marcado? [1 = sim / 0 = não / s = sair]: 
+Entradas: A=1 B=1 C=1 D=0  ->  S=0
+Não pode ser atendido agora. RG e CNH exigem agendamento prévio pelo portal da Central do Cidadão.
+------------------------------------------------------------
+Hoje é dia útil (segunda a sexta, sem feriado)? [1 = sim / 0 = não / s = sair]: Agora está entre 8h e 17h? [1 = sim / 0 = não / s = sair]: O serviço é RG ou CNH (exige agendamento)? [1 = sim / 0 = não / s = sair]: Você tem agendamento marcado? [1 = sim / 0 = não / s = sair]: 
+Entradas: A=1 B=1 C=1 D=1  ->  S=1
+Pode ser atendido agora. Leve o documento original com foto e o comprovante do agendamento.
+------------------------------------------------------------
+Hoje é dia útil (segunda a sexta, sem feriado)? [1 = sim / 0 = não / s = sair]:   Entrada inválida ('xyz'). Digite apenas 1 ou 0.
+Hoje é dia útil (segunda a sexta, sem feriado)? [1 = sim / 0 = não / s = sair]: Agora está entre 8h e 17h? [1 = sim / 0 = não / s = sair]: Encerrado. Protótipo educacional: não é canal oficial e não confirma atendimento, serviços ou direitos. Fonte: ficha FC-07, versão de 01/10/2026 (material didático).

@@ -1,0 +1,29 @@
+TABELA-VERDADE EXECUTADA (16 combinações)
+ m | A B C D | Regra | Canônica | Simplificada | Igual | Orientação
+---+---------+-------+----------+--------------+-------+-----------
+ 0 | 0 0 0 0 |   0   |    0     |      0       |  OK   | Não pode ser atendido agora. Não há atendimento aos sábados,
+ 1 | 0 0 0 1 |   0   |    0     |      0       |  OK   | Não pode ser atendido agora. Não há atendimento aos sábados,
+ 2 | 0 0 1 0 |   0   |    0     |      0       |  OK   | Não pode ser atendido agora. Não há atendimento aos sábados,
+ 3 | 0 0 1 1 |   0   |    0     |      0       |  OK   | Não pode ser atendido agora. Não há atendimento aos sábados,
+ 4 | 0 1 0 0 |   0   |    0     |      0       |  OK   | Não pode ser atendido agora. Não há atendimento aos sábados,
+ 5 | 0 1 0 1 |   0   |    0     |      0       |  OK   | Não pode ser atendido agora. Não há atendimento aos sábados,
+ 6 | 0 1 1 0 |   0   |    0     |      0       |  OK   | Não pode ser atendido agora. Não há atendimento aos sábados,
+ 7 | 0 1 1 1 |   0   |    0     |      0       |  OK   | Não pode ser atendido agora. Não há atendimento aos sábados,
+ 8 | 1 0 0 0 |   0   |    0     |      0       |  OK   | Não pode ser atendido agora. O balcão funciona das 8h às 17h
+ 9 | 1 0 0 1 |   0   |    0     |      0       |  OK   | Não pode ser atendido agora. O balcão funciona das 8h às 17h
+10 | 1 0 1 0 |   0   |    0     |      0       |  OK   | Não pode ser atendido agora. O balcão funciona das 8h às 17h
+11 | 1 0 1 1 |   0   |    0     |      0       |  OK   | Não pode ser atendido agora. O balcão funciona das 8h às 17h
+12 | 1 1 0 0 |   1   |    1     |      1       |  OK   | Pode ser atendido agora. Leve o documento original com foto.
+13 | 1 1 0 1 |   1   |    1     |      1       |  OK   | Pode ser atendido agora. Leve o documento original com foto.
+14 | 1 1 1 0 |   0   |    0     |      0       |  OK   | Não pode ser atendido agora. RG e CNH exigem agendamento pré
+15 | 1 1 1 1 |   1   |    1     |      1       |  OK   | Pode ser atendido agora. Leve o documento original com foto 
+
+Mintermos com S = 1: [12, 13, 15]
+
+ENTRADAS INVÁLIDAS (função ler_bit)
+Entradas ['', '2', 'abc', '1']      | esperado 1    | obtido 1    | OK  (vazio, número fora de 0/1, texto, depois 1)
+Entradas ['-1', ' 0 ']              | esperado 0    | obtido 0    | OK  (negativo, depois 0 com espaços)
+Entradas ['sim', 'S']               | esperado None | obtido None | OK  (palavra, depois 'S' para sair)
+Fim de entrada (EOF)           | esperado None | obtido None | OK
+
+RESUMO: TODOS OS TESTES PASSARAM
