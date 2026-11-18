@@ -66,11 +66,6 @@ E += [Spacer(1, 4 * cm),
       Paragraph("<b>Gustavo Zibini Belizario — RM 561376</b>", C),
       Spacer(1, 0.5 * cm),
       Paragraph("São Paulo, novembro de 2026", C),
-      Spacer(1, 3 * cm),
-      Paragraph("<b>Declaração de uso de IA:</b> este trabalho usou inteligência artificial (Claude, da "
-                "Anthropic) como apoio na modelagem, nas etapas de simplificação, no programa e na redação "
-                "do relatório, com autorização do professor da disciplina, solicitada pelo aluno por ter "
-                "faltado à aula do conteúdo. Todo o conteúdo foi revisado pelo aluno.", PEQ),
       PageBreak()]
 
 # ---------------- 1. Problema ----------------
