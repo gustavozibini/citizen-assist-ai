@@ -57,13 +57,38 @@ def _criar_groq(modelo, max_tokens):
     )
 
 
+def _criar_ollama(modelo, max_tokens, saida_json=False):
+    """Modelo local pelo Ollama. Temperatura 0 = respostas estáveis."""
+    from langchain_ollama import ChatOllama
+
+    opcoes = dict(model=modelo, temperature=config.TEMPERATURA, num_predict=max_tokens,
+                  base_url=config.OLLAMA_URL)
+    if saida_json:
+        opcoes["format"] = "json"      # o juiz precisa devolver JSON válido
+    return ChatOllama(**opcoes)
+
+
+def nome_modelo_agente():
+    return config.MODELO_OLLAMA_AGENTE if config.PROVEDOR == "ollama" else config.MODELO_AGENTE
+
+
+def nome_modelo_juiz():
+    return config.MODELO_OLLAMA_JUIZ if config.PROVEDOR == "ollama" else config.MODELO_JUIZ
+
+
 def criar_llm_agente(modo_offline=False):
-    return LLMFalso() if modo_offline else _criar_groq(config.MODELO_AGENTE, config.MAX_TOKENS_AGENTE)
+    if modo_offline:
+        return LLMFalso()
+    if config.PROVEDOR == "ollama":
+        return _criar_ollama(config.MODELO_OLLAMA_AGENTE, config.MAX_TOKENS_AGENTE)
+    return _criar_groq(config.MODELO_AGENTE, config.MAX_TOKENS_AGENTE)
 
 
 def criar_llm_juiz(modo_offline=False):
     if modo_offline:
         return JuizFalso()
+    if config.PROVEDOR == "ollama":
+        return _criar_ollama(config.MODELO_OLLAMA_JUIZ, config.MAX_TOKENS_JUIZ, saida_json=True)
     return _criar_groq(config.MODELO_JUIZ, config.MAX_TOKENS_JUIZ)
 
 

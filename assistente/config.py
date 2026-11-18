@@ -4,6 +4,17 @@
 
 import os
 
+# ---------- Provedor do modelo ----------
+# "ollama" = modelo local no computador (sem conta, sem chave) -> usado na entrega
+# "groq"   = API do Groq (exige conta e chave) -> alternativa para o Colab
+PROVEDOR = os.environ.get("CITIZEN_PROVEDOR", "ollama")
+
+# ---------- Modelos (Ollama, local) ----------
+# Qwen 2.5 3B: ~1,9 GB, roda em notebook comum, bom em português e em JSON.
+MODELO_OLLAMA_AGENTE = os.environ.get("CITIZEN_MODELO_AGENTE", "qwen2.5:3b")
+MODELO_OLLAMA_JUIZ = os.environ.get("CITIZEN_MODELO_JUIZ", "qwen2.5:3b")
+OLLAMA_URL = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
+
 # ---------- Modelos (Groq, plano gratuito) ----------
 # Modelos de produção do Groq em nov/2026. Llama 3.1/3.3 foram desligados
 # no plano gratuito em 16/08/2026, por isso usamos a família gpt-oss.

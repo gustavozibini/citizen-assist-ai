@@ -10,6 +10,7 @@ import time
 import pandas as pd
 
 import config
+import modelos
 import juiz as modulo_juiz
 from agente import criar_agente, perguntar
 from fichas import carregar_fichas
@@ -83,8 +84,9 @@ def rodar_golden(llm_agente, llm_juiz, versao, modo, caminho_golden="golden_data
     tabela = pd.DataFrame(linhas)
     tabela["versao_recuperacao"] = versao
     tabela["modo"] = modo
-    tabela["modelo_agente"] = config.MODELO_AGENTE if modo == "groq" else "LLMFalso"
-    tabela["modelo_juiz"] = config.MODELO_JUIZ if modo == "groq" else "JuizFalso"
+    real = modo in ("groq", "ollama")
+    tabela["modelo_agente"] = modelos.nome_modelo_agente() if real else "LLMFalso"
+    tabela["modelo_juiz"] = modelos.nome_modelo_juiz() if real else "JuizFalso"
     return tabela
 
 
