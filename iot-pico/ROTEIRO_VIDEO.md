@@ -1,85 +1,73 @@
 # Roteiro do vídeo – Sentinela de Alagamento
 
-**Duração-alvo:** 2 a 3 minutos · **Aluno:** Gustavo Zibini Belizario – RM 561376
-**Publicar:** YouTube, como "Não listado". Colar o link no `ENTREGA.txt`.
+**Tempo:** 2 a 3 minutos · **YouTube:** "Não listado"
 
 ## Antes de gravar
 
-- Abra o projeto salvo no Wokwi e deixe a simulação **parada**.
-- Deixe visíveis ao mesmo tempo: o circuito, o display e o console serial (parte de baixo).
-- Ligue o som do computador e confira se a gravação capta o áudio do navegador (o buzzer precisa ser ouvido).
-- Faça um ensaio completo com os valores da tabela abaixo antes de gravar de verdade.
-- As falas são sugestões. Fale com as suas palavras; o que importa é passar pelos cinco trechos.
+- Abra o link do Wokwi. Não clique em Play ainda.
+- Som do Mac ligado, sem fone (o buzzer precisa aparecer no áudio).
 
-| Distância no controle do sensor | O que deve acontecer |
+| Distância | O que acontece |
 |---|---|
-| 180 cm | NORMAL, LED verde |
-| 110 cm | ATENÇÃO, LED amarelo |
-| 60 cm | ALERTA, LED vermelho e buzzer |
-| 400 cm | FALHA NO SENSOR, amarelo piscando |
+| 180 cm | NORMAL – LED verde |
+| 110 cm | ATENÇÃO – LED amarelo |
+| 60 cm | ALERTA – LED vermelho + buzzer |
+| 400 cm | FALHA NO SENSOR – amarelo piscando |
 
 ---
 
-## Trecho 1 – Problema e público (0:00 a 0:30)
+## 1. Apresentação (30 s)
 
-**Na tela:** você na câmera ou a primeira parte do README (seção 1).
+**Fale:**
+> Oi, eu sou o Gustavo Zibini Belizario, RM 561376. Este é o Sentinela de Alagamento, meu projeto de Computer Organization and Architecture.
+>
+> Todo verão São Paulo alaga. Numa só temporada de chuvas foram 771 ocorrências. E quase sempre a pessoa só percebe quando a água já está na porta.
 
-**Fala sugerida:**
-"Oi, eu sou o Gustavo Zibini Belizario, RM 561376, e este é o meu projeto da Global Solution de Computer Organization and Architecture: o Sentinela de Alagamento.
-Todo verão São Paulo alaga. Numa única temporada de chuvas, o centro de emergências da prefeitura registrou 771 ocorrências em seis meses. Quem mais sofre é quem mora em área baixa, o pedestre, o motorista e o pequeno comerciante. E quase sempre a pessoa só percebe que a água subiu quando ela já está na porta."
+## 2. Componentes (30 s)
 
-## Trecho 2 – Como funciona e componentes (0:30 a 1:05)
+**Faça:** passe o mouse em cada peça enquanto fala.
 
-**Na tela:** o circuito no Wokwi, simulação parada. Aponte com o mouse cada peça enquanto fala.
+**Fale:**
+> A ideia é avisar antes.
+>
+> Este sensor fica em cima do córrego e mede a distância até a água. Quanto mais a água sobe, menor a distância.
+>
+> A Raspberry Pi Pico calcula o nível. Os LEDs mostram verde, amarelo ou vermelho. O buzzer avisa, o display mostra o nível e o botão azul silencia o som.
 
-**Fala sugerida:**
-"A ideia é avisar antes. Este sensor ultrassônico fica preso acima do córrego ou da boca de lobo, apontando para a água, e mede a distância até a superfície. Quanto mais a água sobe, menor a distância.
-A Raspberry Pi Pico, programada em MicroPython, transforma essa distância em nível da água e em porcentagem do canal. Abaixo de 50% é normal, LED verde. A partir de 50% é atenção, LED amarelo. A partir de 75% é alerta: LED vermelho e buzzer. O display mostra o nível e o estado, e este botão silencia o som."
+## 3. Demonstração (50 s)
 
-**Opcional (5 segundos):** mostre o topo do `main.py` com as constantes dos limiares.
+**Faça:** clique em **Play**. Depois clique no sensor para abrir o controle de distância.
 
-## Trecho 3 – Demonstração dos três estados (1:05 a 1:55)
+**180 cm**
+> A água está longe. LED verde, o display mostra normal. Embaixo, no console, cada leitura fica registrada.
 
-**Na tela:** inicie a simulação. Clique no sensor HC-SR04 para abrir o controle de distância.
+**Mude para 110 cm**
+> A água subiu. LED amarelo: atenção. Como subiu rápido, ele avisa que está subindo.
 
-1. **Controle em 180 cm.**
-   "Comecei a simulação. A água está a 180 centímetros do sensor, nível baixo: LED verde, e o display mostra normal. Aqui embaixo, no console, cada leitura fica registrada, como se fosse enviada para uma central."
+**Mude para 60 cm**
+> Subiu mais. LED vermelho e buzzer tocando: alerta.
 
-2. **Mova para 110 cm.** Espere o display estabilizar em "ATENCAO".
-   "Agora a água subiu. O nível passou de 50% e o sistema foi para atenção, LED amarelo. Repara que, como o nível subiu de uma vez, ele mostrou 'subindo': o programa percebe subida rápida e já adianta o aviso."
+## 4. Botão e falha (35 s)
 
-3. **Mova para 60 cm.**
-   "Subiu mais, passou de 75%: alerta. LED vermelho aceso e o buzzer tocando para avisar quem está na rua."
+**Clique no botão azul**
+> Se alguém já está cuidando, o botão desliga o som. O LED vermelho continua aceso.
 
-## Trecho 4 – Botão e falha de sensor (1:55 a 2:30)
+**Mude para 400 cm**
+> Se o sensor quebrar, o sistema não mostra "normal" por engano. Ele mostra falha no sensor e pisca o amarelo.
 
-1. **Com o alerta tocando, clique no botão azul.**
-   "Se alguém já está cuidando da situação, aperta o botão: o som para, mas o LED vermelho continua e o display avisa que está sem som. Se a água baixar e subir de novo, o som volta sozinho."
+**Volte para 180 cm**
+> E volta ao normal.
 
-2. **Mova para 180 cm**, espere o verde, **e volte para 60 cm** (o buzzer volta a tocar). *Se o tempo estiver apertado, pule este passo.*
+## 5. Encerramento (15 s)
 
-3. **Mova para 400 cm.**
-   "E se o sensor quebrar ou for coberto? A leitura fica fora da faixa. Depois de três leituras ruins seguidas, em vez de travar ou mostrar 'normal' por engano, o sistema mostra falha no sensor e pisca o amarelo, pedindo manutenção."
-
-4. **Volte para 180 cm.** O sistema volta ao normal.
-
-## Trecho 5 – Benefício e encerramento (2:30 a 2:50)
-
-**Na tela:** o circuito funcionando, ou você na câmera.
-
-**Fala sugerida:**
-"Com poucos componentes baratos, dá para colocar um ponto desses em cada trecho crítico do bairro. O morador ganha minutos para tirar o carro, subir os móveis ou mudar o caminho, e a prefeitura ganha dados de quais pontos enchem primeiro. É um protótipo simulado: o próximo passo seria colocar comunicação por rede e calibrar em um local real. Esse é o Sentinela de Alagamento. Obrigado!"
+**Fale:**
+> Com peças baratas, dá para colocar um desses em cada ponto crítico do bairro. O morador ganha tempo para se proteger. Esse é o Sentinela de Alagamento. Obrigado!
 
 ---
 
-## Conferência final do vídeo
+## Conferir antes de publicar
 
-- [ ] Falei nome completo e RM.
-- [ ] Expliquei o problema e quem é afetado.
-- [ ] Mostrei os componentes e expliquei o funcionamento.
-- [ ] Mostrei a entrada mudando (controle de distância) e as saídas respondendo: verde, amarelo, vermelho com buzzer.
-- [ ] Mostrei o botão de silenciar e a falha de sensor.
-- [ ] Mostrei o display e o console serial.
-- [ ] Falei do benefício para a sociedade.
-- [ ] O buzzer aparece no áudio da gravação.
-- [ ] Vídeo entre 2 e 3 minutos, publicado como "Não listado", link colado no `ENTREGA.txt`.
+- [ ] Falei nome e RM
+- [ ] Mostrei verde, amarelo, vermelho, botão e falha
+- [ ] O buzzer aparece no áudio
+- [ ] Entre 2 e 3 minutos
