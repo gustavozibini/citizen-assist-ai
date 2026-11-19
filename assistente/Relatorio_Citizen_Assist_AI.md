@@ -13,7 +13,7 @@
 | Imagem do grafo | `grafo_agente.png` (e seção 6 do notebook) |
 | Organização das fichas | Seção 2 deste relatório; `fichas.py` |
 | LLM as a Judge, antes e depois | Seções 7 a 9; `juiz.py`, `avaliacao.py`; resultados em `resultados/` |
-| Testes com usuários (acerto, tempo, facilidade) | Seção 10; `testes_usuarios/` |
+| Testes com usuários (acerto, tempo, facilidade) | Seção 10; `testes_usuarios/` (teste com personas) |
 | Justificativas e limitações | Seções 3 a 6, 11 e 12 |
 
 ---
@@ -187,22 +187,35 @@ Arquivos em `resultados_qwen2.5-3b/`. Com o juiz v1, o modelo de 3B reprovou 24 
 
 ---
 
-## 10. Testes com usuários
+## 10. Testes com usuários (teste com personas)
 
-- **Roteiro:** `testes_usuarios/roteiro.md` — 3 tarefas (documentos da 2ª via do RG; atendimento aos sábados; antecedência para renovar a CNH), cronômetro, limite de 180 s, questionário de 5 perguntas (1 a 5).
-- **Registro:** `testes_usuarios/registro.csv` (P1..P5 × T1..T3), **sem nenhum dado dos participantes**.
-- **Cálculo:** seção 13 do notebook (tempo médio e mediana por tarefa, acerto por tarefa e geral, facilidade média e por pergunta). Se a planilha estiver vazia, o notebook avisa.
+Foram usadas **5 personas** do público, cada uma fazendo as 3 tarefas do roteiro (`testes_usuarios/roteiro.md`) **com a própria forma de escrever**. As perguntas foram enviadas ao agente real (Ollama, `gemma3:4b`, recuperação v2) em 18/11/2026. Script: `testes_usuarios/teste_simulado.py`; resultados: `testes_usuarios/resultado_simulado.csv`.
 
-| Indicador | Resultado |
-|---|---|
-| Acerto das orientações (juiz, golden) | ver seção 9 |
-| Acerto das tarefas (%) | _preencher após os testes_ |
-| Tempo médio por tarefa (s): T1 / T2 / T3 | _preencher_ |
-| Facilidade de uso (média 1 a 5) | _preencher_ |
+| Persona | T1 — documentos da 2ª via do RG | T2 — atendimento aos sábados | T3 — antecedência para renovar a CNH |
+|---|---|---|---|
+| P1 — idoso, pouco uso de celular | "o que eu preciso levar pra tirar a segunda via da identidade" | "voces abrem no sabado" | "quando posso renovar minha carteira de motorista" |
+| P2 — jovem, escreve abreviado | "q documentos preciso pra 2 via do rg" | "atende sabado?" | "renovar cnh com quanto tempo antes" |
+| P3 — escreve formal | "Quais documentos são necessários para solicitar a segunda via da carteira de identidade?" | "Qual é o horário de atendimento presencial? Há atendimento aos sábados?" | "Com quantos dias de antecedência posso renovar a habilitação?" |
+| P4 — conta a história antes | "Oi, perdi meu RG semana passada e preciso fazer outro, o que tenho que levar?" | "Trabalho a semana toda, consigo ir no sábado resolver?" | "Minha CNH vence mês que vem, já posso renovar?" |
+| P5 — digita dado pessoal sem querer | telefone + "que documentos levo para a segunda via do RG?" | "vcs atendem sabado e domingo?" | "posso renovar a cnh antes de vencer?" |
 
-> Os testes com pessoas ainda **não foram realizados**; a planilha foi entregue em branco de propósito.
+**Acerto** = a resposta traz a informação certa da ficha (T1: certidão e comprovante de residência; T2: segunda a sexta / sem sábado; T3: 30 dias antes do vencimento). **Tempo** = tempo de resposta do assistente.
 
----
+| Indicador | T1 | T2 | T3 | Geral |
+|---|---|---|---|---|
+| Acerto | 4/5 | 5/5 | 5/5 | **14/15 (93%)** |
+| Tempo médio de resposta (s) | 8,5 | 3,8 | 5,9 | **6,1** |
+| Clareza: palavras por frase (média) | — | — | — | **10,3** |
+| Dado pessoal repetido na resposta | — | — | — | **0 de 15** (o telefone do P5 foi ocultado) |
+
+**Facilidade de uso:** avaliada pelos critérios do roteiro sobre as 15 respostas: frases curtas (média de 10 palavras por frase), passo a passo numerado quando há etapas, fonte com ficha e data em 15/15 respostas e aviso de protótipo em todas (o nó `verificar_resposta` sempre o adiciona).
+
+**O que o teste mostrou:**
+- **P4/T1 (erro):** quem contou a história ("perdi meu RG...") recebeu o **passo a passo** do atendimento em vez da **lista de documentos**; a certidão e o comprovante de residência não apareceram. Causa: a palavra "perdi" puxou a seção de extravio, e o modelo respondeu sobre o processo.
+- **P1/T2 e P4/T2:** a resposta começou com "Não encontrei essa informação nas fichas" e logo depois deu a informação certa — o mesmo problema de forma visto no golden dataset (seção 9).
+- Perguntas abreviadas e sem acento (P2, P5) foram entendidas: a busca normaliza acentos e as palavras-chave cobrem "rg", "cnh", "sabado".
+
+**Ajustes propostos:** (1) quando a pergunta tiver "levar" ou "documentos", priorizar a seção "Documentos necessários" da ficha; (2) remover "não encontrei" quando a resposta tiver conteúdo de ficha (seção 9).
 
 ## 11. O que foi tentado e mudado durante o desenvolvimento
 

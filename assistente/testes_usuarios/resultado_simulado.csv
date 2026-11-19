@@ -1,0 +1,108 @@
+persona,tarefa,pergunta_mascarada,acertou,tempo_s,palavras_por_frase,repetiu_dado_pessoal,resposta
+"P1 - idoso, pouco uso de celular",T1,o que eu preciso levar pra tirar a segunda via da identidade,sim,13.8,10.1,nao,"Para tirar a segunda via da identidade, você precisa levar os seguintes documentos:
+
+1. Certidão de nascimento ou de casamento (original ou cópia autenticada). FC-01
+2. Comprovante de residência dos últimos 90 dias. FC-01
+3. Em caso de roubo ou furto: boletim de ocorrência. FC-01
+4. Em caso de perda: declaração de extravio, assinada no balcão. FC-01
+
+Primeiramente, agende o atendimento pelo portal da Central do Cidadão. FC-01
+Em seguida, gere e pague a guia de R$ 38,00. FC-01
+Compareça ao Posto de Identificação no dia agendado, com os documentos originais. FC-01
+
+Fonte: Central do Cidadão de Aurora, ficha FC-01 (verificada em 01/10/2026)."
+"P1 - idoso, pouco uso de celular",T2,voces abrem no sabado,sim,4.6,10.0,nao,"Não encontrei essa informação nas fichas. O atendimento presencial é de segunda a sexta, das 8h às 17h, conforme FC-07. Não há atendimento aos sábados, domingos e feriados. Para mais informações, consulte o portal da Central do Cidadão de Aurora.
+
+Fonte: Central do Cidadão de Aurora, ficha FC-07 (verificada em 01/10/2026)."
+"P1 - idoso, pouco uso de celular",T3,quando posso renovar minha carteira de motorista,sim,8.5,12.0,nao,"Você pode renovar sua CNH a partir de 30 dias antes do vencimento. [FC-06]
+
+1.  Faça o exame médico em uma clínica credenciada. [FC-06]
+2.  Agende o atendimento pelo portal da Central do Cidadão. [FC-06]
+3.  Pague a taxa de R$ 180,00. [FC-06]
+4.  Compareça com os documentos necessários. [FC-06]
+A nova CNH fica pronta em 7 dias úteis após a aprovação do exame médico. [FC-06] A validade da CNH renovada varia conforme a idade: até 49 anos: 10 anos; de 50 a 69 anos: 5 anos; 70 anos ou mais: 3 anos. [FC-06]
+
+Fonte: Central do Cidadão de Aurora, ficha FC-06 (verificada em 01/10/2026)."
+"P2 - jovem, escreve abreviado",T1,q documentos preciso pra 2 via do rg,sim,7.5,9.0,nao,"Para a segunda via do RG, você precisa dos seguintes documentos:
+
+1. Certidão de nascimento ou de casamento (original ou cópia autenticada). FC-01
+2. Comprovante de residência dos últimos 90 dias. FC-01
+3. Em caso de roubo ou furto: boletim de ocorrência. FC-01
+4. Em caso de perda: declaração de extravio, assinada no balcão. FC-01
+
+Agende o atendimento no portal da Central do Cidadão. FC-01
+Pague a guia de R$ 38,00 no portal. FC-01
+Compareça ao Posto de Identificação no dia agendado. FC-01
+
+Fonte: Central do Cidadão de Aurora, ficha FC-01 (verificada em 01/10/2026)."
+"P2 - jovem, escreve abreviado",T2,atende sabado?,sim,3.2,9.0,nao,"Não há atendimento aos sábados. [FC-07] O atendimento presencial ocorre de segunda a sexta, das 8h às 17h. [FC-07]
+
+Fonte: Central do Cidadão de Aurora, ficha FC-07 (verificada em 01/10/2026)."
+"P2 - jovem, escreve abreviado",T3,renovar cnh com quanto tempo antes,sim,5.7,14.2,nao,"Para renovar a CNH, você deve comparecer a partir de 30 dias antes do vencimento. [FC-06]
+A nova CNH fica pronta em 7 dias úteis após a aprovação no exame médico. [FC-06]
+Se a CNH estiver vencida há mais de 5 anos, é preciso refazer o curso e a prova. [FC-06]
+Para agendar, acesse o portal da Central do Cidadão. [FC-06]
+
+Fonte: Central do Cidadão de Aurora, ficha FC-06 (verificada em 01/10/2026)."
+P3 - escreve formal,T1,Quais documentos são necessários para solicitar a segunda via da carteira de identidade?,sim,7.9,9.9,nao,"Para solicitar a segunda via da carteira de identidade, você precisará dos seguintes documentos:
+
+1. Certidão de nascimento ou de casamento (original ou cópia autenticada). FC-01
+2. Comprovante de residência dos últimos 90 dias. FC-01
+3. Em caso de roubo ou furto: boletim de ocorrência. FC-01
+4. Em caso de perda: declaração de extravio, assinada no balcão. FC-01
+
+Agende o atendimento no portal da Central do Cidadão. FC-01
+Pague a guia de R$ 38,00 no portal. FC-01
+Compareça ao Posto de Identificação no dia agendado com os documentos originais. FC-01
+
+Fonte: Central do Cidadão de Aurora, ficha FC-01 (verificada em 01/10/2026)."
+P3 - escreve formal,T2,Qual é o horário de atendimento presencial? Há atendimento aos sábados?,sim,3.6,11.5,nao,"O horário de atendimento presencial é de segunda a sexta, das 8h às 17h. [FC-07] Não há atendimento aos sábados, domingos e feriados. [FC-07]
+
+Fonte: Central do Cidadão de Aurora, ficha FC-07 (verificada em 01/10/2026)."
+P3 - escreve formal,T3,Com quantos dias de antecedência posso renovar a habilitação?,sim,2.5,8.0,nao,"A partir de 30 dias antes do vencimento. [FC-06]
+
+Fonte: Central do Cidadão de Aurora, ficha FC-06 (verificada em 01/10/2026)."
+P4 - conta a história antes,T1,"Oi, perdi meu RG semana passada e preciso fazer outro, o que tenho que levar?",nao,6.9,9.7,nao,"1. Agende o atendimento no portal da Central do Cidadão [FC-01].
+2. Gere e pague a guia de R$ 38,00 [FC-01].
+3. Se o documento foi roubado ou furtado, registre um boletim de ocorrência [FC-07].
+4. Se o documento foi perdido, apresente a declaração de extravio no balcão [FC-01].
+5. Leve os documentos originais [FC-01].
+6. Compareça ao Posto de Identificação de Aurora [FC-01].
+
+Fonte: Central do Cidadão de Aurora, ficha FC-01 (verificada em 01/10/2026), FC-07 (verificada em 01/10/2026)."
+P4 - conta a história antes,T2,"Trabalho a semana toda, consigo ir no sábado resolver?",sim,3.9,10.2,nao,"Não encontrei essa informação nas fichas.
+
+O atendimento presencial ocorre de segunda a sexta, das 8h às 17h. [FC-07] Não há atendimento aos sábados, domingos e feriados. Para obter mais informações, acesse o portal ou o balcão da Central do Cidadão. [FC-04]
+
+Fonte: Central do Cidadão de Aurora, ficha FC-04 (verificada em 01/10/2026), FC-07 (verificada em 01/10/2026)."
+P4 - conta a história antes,T3,"Minha CNH vence mês que vem, já posso renovar?",sim,6.6,9.3,nao,"Sim, você pode renovar a CNH. [FC-06]
+Você deve iniciar o processo a partir de 30 dias antes do vencimento. [FC-06]
+1. Faça o exame médico em uma clínica credenciada. [FC-06]
+2. Agende o atendimento pelo portal da Central do Cidadão. [FC-06]
+3. Pague a taxa de R$ 180,00. [FC-06]
+A nova CNH ficará pronta em 7 dias úteis após a aprovação do exame. [FC-06]
+
+Fonte: Central do Cidadão de Aurora, ficha FC-06 (verificada em 01/10/2026)."
+P5 - digita dado pessoal sem querer,T1,"meu telefone é [TELEFONE REMOVIDO], que documentos levo para a segunda via do RG?",sim,6.4,9.4,nao,"Por segurança, ocultei o dado pessoal que você digitou (TELEFONE). Ele não foi guardado. Não informe dados pessoais no chat. A Central do Cidadão não pede esses dados por mensagem (FC-07). Este assistente não agenda e não consulta situação cadastral.
+
+Para a segunda via do RG, você precisará apresentar os seguintes documentos:
+
+1. Certidão de nascimento ou de casamento (original ou cópia autenticada).
+2. Comprovante de residência dos últimos 90 dias.
+3. Em caso de roubo ou furto, apresente o boletim de ocorrência.
+4. Em caso de perda, preencha a declaração de extravio no próprio balcão.
+
+Para agendar o atendimento, acesse o portal da Central do Cidadão. FC-01.
+
+Fonte: Central do Cidadão de Aurora, ficha FC-01 (verificada em 01/10/2026), FC-07 (verificada em 01/10/2026)."
+P5 - digita dado pessoal sem querer,T2,vcs atendem sabado e domingo?,sim,3.7,11.0,nao,"Não há atendimento aos sábados, domingos e feriados. [FC-07]
+Consulte o portal da Central do Cidadão de Aurora ou o balcão de atendimento. [FC-07]
+
+Fonte: Central do Cidadão de Aurora, ficha FC-07 (verificada em 01/10/2026)."
+P5 - digita dado pessoal sem querer,T3,posso renovar a cnh antes de vencer?,sim,6.1,11.0,nao,"Sim, pode renovar a CNH antes do vencimento. [FC-06]
+Você deve renovar a partir de 30 dias antes do vencimento. [FC-06]
+Para renovar, agende o atendimento pelo portal da Central do Cidadão. [FC-06]
+Após o exame médico em clínica credenciada, pague a taxa de R$ 180,00. [FC-06]
+A nova CNH fica pronta em 7 dias úteis após a aprovação. [FC-06]
+
+Fonte: Central do Cidadão de Aurora, ficha FC-06 (verificada em 01/10/2026)."
