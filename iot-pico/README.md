@@ -144,9 +144,11 @@ Exemplo do console:
    | 60 cm | 140 cm (93%) | ALERTA – LED vermelho + buzzer |
    | 400 cm | fora da faixa | FALHA NO SENSOR – amarelo piscando |
 
+   Os valores são os teóricos. O sensor do Wokwi costuma ler cerca de 2 cm a mais (por exemplo, 182,6 cm em vez de 180 cm), então o display pode mostrar 17 cm (12%), 88 cm (59%) e 139 cm (93%). Os estados são os mesmos.
+
    Ao mover o controle de uma vez, o display pode mostrar "ATENCAO: SUBINDO" por alguns segundos: é a detecção de subida rápida.
 8. Com o alerta tocando, clique no **botão azul** (ou aperte a tecla **S** com o desenho em foco) para silenciar.
-9. Clique em **Save** e copie o endereço da página (`https://wokwi.com/projects/…`). Esse é o link da entrega. Cole no `ENTREGA.txt`.
+9. Tire as prints de cada estado (NORMAL, ATENÇÃO, ALERTA, ALERTA silenciado e FALHA). As prints entregues estão na pasta `prints/`.
 
 Os arquivos `teste_logica.py`, `validar_diagrama.py`, `README.md`, `ROTEIRO_VIDEO.md`, `ENTREGA.txt`, `LICENCA_LCD.txt` e a pasta `evidencias/` **não** vão para o Wokwi.
 
@@ -201,7 +203,8 @@ Esses testes verificam a lógica e a consistência dos arquivos. Eles não subst
 | `validar_diagrama.py` | validação do `diagram.json` | não |
 | `evidencias/` | saídas dos dois testes | não |
 | `ROTEIRO_VIDEO.md` | roteiro do vídeo | não |
-| `ENTREGA.txt` | modelo da entrega com os links | não |
+| `prints/` | prints da simulação nos 5 estados | não |
+| `ENTREGA.txt` | arquivo de entrega (prints e link do vídeo) | não |
 
 ## 13. Fontes
 
