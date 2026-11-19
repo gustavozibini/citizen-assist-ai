@@ -13,14 +13,17 @@ RM: 561376
 Curso: Ciencia da Computacao - 1o ano
 
 LINKS
-1) Projeto no Wokwi (circuito + codigo MicroPython):
-   [COLAR AQUI O LINK DO WOKWI]
+1) Prints da simulacao no Wokwi (pasta prints/):
+   Print_1 - NORMAL (180 cm)
+   Print_2 - ATENCAO (110 cm)
+   Print_3 - ALERTA (60 cm)
+   Print_4 - ALERTA silenciado (botao)
+   Print_5 - FALHA no sensor (400 cm)
 
 2) Video demonstrativo no YouTube:
    [COLAR AQUI O LINK DO YOUTUBE]
 
 ANTES DE ENVIAR
-[ ] O link do Wokwi abre em uma janela anonima do navegador
-[ ] A simulacao inicia e responde ao controle de distancia do sensor
+[x] Prints dos 5 estados anexadas
 [ ] O link do YouTube abre em uma janela anonima (video "Nao listado")
-[ ] Os dois campos acima estao preenchidos
+[ ] O link do YouTube esta preenchido

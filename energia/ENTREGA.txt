@@ -7,7 +7,7 @@ Nome completo: Gustavo Zibini Belizario
 RM: 561376
 
 Link do repositório no GitHub:
-[COLE AQUI O LINK DO REPOSITÓRIO]
+https://github.com/gustavozibini/citizen-assist-ai
 (Parte de Energia na pasta: energia/)
 
 Link do vídeo no YouTube (não listado):
