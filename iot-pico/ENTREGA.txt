@@ -21,9 +21,9 @@ LINKS
    Print_5 - FALHA no sensor (400 cm)
 
 2) Video demonstrativo no YouTube:
-   [COLAR AQUI O LINK DO YOUTUBE]
+   https://youtu.be/U3GGRcFgSjk
 
 ANTES DE ENVIAR
 [x] Prints dos 5 estados anexadas
 [ ] O link do YouTube abre em uma janela anonima (video "Nao listado")
-[ ] O link do YouTube esta preenchido
+[x] O link do YouTube esta preenchido
