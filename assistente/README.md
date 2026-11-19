@@ -26,7 +26,7 @@ Resultados em `resultados/` (a primeira tentativa com `qwen2.5:3b` está em `res
 |---|---|
 | `rodar_mac.sh`, `rodar_local.py` | **Execução principal** com Ollama: avaliação antes/depois e menu de conversa. |
 | `rejulgar.py` | Reavalia respostas salvas com o juiz atual, sem chamar o agente. |
-| `resultados/` | Resultados reais (gemma3:4b): `antes.csv`, `depois.csv`, `resumo_comparativo.md`, `conferencia_manual.csv`. |
+| `resultados/` | Resultados reais (gemma3:4b): `antes.csv`, `depois.csv`, `resumo_comparativo.md`, `conferencia_manual.csv` (amostra de 6) e `conferencia_manual_completa.csv` (as 26). |
 | `Citizen_Assist_AI.ipynb` | Alternativa no Colab com Groq (exige conta e chave). |
 | `Relatorio_Citizen_Assist_AI.md` | Relatório: justificativas, régua do juiz, resultados, limitações. |
 | `config.py` | Modelos, versão da recuperação, limites e aviso. |

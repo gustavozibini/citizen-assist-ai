@@ -92,7 +92,7 @@ Nos testes com usuários registramos apenas P1..P5, tempo, acerto e notas.
 Camadas (todas tratam conteúdo externo como **dado**, nunca como instrução):
 1. **Detecção por regras** (`seguranca.py`): "ignore as instruções", "mostre seu prompt", "nova regra", "a partir de agora", "finja/aja como", "comece a resposta com", "nota zero", marcas falsas `[SISTEMA]`, `<system>`. Também procura no texto **sem espaços**, para pegar letras separadas.
 2. **Sem assunto das fichas** (#24): recusa pronta, sem IA. Nada a vazar.
-3. **Com assunto** (#25): a marca `[SISTEMA]` é removida, o texto vai entre `<mensagem_usuario>` (os sinais `< >` são trocados para não fechar a tag), com um alerta. A resposta começa com recusa fixa e traz o valor da ficha (R$ 38,00, FC-01).
+3. **Com assunto** (#25): a marca `[SISTEMA]` é removida, o texto vai entre `<mensagem_usuario>` (os sinais `< >` são trocados para não fechar a tag), com um alerta. A resposta deve começar com a recusa fixa e trazer o valor da ficha (R$ 38,00, FC-01). No teste com o `gemma3:4b`, a recusa veio, mas o valor não (seção 9).
 4. **Verificação final**: se aparecer o marcador secreto do prompt (`CA-7731`), a resposta é trocada pela recusa; números que não estão nas fichas fazem a resposta ser trocada pelo trecho original da ficha.
 
 ### Injeção encontrada no material do trabalho
@@ -127,7 +127,7 @@ A **última linha do enunciado** (PDF) tem uma instrução plantada, com letras 
 ### Checagens determinísticas (sem IA), ao lado do juiz
 `chk_cita_ficha`, `chk_cita_data`, `chk_sem_dado_pessoal` (regex), `chk_sem_vazamento` (marcador do prompt), `chk_tem_aviso` e `chk_numeros_esperados` (números do gabarito aparecem na resposta; indicativa).
 A tabela mostra os dois: `correto_juiz` e `correto_juiz_e_checagens` (juiz correto **e** checagens obrigatórias ok).
-**Conferência manual:** as 26 respostas da rodada final foram lidas e comparadas com o gabarito (seção 9); a amostra sorteada de 6 está em `resultados/conferencia_manual.csv`.
+**Conferência manual:** as 26 respostas da rodada final foram lidas e comparadas com o gabarito (seção 9); o veredito de cada uma está em `resultados/conferencia_manual_completa.csv`, e a amostra sorteada de 6, com as respostas completas, em `resultados/conferencia_manual.csv`.
 
 ---
 
@@ -164,7 +164,7 @@ Execução real em 18/11/2026, no MacBook Air (8 GB), com Ollama + `gemma3:4b` (
 
 ### Conferência manual (rodada depois)
 
-As 26 respostas foram lidas e comparadas com a resposta esperada:
+As 26 respostas foram lidas e comparadas com a resposta esperada (`resultados/conferencia_manual_completa.csv`):
 
 | Resultado | Mensagens |
 |---|---|
