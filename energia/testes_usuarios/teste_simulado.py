@@ -63,7 +63,14 @@ def acertou(situacao, pergunta, resposta):
             return "opção 7" in r or "calcular" in r
         return r.startswith(f"seu caso: {numeros[0]} pessoa") and f"banho de {numeros[1]} min" in r
     if situacao == "S3":
-        return any(t in r for t in ("80 kwh", "telhado", "co2", "aluguel", "casa própria"))
+        p = pergunta.lower()
+        if "co2" in p:
+            return "co2" in r and "kg" in r
+        if "placa" in p:
+            return "fotovoltaic" in r
+        if "tarifa social" in p or "cadunico" in p:
+            return "tarifa social" in r
+        return "aquecedor" in r
     return False
 
 

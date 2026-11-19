@@ -242,7 +242,7 @@ AVISO_DADOS_PESSOAIS = ("Por segurança, não digite CPF, telefone, e-mail, ende
 ASSUNTOS = [
     ("tarifa_social", ["tarifa social", "cadunico", "cad unico", "baixa renda", "luz do povo",
                        "gratuidade", "gratis", "desconto", "bpc", "direito"], resposta_tarifa_social),
-    ("fotovoltaica", ["fotovoltaic", "painel solar", "paineis", "placa solar de luz",
+    ("fotovoltaica", ["fotovoltaic", "painel solar", "paineis", "placa solar", "placas",
                       "gerar energia", "energia solar", "compensacao"], resposta_fotovoltaica),
     ("solar", ["aquecedor", "aquecimento solar", "solar", "asbc", "boiler", "baixo custo"],
      resposta_solar),
@@ -373,6 +373,10 @@ def responder(pergunta):
             return resultado
         return ("Para calcular, use a opção 7 do menu ou escreva assim: "
                 "calcular 4 pessoas 8 minutos 5500 W.")
+    # Pergunta sobre CO2 vai para CO2 mesmo citando o aquecedor solar
+    # (ajuste após o teste simulado com personas).
+    if re.search(r"co2|carbono|emiss", normalizar(pergunta)):
+        return resposta_co2()
     assunto = identificar_assunto(pergunta)
     for nome, _, funcao in ASSUNTOS:
         if nome == assunto:

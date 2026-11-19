@@ -87,7 +87,10 @@ energia/
 │   └── sessao_assistente.txt  sessão real do menu
 ├── testes_usuarios/
 │   ├── roteiro.md             roteiro para testar com pessoas
-│   └── registro.md            formulário em branco para anotar os testes
+│   ├── registro.md            formulário para anotar testes com pessoas
+│   ├── teste_simulado.py      teste simulado com 5 personas
+│   ├── resultado_simulado_antes_ajuste.csv
+│   └── resultado_simulado.csv
 ├── ROTEIRO_VIDEO.md           roteiro do vídeo de até 3 minutos
 └── ENTREGA.txt                modelo do arquivo .txt de entrega
 ```
@@ -265,14 +268,16 @@ Resultado: 29 testes, todos passaram. Saída real em `evidencias/saida_testes.tx
 
 | Indicador | Antes do ajuste | Depois do ajuste |
 |---|---|---|
-| Acerto geral | 12/15 (80%) | **15/15 (100%)** |
+| Acerto geral | 10/15 (67%) | **15/15 (100%)** |
 | S2 - calculadora por texto livre | 2/5 | **5/5** |
+| S3 - Tarifa Social / solar / CO2 | 3/5 | **5/5** |
 | Tempo médio de resposta do sistema | < 1 ms | < 1 ms |
-| Palavras por frase (média) | 9,8 | 9,8 |
+| Palavras por frase (média) | cerca de 10 | cerca de 10 |
 
 | Situação testada | Problema encontrado | Ajuste realizado |
 |---|---|---|
 | S2 (P1, P3, P4) | Quem escrevia "somos 3... 12 minutos" ou "2 pessoas, banho de 20 minutos" recebia o exemplo genérico de 4 pessoas, porque a calculadora só era acionada com a palavra "calcular". | `responder()` passa a tentar a calculadora sempre que a pergunta tem números, e `calcular_do_texto()` entende "somos N" e "N em casa". Os 29 testes automáticos continuam passando. |
+| S3 (P4, P5) | "compensa colocar placa solar?" recebia a resposta do aquecedor solar de água, e "quanto co2 eu evito com aquecedor solar" também, sem falar de CO2. | "placa solar" passa a levar à resposta de energia fotovoltaica, e perguntas com "CO2", "carbono" ou "emissão" vão para a resposta de CO2. |
 | S1 (P5) | Nenhum: o CPF foi recusado e não foi usado na resposta. | — |
 
 Resultados: `testes_usuarios/resultado_simulado_antes_ajuste.csv` e `testes_usuarios/resultado_simulado.csv`. O roteiro para pessoas reais continua pronto em `testes_usuarios/roteiro.md`.

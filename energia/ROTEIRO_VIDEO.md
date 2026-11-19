@@ -20,4 +20,4 @@ Os números das falas são os da tabela gerada por `calculos_energia.py` (seçã
 - Na demonstração, digitar devagar; se o tempo apertar, mostrar só as opções 1 e 7.
 - Não mostrar e-mail, área de trabalho pessoal ou outras abas do navegador.
 - Conferir no final: duração de até 3:00 e vídeo como **não listado**.
-- Se os testes com usuários já tiverem sido feitos até a gravação, citar em uma frase um ajuste feito a partir deles. Se não, não mencionar resultados.
+- Se quiser, citar em uma frase um ajuste feito a partir do teste com personas (README, seção 9.2): por exemplo, a calculadora passou a entender "somos 3 e o banho dura 12 minutos".

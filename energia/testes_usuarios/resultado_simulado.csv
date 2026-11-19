@@ -1,16 +1,16 @@
 persona,situacao,pergunta,acertou,tempo_ms,palavras_por_frase,inicio_resposta
-"P1 - idosa, pouco uso de celular",S1,quanto o chuveiro gasta por mes,sim,0.4,7.9,Um chuveiro elétrico de 5.500 W é um dos aparelhos que mais gastam.
+"P1 - idosa, pouco uso de celular",S1,quanto o chuveiro gasta por mes,sim,0.5,7.9,Um chuveiro elétrico de 5.500 W é um dos aparelhos que mais gastam.
 "P1 - idosa, pouco uso de celular",S2,"aqui em casa somos 3 e cada um demora uns 12 minutos no banho, quanto da?",sim,0.5,10.1,"Seu caso: 3 pessoa(s), banho de 12 min, chuveiro de 5.500 W, tarifa residencial comum."
 "P1 - idosa, pouco uso de celular",S3,"tenho cadunico, tenho desconto na luz?",sim,0.1,9.9,A Tarifa Social dá desconto na conta de luz para famílias de baixa renda.
 "P2 - jovem, escreve abreviado",S1,qnto custa o banho,sim,0.0,7.9,Um chuveiro elétrico de 5.500 W é um dos aparelhos que mais gastam.
 "P2 - jovem, escreve abreviado",S2,calcular 4 pessoas 8 minutos,sim,0.1,10.1,"Seu caso: 4 pessoa(s), banho de 8 min, chuveiro de 5.500 W, tarifa residencial comum."
 "P2 - jovem, escreve abreviado",S3,vale a pena aquecedor solar?,sim,0.1,9.7,O aquecedor solar esquenta a água com o sol. O chuveiro fica de apoio nos dias sem sol.
-"P3 - mãe, quer economizar",S1,como gastar menos com banho sem comprar nada,sim,0.0,9.3,Dá para economizar sem gastar nada:
+"P3 - mãe, quer economizar",S1,como gastar menos com banho sem comprar nada,sim,0.1,9.3,Dá para economizar sem gastar nada:
 "P3 - mãe, quer economizar",S2,"somos 5 e o banho dura 15 minutos, quanto gasto?",sim,0.1,9.8,"Seu caso: 5 pessoa(s), banho de 15 min, chuveiro de 5.500 W, tarifa residencial comum."
 "P3 - mãe, quer economizar",S3,o que é tarifa social e quem tem direito,sim,0.1,9.9,A Tarifa Social dá desconto na conta de luz para famílias de baixa renda.
 P4 - mora de aluguel,S1,o chuveiro pesa muito na conta?,sim,0.0,7.9,Um chuveiro elétrico de 5.500 W é um dos aparelhos que mais gastam.
 P4 - mora de aluguel,S2,"2 pessoas, banho de 20 minutos, chuveiro 7500 W",sim,0.1,9.8,"Seu caso: 2 pessoa(s), banho de 20 min, chuveiro de 7.500 W, tarifa residencial comum."
-P4 - mora de aluguel,S3,"moro de aluguel, compensa colocar placa solar?",sim,0.1,9.7,O aquecedor solar esquenta a água com o sol. O chuveiro fica de apoio nos dias sem sol.
+P4 - mora de aluguel,S3,"moro de aluguel, compensa colocar placa solar?",sim,0.1,9.8,Placa fotovoltaica gera eletricidade. A energia que sobra vira crédito na conta (compensaç
 P5 - digita dado pessoal sem querer,S1,"meu cpf é 123.456.789-00, quanto gasto de banho?",sim,0.0,10.0,"Por segurança, não digite CPF, telefone, e-mail, endereço ou número da conta de luz. Eu nã"
 P5 - digita dado pessoal sem querer,S2,calcular meu caso,sim,0.1,18.0,"Para calcular, use a opção 7 do menu ou escreva assim: calcular 4 pessoas 8 minutos 5500 W"
-P5 - digita dado pessoal sem querer,S3,quanto co2 eu evito com aquecedor solar,sim,0.1,9.7,O aquecedor solar esquenta a água com o sol. O chuveiro fica de apoio nos dias sem sol.
+P5 - digita dado pessoal sem querer,S3,quanto co2 eu evito com aquecedor solar,sim,0.0,8.3,"A energia do Brasil é quase toda renovável, então o banho emite pouco CO2."
