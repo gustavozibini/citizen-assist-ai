@@ -25,5 +25,5 @@ LINKS
 
 ANTES DE ENVIAR
 [x] Prints dos 5 estados anexadas
-[ ] O link do YouTube abre em uma janela anonima (video "Nao listado")
+[x] O link do YouTube abre em uma janela anonima (video "Nao listado")
 [x] O link do YouTube esta preenchido
