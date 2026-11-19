@@ -284,7 +284,7 @@ E += [P("3. Questão 02 - Probabilidade com a distribuição normal", h1),
 a, b = q3["a"], q3["b"]
 E += [P("4. Questão 03 - Teste de hipótese para a média", h1),
       P("<b>Variável escolhida:</b> expectativa de anos de estudo (e_anosestudo). <b>Justificativa:</b> mede a "
-        "escolaridade esperada e é a variável mais simétrica da base (assimetria de %s), o que torna a "
+        "escolaridade esperada e é uma das variáveis mais simétricas da base (assimetria de %s), o que torna a "
         "suposição de normalidade mais razoável para amostras pequenas." % n(q3["assimetria"])),
       P("<b>Método:</b> teste z para a média, pois o desvio padrão populacional é conhecido (calculado sobre "
         "todos os municípios). Média populacional de referência μ₀ = <b>%s anos</b>; desvio padrão "
