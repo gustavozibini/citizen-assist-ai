@@ -4,7 +4,7 @@ VALIDACAO DO diagram.json - Sentinela de Alagamento
 [OK  ] cabecalho: "version": 1 e "editor": "wokwi"
 [OK  ] id unico: pico
 [OK  ] tipo documentado: wokwi-pi-pico (pico)
-[OK  ] atributo documentado: pico.env = 'micropython-20231227-v1.22.0'
+[OK  ] atributo documentado: pico.env = 'micropython-20260406-v1.28.0'
 [OK  ] id unico: ultra1
 [OK  ] tipo documentado: wokwi-hc-sr04 (ultra1)
 [OK  ] atributo documentado: ultra1.distance = '180'
@@ -41,7 +41,7 @@ VALIDACAO DO diagram.json - Sentinela de Alagamento
 [OK  ] atributo documentado: btn1.color = 'blue'
 [OK  ] atributo documentado: btn1.label = 'SILENCIAR'
 [OK  ] atributo documentado: btn1.key = 's'
-[OK  ] placa Raspberry Pi Pico configurada para MicroPython (env=micropython-20231227-v1.22.0)
+[OK  ] placa Raspberry Pi Pico configurada para MicroPython (env=micropython-20260406-v1.28.0)
 [OK  ] LCD em modo I2C ("pins": "i2c")
 
 [OK  ] ligacao aponta para peca e pino existentes: ultra1:VCC
