@@ -29,6 +29,11 @@ MAX_TOKENS_JUIZ = 1200
 # tokens por minuto; com 15 s ficamos abaixo do limite com folga.
 SEGUNDOS_ENTRE_CHAMADAS = 15
 
+# ---------- Juiz ----------
+# "v1"     = notas 0/1/2 dadas pelo LLM (bom em modelos grandes, como no Groq)
+# "simnao" = 3 perguntas sim/não + citação por regra fixa (melhor para modelo local pequeno)
+VERSAO_JUIZ = os.environ.get("CITIZEN_JUIZ", "simnao" if PROVEDOR == "ollama" else "v1")
+
 # ---------- Recuperação nas fichas ----------
 # "v1" = só as palavras-chave do cabeçalho de cada ficha (versão "antes").
 # "v2" = v1 + termos por seção da FC-07 + seções complementares (versão "depois").
