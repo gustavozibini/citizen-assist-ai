@@ -1,3 +1,5 @@
+> **Testes com pessoas reais não realizados.** Foi feito um teste simulado com personas: ver `teste_simulado.py`, `resultado_simulado.csv` e a seção 9.2 do README.
+
 # Registro dos testes com usuários - módulo de Energia
 
 Citizen Assist AI - Soluções em Energias Renováveis e Sustentáveis

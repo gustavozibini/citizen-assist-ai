@@ -327,7 +327,10 @@ def calcular_do_texto(pergunta):
     """Tenta achar moradores, minutos e watts no texto livre.
     Ex.: 'calcular 4 pessoas 8 minutos 5500 W'. Devolve None se faltar algo."""
     texto = normalizar(pergunta)
-    achou_pessoas = re.search(r"(-?\d+)\s*(pessoas?|moradores?)", texto)
+    # "4 pessoas", "4 moradores", "somos 4", "4 em casa" (ajuste após o teste simulado)
+    achou_pessoas = (re.search(r"(-?\d+)\s*(pessoas?|moradores?)", texto)
+                     or re.search(r"somos\s*(-?\d+)", texto)
+                     or re.search(r"(-?\d+)\s*em casa", texto))
     achou_minutos = re.search(r"(-?\d+)\s*(min|minutos?)\b", texto)
     achou_watts = re.search(r"(-?\d[\d.]*)\s*(w|watts?)\b", texto)
     if not (achou_pessoas and achou_minutos):
@@ -358,6 +361,12 @@ def responder(pergunta):
                 "com uma pergunta por vez.")
     if parece_dado_pessoal(pergunta):
         return AVISO_DADOS_PESSOAIS
+    # Pergunta com número de pessoas e minutos vai direto para a calculadora,
+    # mesmo sem a palavra "calcular" (ajuste após o teste simulado com personas).
+    if re.search(r"\d", pergunta):
+        resultado = calcular_do_texto(pergunta)
+        if resultado:
+            return resultado
     if re.search(r"calcul|simul|meu caso", normalizar(pergunta)):
         resultado = calcular_do_texto(pergunta)
         if resultado:

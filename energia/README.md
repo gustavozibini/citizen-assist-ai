@@ -251,15 +251,31 @@ Por que a fotovoltaica é menos viável aqui: investimento inicial alto, quase n
 
 Resultado: 29 testes, todos passaram. Saída real em `evidencias/saida_testes.txt`. Uma sessão real do menu está em `evidencias/sessao_assistente.txt` (sessão de teste do desenvolvedor, não é teste com usuário).
 
-### 9.2 Testes com usuários (ainda não realizados)
+### 9.2 Testes com usuários: teste simulado com personas
 
-**Os testes com usuários ainda não foram realizados.** O roteiro está pronto em `testes_usuarios/roteiro.md` e o formulário em branco em `testes_usuarios/registro.md`. Os testes não coletam nome, idade, endereço, telefone, CPF nem número da conta de luz.
+**Testes com pessoas reais não foram realizados** por falta de tempo. No lugar, foi feito um **teste simulado com 5 personas** do público (`testes_usuarios/teste_simulado.py`): cada persona faz as 3 situações do roteiro escrevendo do seu jeito (informal, abreviado, sem acento, com dado pessoal por engano). O assistente real responde e uma regra fixa confere se a resposta tem a informação esperada. O teste mede acerto, tempo de resposta e clareza (palavras por frase); **não mede satisfação nem compreensão**, que só pessoas reais podem informar.
 
-Depois de aplicar, registrar aqui: situações testadas, comentários recebidos e ajustes feitos no assistente.
+| Persona | S1 - quanto gasta / economizar | S2 - calculadora com o próprio caso | S3 - Tarifa Social / solar |
+|---|---|---|---|
+| P1 - idosa, pouco uso de celular | "quanto o chuveiro gasta por mes" | "aqui em casa somos 3 e cada um demora uns 12 minutos no banho, quanto da?" | "tenho cadunico, tenho desconto na luz?" |
+| P2 - jovem, escreve abreviado | "qnto custa o banho" | "calcular 4 pessoas 8 minutos" | "vale a pena aquecedor solar?" |
+| P3 - mãe, quer economizar | "como gastar menos com banho sem comprar nada" | "somos 5 e o banho dura 15 minutos, quanto gasto?" | "o que é tarifa social e quem tem direito" |
+| P4 - mora de aluguel | "o chuveiro pesa muito na conta?" | "2 pessoas, banho de 20 minutos, chuveiro 7500 W" | "moro de aluguel, compensa colocar placa solar?" |
+| P5 - digita dado pessoal | pergunta com CPF fictício | "calcular meu caso" | "quanto co2 eu evito com aquecedor solar" |
 
-| Situação testada | Comentários recebidos | Ajuste realizado |
+| Indicador | Antes do ajuste | Depois do ajuste |
 |---|---|---|
-| (a preencher após os testes) | | |
+| Acerto geral | 12/15 (80%) | **15/15 (100%)** |
+| S2 - calculadora por texto livre | 2/5 | **5/5** |
+| Tempo médio de resposta do sistema | < 1 ms | < 1 ms |
+| Palavras por frase (média) | 9,8 | 9,8 |
+
+| Situação testada | Problema encontrado | Ajuste realizado |
+|---|---|---|
+| S2 (P1, P3, P4) | Quem escrevia "somos 3... 12 minutos" ou "2 pessoas, banho de 20 minutos" recebia o exemplo genérico de 4 pessoas, porque a calculadora só era acionada com a palavra "calcular". | `responder()` passa a tentar a calculadora sempre que a pergunta tem números, e `calcular_do_texto()` entende "somos N" e "N em casa". Os 29 testes automáticos continuam passando. |
+| S1 (P5) | Nenhum: o CPF foi recusado e não foi usado na resposta. | — |
+
+Resultados: `testes_usuarios/resultado_simulado_antes_ajuste.csv` e `testes_usuarios/resultado_simulado.csv`. O roteiro para pessoas reais continua pronto em `testes_usuarios/roteiro.md`.
 
 ## 10. Limitações
 

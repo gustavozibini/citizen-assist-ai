@@ -3,7 +3,7 @@
 Citizen Assist AI - Soluções em Energias Renováveis e Sustentáveis
 Aluno: Gustavo Zibini Belizario - RM 561376
 
-> **Situação: os testes com usuários ainda não foram realizados.**
+> **Situação: testes com pessoas reais não realizados; foi feito o teste simulado com personas (`teste_simulado.py`, README seção 9.2).**
 > Este roteiro está pronto para ser aplicado. Os resultados vão em `registro.md`.
 
 ## Objetivo
