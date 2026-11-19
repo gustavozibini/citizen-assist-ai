@@ -14,7 +14,7 @@ NOS = [
     ("proteger_dados", 5, 10.0, "oculta CPF, RG, telefone, e-mail, CEP, endereço", False),
     ("detectar_injecao", 5, 8.4, "regras e padrões de injeção", False),
     ("classificar_e_recuperar", 5, 6.8, "busca nas fichas + tipo da mensagem", False),
-    ("gerar_resposta", 2.4, 4.9, "LLM Groq, temperatura 0", True),
+    ("gerar_resposta", 2.4, 4.9, "LLM local (Ollama gemma3:4b), temperatura 0", True),
     ("responder_sem_ia", 7.6, 4.9, "respostas prontas", False),
     ("verificar_resposta", 5, 3.0, "números, vazamento, dados, fonte + aviso", False),
     ("FIM", 5, 1.5, "resposta ao cidadão", False),

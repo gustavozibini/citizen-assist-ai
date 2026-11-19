@@ -1,5 +1,5 @@
 # Citizen Assist AI - Gustavo Zibini Belizario - RM 561376
-"""Criação dos modelos: Groq (real) ou modelos falsos para testes offline.
+"""Criação dos modelos: Ollama (local, padrão), Groq (alternativa) ou modelos falsos para testes offline.
 
 Os modelos falsos são determinísticos e NÃO usam IA. Servem só para testar
 o grafo e o pipeline sem internet. Tudo que eles geram é marcado como SIMULADO.

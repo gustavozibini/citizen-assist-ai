@@ -1,6 +1,6 @@
 # Citizen Assist AI — Relatório
 
-**Integrante:** Gustavo Zibini Belizario — RM 561376 (trabalho individual)
+**Integrante:** Gustavo Zibini Belizario — RM 561376 (trabalho individual)  
 **Disciplina:** Prompt and Artificial Intelligence — Global Solution 2026.2 — FIAP, Ciência da Computação, 1º ano
 
 ---

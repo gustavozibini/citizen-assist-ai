@@ -12,7 +12,7 @@ Um único projeto, com a contribuição de cada disciplina em sua própria pasta
 
 | Pasta | Disciplina | Conteúdo |
 |---|---|---|
-| [`assistente/`](assistente/) | Prompt and Artificial Intelligence | Agente (LangGraph + Groq) que responde só com base nas fichas, juiz LLM no golden dataset, notebook para Colab |
+| [`assistente/`](assistente/) | Prompt and Artificial Intelligence | Agente (LangGraph + Ollama, `gemma3:4b` local) que responde só com base nas fichas, juiz LLM no golden dataset, teste com personas |
 | [`dsa/`](dsa/) | Data Structures and Algorithms | Catálogo de serviços em lista encadeada (Python): CRUD, busca, merge sort, Big-O, testes |
 | [`energia/`](energia/) | Soluções em Energias Renováveis e Sustentáveis | Análise do chuveiro elétrico × hábitos × aquecedor solar × fotovoltaica, integrada ao assistente |
 | [`estatistica/`](estatistica/) | Estatística com Python | Análise de 5.565 municípios (Atlas do Desenvolvimento Humano, Censo 2010): probabilidade, testes de hipótese, regressões |
@@ -30,4 +30,4 @@ cd energia && python3 assistente_energia.py      # orientações de energia
 cd estatistica && python3 analise_estatistica.py # análise estatística
 ```
 
-O agente de IA roda no Google Colab: veja [`assistente/README.md`](assistente/README.md).
+O agente de IA roda localmente com Ollama (`cd assistente && bash rodar_mac.sh`): veja [`assistente/README.md`](assistente/README.md).

@@ -43,7 +43,7 @@ Resultados em `resultados/` (a primeira tentativa com `qwen2.5:3b` está em `res
 | `testes.py` | Testes offline (96 verificações). Saída em `evidencias/saida_testes.txt`. |
 | `conferir_golden.py` | Confere o golden contra o texto do PDF. Saída em `evidencias/conferencia_golden_pdf.txt`. |
 | `gerar_notebook.py` | Gera o notebook a partir dos `.py`, das fichas e do golden. |
-| `testes_usuarios/` | `roteiro.md` e `registro.csv` (em branco, para preencher). |
+| `testes_usuarios/` | `roteiro.md`, `registro.csv` (para teste com pessoas), `teste_simulado.py` e `resultado_simulado.csv` (teste com 5 personas). |
 | `evidencias/` | Saídas reais dos testes offline e da execução offline do notebook. |
 
 ## Alternativa: Google Colab com Groq
@@ -66,7 +66,7 @@ Para trocar o modelo, edite `MODELO_AGENTE` / `MODELO_JUIZ` na mesma célula.
 **Sem chave:** na célula de configuração, `MODO_OFFLINE = True`. Roda com modelos falsos (sem IA), salva em
 `resultados_offline/` e marca tudo como SIMULADO.
 
-## Rodar localmente
+## Rodar o notebook localmente (alternativa com Groq)
 
 ```bash
 pip install langgraph==1.2.22 langchain-groq==1.2.0 langchain-core==1.8.1 pandas matplotlib
@@ -80,5 +80,6 @@ O código procura as fichas em `./fichas` ou `../fichas`. Depois de alterar um `
 `python gerar_notebook.py` para atualizar o notebook.
 
 ## Testes com usuários
-Siga `testes_usuarios/roteiro.md` com 5 pessoas de fora, sem identificar ninguém. Preencha
-`testes_usuarios/registro.csv`, envie para a mesma pasta no Colab e rode a seção 13 do notebook.
+O teste com 5 personas roda com `.venv/bin/python testes_usuarios/teste_simulado.py` (Ollama aberto) e salva
+`testes_usuarios/resultado_simulado.csv`. Resultados na seção 10 do relatório. Para repetir com pessoas, siga
+`testes_usuarios/roteiro.md` e preencha `testes_usuarios/registro.csv`.

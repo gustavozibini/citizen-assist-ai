@@ -15,7 +15,7 @@ Medir três indicadores com **pelo menos 5 pessoas de fora do grupo**:
 - Registre só: participante (P1..P5), tarefa, tempo em segundos, acertou (sim/não) e as 5 notas.
 
 ## Preparação
-- Notebook já executado no Colab, com o menu de texto aberto (ou a interface Gradio).
+- Assistente aberto no menu de texto (`bash rodar_mac.sh conversar`, na pasta `assistente/`).
 - Cronômetro (celular).
 - Planilha `registro.csv` aberta.
 
@@ -52,7 +52,7 @@ Notas de 1 (discordo totalmente) a 5 (concordo totalmente):
 - `tempo_s`: número inteiro de segundos.
 - `acertou`: `sim` ou `nao`.
 - `q1` a `q5`: preencha **só na linha da T3** de cada participante.
-- Depois, envie o arquivo para a pasta `testes_usuarios/` do Colab e rode a seção 13 do notebook.
+- Depois, salve o arquivo em `testes_usuarios/` e calcule os indicadores com `avaliacao.py` (ou a seção 13 do notebook).
 
 ## Indicadores calculados pelo notebook
 - Tempo médio e mediana por tarefa (s).
