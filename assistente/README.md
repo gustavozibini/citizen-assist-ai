@@ -4,20 +4,37 @@
 
 Assistente sobre documentos pessoais (RG, CPF, título, carteira de trabalho, certidões, CNH) que responde
 **somente** com as 7 fichas da Central do Cidadão de Aurora (fictícia), citando ficha e data.
-Feito com **LangGraph** + **Groq**. Relatório completo: `Relatorio_Citizen_Assist_AI.md`.
+Feito com **LangGraph** + **Ollama** (`gemma3:4b`, local, sem conta nem chave). Relatório completo: `Relatorio_Citizen_Assist_AI.md`.
+
+## Rodar (Mac/Linux, com Ollama)
+
+1. Instale o Ollama (https://ollama.com/download) e abra o aplicativo.
+2. No Terminal:
+
+```bash
+ollama pull gemma3:4b
+cd citizen-assist-ai/assistente
+bash rodar_mac.sh            # golden dataset antes/depois + juiz
+bash rodar_mac.sh conversar                                   # usar o assistente (menu de texto)
+```
+
+Resultados em `resultados/` (a primeira tentativa com `qwen2.5:3b` está em `resultados_qwen2.5-3b/`).
 
 ## Arquivos
 
 | Arquivo | O que é |
 |---|---|
-| `Citizen_Assist_AI.ipynb` | **Entregável principal.** Notebook autocontido para o Colab (sem saídas: execute você). |
+| `rodar_mac.sh`, `rodar_local.py` | **Execução principal** com Ollama: avaliação antes/depois e menu de conversa. |
+| `rejulgar.py` | Reavalia respostas salvas com o juiz atual, sem chamar o agente. |
+| `resultados/` | Resultados reais (gemma3:4b): `antes.csv`, `depois.csv`, `resumo_comparativo.md`, `conferencia_manual.csv`. |
+| `Citizen_Assist_AI.ipynb` | Alternativa no Colab com Groq (exige conta e chave). |
 | `Relatorio_Citizen_Assist_AI.md` | Relatório: justificativas, régua do juiz, resultados, limitações. |
 | `config.py` | Modelos, versão da recuperação, limites e aviso. |
 | `fichas.py` | Leitura das fichas, divisão em seções e busca por palavras-chave (v1 e v2). |
 | `seguranca.py` | Validação de entrada, dados pessoais (regex) e prompt injection. |
 | `prompts.py` | Prompt de sistema e respostas prontas. |
 | `agente.py` | Grafo LangGraph (7 nós) e verificação final. |
-| `modelos.py` | Groq (chave via Secrets/variável) e modelos falsos para teste offline. |
+| `modelos.py` | Ollama (local), Groq (chave via Secrets/variável) e modelos falsos para teste offline. |
 | `juiz.py` | LLM as a Judge, régua e checagens determinísticas. |
 | `avaliacao.py` | Roda o golden, salva CSVs, compara antes/depois, indicadores dos testes com usuários. |
 | `interface.py` | Menu de texto e interface Gradio (opcional). |
@@ -29,7 +46,7 @@ Feito com **LangGraph** + **Groq**. Relatório completo: `Relatorio_Citizen_Assi
 | `testes_usuarios/` | `roteiro.md` e `registro.csv` (em branco, para preencher). |
 | `evidencias/` | Saídas reais dos testes offline e da execução offline do notebook. |
 
-## Rodar no Google Colab (com IA)
+## Alternativa: Google Colab com Groq
 
 1. Crie a chave gratuita: **console.groq.com** > **API Keys** > **Create API Key** (começa com `gsk_`).
 2. Abra `Citizen_Assist_AI.ipynb` no Colab (Arquivo > Fazer upload de notebook).

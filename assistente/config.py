@@ -10,9 +10,9 @@ import os
 PROVEDOR = os.environ.get("CITIZEN_PROVEDOR", "ollama")
 
 # ---------- Modelos (Ollama, local) ----------
-# Qwen 2.5 3B: ~1,9 GB, roda em notebook comum, bom em português e em JSON.
-MODELO_OLLAMA_AGENTE = os.environ.get("CITIZEN_MODELO_AGENTE", "qwen2.5:3b")
-MODELO_OLLAMA_JUIZ = os.environ.get("CITIZEN_MODELO_JUIZ", "qwen2.5:3b")
+# Gemma 3 4B: ~3,3 GB, cabe em 8 GB de RAM, bom em português. (qwen2.5:3b foi testado e descartado.)
+MODELO_OLLAMA_AGENTE = os.environ.get("CITIZEN_MODELO_AGENTE", "gemma3:4b")
+MODELO_OLLAMA_JUIZ = os.environ.get("CITIZEN_MODELO_JUIZ", "gemma3:4b")
 OLLAMA_URL = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
 
 # ---------- Modelos (Groq, plano gratuito) ----------
