@@ -1,0 +1,16 @@
+persona,situacao,entendeu,o_que_entendeu,utilidade_1a5
+P1,S1,sim,"Então, o chuveiro gasta bastante, mas eu entendi como calcular.",3
+P1,S2,sim,"Que o banho dos meus netos gasta quase 100 kWh por mês, é muita coisa!",5
+P1,S3,sim,"Ah, então eu não tenho direito a desconto, porque o banho é muito grande...",5
+P2,S1,sim,"Banhar gasta muito, mas dá pra calcular.",3
+P2,S2,sim,"4 pessoas, 8 min, sai uns R$ 70 por mês.",5
+P2,S3,sim,"Aquecedor solar é bom se tiver sol, mas demora pra pagar.",4
+P3,S1,sim,Posso economizar no banho tomando menos tempo e desligando o chuveiro,5
+P3,S2,sim,Meu banho de 15 minutos custa em torno de R$ 163 por mês,3
+P3,S3,sim,"A tarifa social ajuda, mas meu banho já gasta demais para aproveitar o desconto",4
+P4,S1,sim,O chuveiro elétrico de 5.500W é um dos que mais consome energia.,5
+P4,S2,sim,"Um banho de 20 minutos com um chuveiro de 7.500W custaria em torno de R$ 118,41 por mês.",5
+P4,S3,sim,"Colocar uma placa solar para o banho seria caro e demorado, e o aquecedor solar pode ser mais vantajoso.",4
+P5,S1,sim,"Entendi, não preciso dar meus dados pessoais.",5
+P5,S2,sim,"Ok, então só preciso digitar os dados do consumo ou usar o menu.",3
+P5,S3,sim,"Ufa, muita informação! Mas entendi que o aquecedor solar ajuda a reduzir o CO2.",4

@@ -168,6 +168,8 @@ def resposta_tarifa_social():
     social = comparar_alternativas(P, tarifa_social=True)
     a = buscar(social, "A")
     texto = (
+        "Resposta curta: se a família está no CadÚnico com renda de até meio salário mínimo por pessoa, "
+        "ela tem direito à Tarifa Social. O direito não depende de quanto a casa gasta.\n"
         "A Tarifa Social dá desconto na conta de luz para famílias de baixa renda.\n"
         f"Regra atual: os primeiros {fmt(P['franquia_tarifa_social_kwh'], 0)} kWh do mês são gratuitos. "
         "O que passar disso é pago.\n"
@@ -180,10 +182,10 @@ def resposta_tarifa_social():
         "O desconto é automático se o CadÚnico estiver atualizado.\n"
         "A conta de luz precisa estar no nome de alguém da família, no endereço do cadastro.\n"
         "Procure o CRAS da sua região para se cadastrar ou atualizar.\n"
-        f"Atenção: o banho de {fmt(P['moradores'], 0)} pessoas gasta {fmt(a['consumo_kwh_mes'])} kWh por mês, "
-        f"mais do que os {fmt(P['franquia_tarifa_social_kwh'], 0)} kWh gratuitos.\n"
+        f"Mesmo com o desconto, a conta não zera: o banho de {fmt(P['moradores'], 0)} pessoas gasta "
+        f"{fmt(a['consumo_kwh_mes'])} kWh por mês, mais do que os {fmt(P['franquia_tarifa_social_kwh'], 0)} kWh gratuitos.\n"
         f"Com a Tarifa Social, o banho ainda pode custar cerca de {fmt_reais(a['custo_mes'])} por mês "
-        f"(excedente a {fmt(tarifa_baixa_renda(P), 5)} R$/kWh sem impostos).\n"
+        f"(cada kWh a mais custa {fmt_reais(tarifa_baixa_renda(P))}, sem impostos).\n"
         "Por isso economizar no banho continua valendo a pena.")
     return com_aviso(texto, "F1 (ANEEL, REH 3.596/2026), F2 (governo federal), F14 (Lei 15.235/2025)")
 

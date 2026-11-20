@@ -90,7 +90,10 @@ energia/
 │   ├── registro.md            formulário para anotar testes com pessoas
 │   ├── teste_simulado.py      teste simulado com 5 personas
 │   ├── resultado_simulado_antes_ajuste.csv
-│   └── resultado_simulado.csv
+│   ├── resultado_simulado.csv
+│   ├── compreensao_personas.py  compreensão, utilidade e comentários das personas
+│   ├── compreensao_personas.csv
+│   └── comentarios_personas.csv
 ├── ROTEIRO_VIDEO.md           roteiro do vídeo de até 3 minutos
 └── ENTREGA.txt                modelo do arquivo .txt de entrega
 ```
@@ -256,7 +259,7 @@ Resultado: 29 testes, todos passaram. Saída real em `evidencias/saida_testes.tx
 
 ### 9.2 Testes com usuários: teste simulado com personas
 
-**Testes com pessoas reais não foram realizados** por falta de tempo. No lugar, foi feito um **teste simulado com 5 personas** do público (`testes_usuarios/teste_simulado.py`): cada persona faz as 3 situações do roteiro escrevendo do seu jeito (informal, abreviado, sem acento, com dado pessoal por engano). O assistente real responde e uma regra fixa confere se a resposta tem a informação esperada. O teste mede acerto, tempo de resposta e clareza (palavras por frase); **não mede satisfação nem compreensão**, que só pessoas reais podem informar.
+**Testes com pessoas reais não foram realizados** por falta de tempo. No lugar, foi feito um **teste simulado com 5 personas** do público (`testes_usuarios/teste_simulado.py`): cada persona faz as 3 situações do roteiro escrevendo do seu jeito (informal, abreviado, sem acento, com dado pessoal por engano). O assistente real responde e uma regra fixa confere se a resposta tem a informação esperada. O teste mede acerto, tempo de resposta e clareza (palavras por frase). Depois, cada persona leu as respostas e disse o que entendeu, quanto foi útil e o que achou (compreensão, utilidade e comentários, abaixo).
 
 | Persona | S1 - quanto gasta / economizar | S2 - calculadora com o próprio caso | S3 - Tarifa Social / solar |
 |---|---|---|---|
@@ -279,8 +282,34 @@ Resultado: 29 testes, todos passaram. Saída real em `evidencias/saida_testes.tx
 | S2 (P1, P3, P4) | Quem escrevia "somos 3... 12 minutos" ou "2 pessoas, banho de 20 minutos" recebia o exemplo genérico de 4 pessoas, porque a calculadora só era acionada com a palavra "calcular". | `responder()` passa a tentar a calculadora sempre que a pergunta tem números, e `calcular_do_texto()` entende "somos N" e "N em casa". Os 29 testes automáticos continuam passando. |
 | S3 (P4, P5) | "compensa colocar placa solar?" recebia a resposta do aquecedor solar de água, e "quanto co2 eu evito com aquecedor solar" também, sem falar de CO2. | "placa solar" passa a levar à resposta de energia fotovoltaica, e perguntas com "CO2", "carbono" ou "emissão" vão para a resposta de CO2. |
 | S1 (P5) | Nenhum: o CPF foi recusado e não foi usado na resposta. | — |
+| S3 (P1, P3) | No teste de compreensão, quem tem CadÚnico entendeu que **não teria direito** à Tarifa Social "porque o banho gasta muito". A resposta começava pela regra dos 80 kWh e terminava falando do gasto do banho, e as duas coisas se misturaram. | A resposta da Tarifa Social passa a começar por "Resposta curta: se a família está no CadÚnico com renda de até meio salário mínimo por pessoa, ela tem direito... O direito não depende de quanto a casa gasta." A parte do custo do banho virou "Mesmo com o desconto, a conta não zera". |
 
-Resultados: `testes_usuarios/resultado_simulado_antes_ajuste.csv` e `testes_usuarios/resultado_simulado.csv`. O roteiro para pessoas reais continua pronto em `testes_usuarios/roteiro.md`.
+#### Compreensão, utilidade e comentários
+
+Cada persona leu as 3 respostas que recebeu e disse, com as suas palavras, o que entendeu, quanto a orientação foi útil (1 a 5) e quanto o texto foi claro (1 a 5). Script: `testes_usuarios/compreensao_personas.py` (modelo local `gemma3:4b` no papel de cada persona). O "o que entendeu" de cada persona foi conferido com a resposta e com as contas do projeto.
+
+| Indicador | S1 | S2 | S3 | Geral |
+|---|---|---|---|---|
+| Entendeu corretamente | 5/5 | 5/5 | 3/5 | **13/15** |
+| Achou útil (nota 4 ou 5, escala de 1 a 5) | 3/5 | 3/5 | 5/5 | **11/15** |
+| Clareza do texto (escala de 1 a 5) | — | — | — | **nota 3 para as 5 personas** |
+
+- **S2 (calculadora):** as 4 personas que deram números repetiram o valor certo do próprio caso (ex.: P3, 5 pessoas e 15 min: "custa em torno de R$ 163 por mês"; P4, 2 pessoas, 20 min e 7.500 W: cerca de R$ 118 por mês). A P5 entendeu que podia usar o menu sem dar dados pessoais.
+- **S3 (Tarifa Social):** P1 e P3 entenderam errado que não teriam direito porque o banho gasta muito. Isso levou ao ajuste da tabela acima.
+
+Comentários recebidos (`testes_usuarios/comentarios_personas.csv`):
+
+| Persona | Comentário |
+|---|---|
+| P1 | "Muito técnico, com muitas abreviações. Poderia ser mais simples, com explicações mais claras sobre o CadÚnico." |
+| P2 | "Um pouco confuso, podia ser mais direto." |
+| P3 | "O texto é um pouco técnico e cheio de números, mas a informação sobre a tarifa social foi bem clara." |
+| P4 | "O texto é um pouco técnico e cheio de números, mas a informação sobre a compensação de energia é importante. Poderia ser mais didático." |
+| P5 | "O texto é um pouco denso, poderia ter mais exemplos e simplificar a explicação sobre os fatores de emissão." |
+
+Todos acharam o texto técnico (nota 3 de 5 para clareza). Ajuste feito: a resposta da Tarifa Social começa por uma frase curta e direta (tabela acima). Próximos ajustes: trocar siglas e unidades por palavras do dia a dia ("kWh" com "unidades da conta de luz") e começar cada resposta pelo valor em reais.
+
+Resultados: `testes_usuarios/resultado_simulado_antes_ajuste.csv`, `testes_usuarios/resultado_simulado.csv`, `testes_usuarios/compreensao_personas.csv` e `testes_usuarios/comentarios_personas.csv`. O roteiro para pessoas reais continua pronto em `testes_usuarios/roteiro.md`.
 
 ## 10. Limitações
 
