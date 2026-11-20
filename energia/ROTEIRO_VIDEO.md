@@ -1,70 +1,25 @@
-# Roteiro do vídeo – Energia: o banho quente na conta de luz
+# Roteiro do vídeo – Energia
 
-**Tempo:** até 3 minutos · **YouTube:** "Não listado"
+**Até 3 minutos · YouTube "Não listado"**
 
-## Antes de gravar
-
-- Deixe abertos, nesta ordem:
-  1. `energia/README.md` (no navegador do GitHub ou no editor)
-  2. `energia/resultados/comparacao.md` (Tabela 1)
-  3. `energia/resultados/grafico_custo_acumulado.png`
-  4. Terminal na pasta: `cd ~/Documents/GusAgent/citizen-assist-ai/energia`
-- Aumente a fonte do Terminal (Cmd + algumas vezes).
+Antes de gravar: abra a Tabela 1 de `resultados/comparacao.md`, o gráfico `resultados/grafico_custo_acumulado.png` e o Terminal já na pasta `energia`.
 
 ---
 
-## 1. Apresentação (30 s)
+Olá, eu sou o Gustavo Zibini Belizario, RM 561376, e esta é a parte de Energia do Citizen Assist AI. O público que eu escolhi são as famílias de baixa renda da cidade de São Paulo, e a necessidade é a água quente do banho. Na maioria dessas casas quem esquenta a água é o chuveiro elétrico, um aparelho de cerca de 5.500 watts que fica ligado pouco tempo, mas pesa muito na conta de luz.
 
-**Mostre:** o início do README.
+Para a análise usei dados de fontes oficiais, como a tarifa da Enel aprovada pela ANEEL, e deixei marcado o que é dado real e o que é estimativa. A conta é simples: energia é potência vezes tempo. Uma família de quatro pessoas, com banhos de dez minutos, gasta 110 quilowatts-hora por mês só no chuveiro, cerca de 87 reais sem impostos.
 
-**Fale:**
-> Olá, sou o Gustavo Zibini Belizario, RM 561376. Esta é a parte de Energia do Citizen Assist AI.
->
-> O público são famílias de baixa renda de São Paulo. A necessidade é a água quente do banho. Quase sempre é um chuveiro elétrico de 5.500 watts, um dos aparelhos que mais pesam na conta de luz.
+Comparei quatro alternativas para esse mesmo banho. Mudar hábitos, com banho mais curto e o chuveiro na posição verão, economiza uns 43 reais por mês sem gastar nada. O aquecedor solar comercial custa cerca de 3.360 reais e se paga em quatro anos e meio. O aquecedor solar de baixo custo custa 1.500 reais e se paga em menos de três anos. E a placa fotovoltaica exige telhado próprio e um investimento maior.
 
-## 2. Comparação (55 s)
+**[mostre o gráfico]**
 
-**Mostre:** a Tabela 1 de `comparacao.md`.
+Neste gráfico está o custo acumulado de cada opção em dez anos, somando o investimento e a conta de luz. A linha azul é o chuveiro sem nenhum cuidado, que termina como a mais cara. As opções solares começam mais caras por causa do investimento, mas cruzam a linha azul entre três e seis anos. E a mudança de hábitos fica abaixo de todas, porque não custa nada.
 
-**Fale:**
-> Os dados vêm de fontes oficiais, como a tarifa da Enel aprovada pela ANEEL.
->
-> Uma família de 4 pessoas, com banho de 10 minutos, gasta 110 kWh por mês. São cerca de 87 reais.
->
-> Comparei 4 alternativas para o mesmo banho:
-> - mudar hábitos economiza 43 reais por mês, sem gastar nada;
-> - o aquecedor solar comercial se paga em 4,6 anos;
-> - o aquecedor solar de baixo custo se paga em 2,9 anos;
-> - a placa fotovoltaica custa mais e exige telhado próprio.
+Agora vou mostrar isso funcionando no assistente. Abrindo o programa, aparece o menu, e a pessoa escolhe só pelo número. Na opção 1 ela vê quanto o chuveiro gasta, com a fonte e o aviso de que é uma estimativa. Na opção 7 está a calculadora: eu informo cinco pessoas, sete minutos de banho, chuveiro na posição verão e que a família tem Tarifa Social, e o assistente mostra a comparação para esse caso. Na opção 8 a pessoa escreve do jeito dela, e se digitar um CPF o assistente avisa que não precisa desse dado e não usa o número.
 
-**Mostre:** o gráfico.
-
-> O gráfico mostra quanto cada opção custa em 10 anos.
-
-## 3. Demonstração (55 s)
-
-**Faça:** no Terminal, digite `python3 assistente_energia.py` e Enter.
-
-**Digite 1**
-> A pessoa escolhe pelo número. Aqui ela vê quanto o chuveiro gasta, com a fonte e o aviso de que é estimativa.
-
-**Digite 7** e responda: `5` · `7` · `2` · `1`
-> Na calculadora ela informa só quantas pessoas, os minutos e a posição do chuveiro. E recebe a comparação para o caso dela.
-
-**Digite 8** e escreva: `meu cpf é 123.456.789-00, quanto gasto?`
-> O assistente não pede dados pessoais. Se a pessoa digitar um CPF, ele avisa e não usa o número.
-
-## 4. Encerramento (20 s)
-
-**Fale:**
-> A recomendação é começar pelos hábitos, ver se tem direito à Tarifa Social e, em casa própria, avaliar o aquecedor solar.
->
-> Os valores são estimativas, sem impostos, e não há garantia de economia. Obrigado!
+Para fechar, a recomendação é começar pelos hábitos, que não custam nada, conferir se a família tem direito à Tarifa Social e, em casa própria com sol no telhado, avaliar o aquecedor solar. São estimativas sem impostos, que dependem das premissas, e não há garantia de economia. Obrigado!
 
 ---
 
-## Conferir antes de publicar
-
-- [ ] Falei nome e RM
-- [ ] Mostrei a tabela, o gráfico e o assistente funcionando
-- [ ] No máximo 3 minutos
+**O que digitar no Terminal durante a demonstração:** `python3 assistente_energia.py` → `1` → `7` (`5`, `7`, `2`, `1`) → `8` (`meu cpf é 123.456.789-00, quanto gasto?`) → `0`
