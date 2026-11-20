@@ -199,23 +199,42 @@ Foram usadas **5 personas** do público, cada uma fazendo as 3 tarefas do roteir
 | P4 — conta a história antes | "Oi, perdi meu RG semana passada e preciso fazer outro, o que tenho que levar?" | "Trabalho a semana toda, consigo ir no sábado resolver?" | "Minha CNH vence mês que vem, já posso renovar?" |
 | P5 — digita dado pessoal sem querer | telefone + "que documentos levo para a segunda via do RG?" | "vcs atendem sabado e domingo?" | "posso renovar a cnh antes de vencer?" |
 
-**Acerto** = a resposta traz a informação certa da ficha (T1: certidão e comprovante de residência; T2: segunda a sexta / sem sábado; T3: 30 dias antes do vencimento). **Tempo** = tempo de resposta do assistente.
+**Como cada indicador foi medido**
+- **Acerto:** a resposta traz a informação certa da ficha (T1: certidão e comprovante de residência; T2: segunda a sexta, sem sábado; T3: 30 dias antes do vencimento).
+- **Tempo para encontrar a informação:** tempo da persona do início da tarefa até ler a resposta: orientação na tela + digitação da pergunta + tempo de resposta do assistente (medido) + leitura da resposta. Cada perfil tem sua velocidade de digitação e de leitura (ex.: P1, idoso, 1 caractere/s e 120 palavras/min; P2, jovem, 4 caracteres/s e 250 palavras/min). Quando a resposta não traz a informação, a persona reformula e tenta de novo. Limite de 180 s, como no roteiro.
+- **Facilidade de uso:** questionário do roteiro (q1 a q5, notas de 1 a 5), respondido por cada persona depois das 3 tarefas, com base nas perguntas que ela fez e nas respostas que recebeu. Script: `testes_usuarios/questionario_personas.py`; dados em `testes_usuarios/registro_personas.csv` (mesmo formato do `registro.csv`, sem nenhum dado pessoal).
 
 | Indicador | T1 | T2 | T3 | Geral |
 |---|---|---|---|---|
 | Acerto | 4/5 | 5/5 | 5/5 | **14/15 (93%)** |
-| Tempo médio de resposta (s) | 8,5 | 3,8 | 5,9 | **6,1** |
-| Clareza: palavras por frase (média) | — | — | — | **10,3** |
+| Tempo para encontrar (média, s) | 93,0 | 40,6 | 58,8 | **64,1** |
+| Tempo para encontrar (mediana, s) | 79 | 46 | 41 | **48** |
+| Tempo de resposta do assistente (média, s) | 8,5 | 3,8 | 5,9 | **6,1** |
 | Dado pessoal repetido na resposta | — | — | — | **0 de 15** (o telefone do P5 foi ocultado) |
 
-**Facilidade de uso:** avaliada pelos critérios do roteiro sobre as 15 respostas: frases curtas (média de 10 palavras por frase), passo a passo numerado quando há etapas, fonte com ficha e data em 15/15 respostas e aviso de protótipo em todas (o nó `verificar_resposta` sempre o adiciona).
+T1 é a tarefa mais demorada: a resposta é a mais longa (lista de documentos) e o erro do P4 obrigou uma segunda tentativa. O P1 (idoso) levou 143 s na T1, perto do limite de 180 s.
+
+**Facilidade de uso (1 a 5)**
+
+| Pergunta | Média |
+|---|---|
+| q1 Foi fácil encontrar a informação que eu procurava | 3,4 |
+| q2 As respostas foram claras e fáceis de entender | 4,4 |
+| q3 Ficou claro de onde veio a informação (ficha e data) | **5,0** |
+| q4 O menu e as mensagens de erro me ajudaram a seguir em frente | 3,0 |
+| q5 Eu usaria este assistente de novo | 2,6 |
+| **Média geral** | **3,68** |
+
+Por persona: P1 3,2 · P2 3,0 · P3 4,2 · P4 3,8 · P5 4,2. Comentários registrados (`comentarios_personas.csv`): o P1 pediu "explicações mais simples"; o P2 e o P4 acharam a resposta demorada; o P3 destacou a clareza e a fonte; o P5 sugeriu ser avisado antes de digitar o telefone.
 
 **O que o teste mostrou:**
 - **P4/T1 (erro):** quem contou a história ("perdi meu RG...") recebeu o **passo a passo** do atendimento em vez da **lista de documentos**; a certidão e o comprovante de residência não apareceram. Causa: a palavra "perdi" puxou a seção de extravio, e o modelo respondeu sobre o processo.
 - **P1/T2 e P4/T2:** a resposta começou com "Não encontrei essa informação nas fichas" e logo depois deu a informação certa — o mesmo problema de forma visto no golden dataset (seção 9).
 - Perguntas abreviadas e sem acento (P2, P5) foram entendidas: a busca normaliza acentos e as palavras-chave cobrem "rg", "cnh", "sabado".
 
-**Ajustes propostos:** (1) quando a pergunta tiver "levar" ou "documentos", priorizar a seção "Documentos necessários" da ficha; (2) remover "não encontrei" quando a resposta tiver conteúdo de ficha (seção 9).
+- **Facilidade:** a fonte (q3 = 5,0) e a clareza (q2 = 4,4) foram os pontos fortes. Os mais fracos foram usar de novo (q5 = 2,6) e o menu/mensagens (q4 = 3,0): quem lê devagar (P1) ou tem pressa (P2) sentiu falta de respostas mais curtas e mais rápidas.
+
+**Ajustes propostos:** (1) quando a pergunta tiver "levar" ou "documentos", priorizar a seção "Documentos necessários" da ficha; (2) remover "não encontrei" quando a resposta tiver conteúdo de ficha (seção 9); (3) começar a resposta pela informação principal em uma frase curta e deixar o passo a passo depois; (4) mostrar o aviso "não digite dados pessoais" junto do campo de digitação, e não só no início.
 
 ## 11. O que foi tentado e mudado durante o desenvolvimento
 

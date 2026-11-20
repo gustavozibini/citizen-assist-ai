@@ -1,0 +1,16 @@
+participante,tarefa,tempo_s,acertou,q1,q2,q3,q4,q5
+P1,T1,143,sim,,,,,
+P1,T2,65,sim,,,,,
+P1,T3,126,sim,3,4,5,2,2
+P2,T1,45,sim,,,,,
+P2,T2,18,sim,,,,,
+P2,T3,36,sim,3,4,5,2,1
+P3,T1,79,sim,,,,,
+P3,T2,48,sim,,,,,
+P3,T3,38,sim,4,5,5,3,4
+P4,T1,130,nao,,,,,
+P4,T2,46,sim,,,,,
+P4,T3,53,sim,3,4,5,4,3
+P5,T1,68,sim,,,,,
+P5,T2,26,sim,,,,,
+P5,T3,41,sim,4,5,5,4,3

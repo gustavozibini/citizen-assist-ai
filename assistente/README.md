@@ -43,7 +43,7 @@ Resultados em `resultados/` (a primeira tentativa com `qwen2.5:3b` está em `res
 | `testes.py` | Testes offline (96 verificações). Saída em `evidencias/saida_testes.txt`. |
 | `conferir_golden.py` | Confere o golden contra o texto do PDF. Saída em `evidencias/conferencia_golden_pdf.txt`. |
 | `gerar_notebook.py` | Gera o notebook a partir dos `.py`, das fichas e do golden. |
-| `testes_usuarios/` | `roteiro.md`, `registro.csv` (para teste com pessoas), `teste_simulado.py` e `resultado_simulado.csv` (teste com 5 personas). |
+| `testes_usuarios/` | `roteiro.md`, `registro.csv` (para teste com pessoas), `teste_simulado.py` e `resultado_simulado.csv` (teste com 5 personas), `questionario_personas.py`, `registro_personas.csv` e `comentarios_personas.csv` (tempo para encontrar e facilidade de uso). |
 | `evidencias/` | Saídas reais dos testes offline e da execução offline do notebook. |
 
 ## Alternativa: Google Colab com Groq
@@ -81,5 +81,6 @@ O código procura as fichas em `./fichas` ou `../fichas`. Depois de alterar um `
 
 ## Testes com usuários
 O teste com 5 personas roda com `.venv/bin/python testes_usuarios/teste_simulado.py` (Ollama aberto) e salva
-`testes_usuarios/resultado_simulado.csv`. Resultados na seção 10 do relatório. Para repetir com pessoas, siga
+`testes_usuarios/resultado_simulado.csv`. Depois, `.venv/bin/python testes_usuarios/questionario_personas.py` calcula o tempo para
+encontrar a informação e aplica o questionário de facilidade (q1 a q5). Resultados na seção 10 do relatório. Para repetir com pessoas, siga
 `testes_usuarios/roteiro.md` e preencha `testes_usuarios/registro.csv`.
