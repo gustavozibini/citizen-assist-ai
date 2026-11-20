@@ -26,7 +26,7 @@ Neste gráfico está o custo acumulado de cada opção em dez anos, somando o in
 
 **[mostre o Terminal]**
 
-**[digite `python3 assistente_energia.py`]** Agora, no assistente. A pessoa escolhe pelo número do menu. **[`1`]** Na opção 1 ela vê quanto o chuveiro gasta, com a fonte e o aviso de que é uma estimativa. **[`7`]** Na opção 7 está a calculadora: eu informo cinco pessoas **[`5`]**, sete minutos de banho **[`7`]**, chuveiro na posição verão **[`2`]** e que a família tem Tarifa Social **[`1`]**, e o assistente mostra a comparação para esse caso. **[`8`]** Na opção 8 a pessoa escreve do jeito dela, **[digite `meu cpf é 123.456.789-00, quanto gasto?`]** e se digitar um CPF o assistente avisa que não precisa desse dado e não usa o número. **[`0`]**
+**[digite `python3 assistente_energia.py`]** Agora, no assistente. A pessoa escolhe pelo número do menu. **[digite `1`]** Na opção 1 ela vê quanto o chuveiro gasta, com a fonte e o aviso de que é uma estimativa. **[digite `7`]** Na opção 7 está a calculadora: eu informo cinco pessoas **[digite `5`]**, sete minutos de banho **[digite `7`]**, chuveiro na posição verão **[digite `2`]** e que a família tem Tarifa Social **[digite `1`]**, e o assistente mostra a comparação para esse caso. **[digite `8`]** Na opção 8 a pessoa escreve do jeito dela, **[digite `meu cpf é 123.456.789-00, quanto gasto?`]** e se digitar um CPF o assistente avisa que não precisa desse dado e não usa o número. **[digite `0`]**
 
 Para fechar, a recomendação é começar pelos hábitos, que não custam nada, conferir se a família tem direito à Tarifa Social e, em casa própria com sol no telhado, avaliar o aquecedor solar. São estimativas sem impostos e não há garantia de economia. Obrigado!
 
