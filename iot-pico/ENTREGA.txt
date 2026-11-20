@@ -13,17 +13,21 @@ RM: 561376
 Curso: Ciencia da Computacao - 1o ano
 
 LINKS
-1) Prints da simulacao no Wokwi (pasta prints/):
+1) Projeto no Wokwi (circuito com a Raspberry Pi Pico + codigo MicroPython):
+   https://wokwi.com/projects/481079018211939329
+
+2) Video demonstrativo no YouTube (nao listado):
+   https://youtu.be/U3GGRcFgSjk
+
+3) Prints da simulacao (pasta prints/):
    Print_1 - NORMAL (180 cm)
    Print_2 - ATENCAO (110 cm)
    Print_3 - ALERTA (60 cm)
    Print_4 - ALERTA silenciado (botao)
    Print_5 - FALHA no sensor (400 cm)
 
-2) Video demonstrativo no YouTube:
-   https://youtu.be/U3GGRcFgSjk
-
 ANTES DE ENVIAR
+[x] O link do Wokwi abre e a simulacao inicia
 [x] Prints dos 5 estados anexadas
 [x] O link do YouTube abre em uma janela anonima (video "Nao listado")
 [x] O link do YouTube esta preenchido
