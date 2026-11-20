@@ -2,11 +2,19 @@
 
 **Até 3 minutos · YouTube "Não listado"**
 
-Antes de gravar: abra a Tabela 1 de `resultados/comparacao.md`, o gráfico `resultados/grafico_custo_acumulado.png` e o Terminal já na pasta `energia`.
+Antes de gravar, deixe abertos no navegador, nesta ordem:
+1. README: https://github.com/gustavozibini/citizen-assist-ai/tree/main/energia
+2. Tabela: https://github.com/gustavozibini/citizen-assist-ai/blob/main/energia/resultados/comparacao.md
+3. Gráfico: https://github.com/gustavozibini/citizen-assist-ai/blob/main/energia/resultados/grafico_custo_acumulado.png
+4. Terminal já na pasta: `cd ~/Documents/GusAgent/citizen-assist-ai/energia`
 
 ---
 
-Olá, eu sou o Gustavo Zibini Belizario, RM 561376, e esta é a parte de Energia do Citizen Assist AI. O público são as famílias de baixa renda de São Paulo, e a necessidade é a água quente do banho. Nessas casas quem esquenta a água é o chuveiro elétrico, de cerca de 5.500 watts, que pesa muito na conta de luz.
+**[mostre o README]**
+
+Olá, eu sou o Gustavo, e esta é a parte de Energias Renováveis do Citizen Assist AI. O público são as famílias de baixa renda de São Paulo, e a necessidade é a água quente do banho. Nessas casas quem esquenta a água é o chuveiro elétrico, de cerca de 5.500 watts, que pesa muito na conta de luz.
+
+**[mostre a tabela]**
 
 Usei dados de fontes oficiais, como a tarifa da Enel aprovada pela ANEEL, e marquei o que é dado real e o que é estimativa. A conta é simples: energia é potência vezes tempo. Uma família de quatro pessoas, com banhos de dez minutos, gasta 110 quilowatts-hora por mês só no chuveiro, cerca de 87 reais sem impostos.
 
