@@ -24,9 +24,9 @@ Comparei quatro alternativas para esse mesmo banho. Mudar hábitos, com banho ma
 
 Neste gráfico está o custo acumulado de cada opção em dez anos, somando o investimento e a conta de luz. A linha azul é o chuveiro sem nenhum cuidado, que termina como a mais cara. As opções solares começam mais caras por causa do investimento, mas cruzam a linha azul entre três e seis anos. E a mudança de hábitos fica abaixo de todas, porque não custa nada.
 
-**[mostre o Terminal e digite `python3 assistente_energia.py`; depois `1`, `7` (`5`, `7`, `2`, `1`) e `8` (`meu cpf é 123.456.789-00, quanto gasto?`) conforme for falando]**
+**[mostre o Terminal]**
 
-Agora, no assistente. A pessoa escolhe pelo número do menu. Na opção 1 ela vê quanto o chuveiro gasta, com a fonte e o aviso de que é uma estimativa. Na opção 7 está a calculadora: eu informo cinco pessoas, sete minutos de banho, chuveiro na posição verão e que a família tem Tarifa Social, e o assistente mostra a comparação para esse caso. Na opção 8 a pessoa escreve do jeito dela, e se digitar um CPF o assistente avisa que não precisa desse dado e não usa o número.
+**[digite `python3 assistente_energia.py` + Enter]** Agora, no assistente. A pessoa escolhe pelo número do menu. **[digite `1` + Enter]** Na opção 1 ela vê quanto o chuveiro gasta, com a fonte e o aviso de que é uma estimativa. **[digite `7` + Enter]** Na opção 7 está a calculadora: eu informo cinco pessoas **[`5` + Enter]**, sete minutos de banho **[`7` + Enter]**, chuveiro na posição verão **[`2` + Enter]** e que a família tem Tarifa Social **[`1` + Enter]**, e o assistente mostra a comparação para esse caso. **[digite `8` + Enter]** Na opção 8 a pessoa escreve do jeito dela, **[digite `meu cpf é 123.456.789-00, quanto gasto?` + Enter]** e se digitar um CPF o assistente avisa que não precisa desse dado e não usa o número. **[digite `0` + Enter para sair]**
 
 Para fechar, a recomendação é começar pelos hábitos, que não custam nada, conferir se a família tem direito à Tarifa Social e, em casa própria com sol no telhado, avaliar o aquecedor solar. São estimativas sem impostos e não há garantia de economia. Obrigado!
 
